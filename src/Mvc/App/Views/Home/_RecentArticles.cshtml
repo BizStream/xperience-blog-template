@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ArticleListingItem>
+
+<section class="article-listing">
+    @if( Model?.Any() == true )
+    {
+        foreach( var item in Model )
+        {
+            <div class="article-item">
+                <a class="article-title" href="@item.Url">
+                    <h3>@item.Title</h3>
+                    <span class="article-published-at">@item.PublishedAt.ToShortDateString()</span>
+                </a>
+                
+                @if( !string.IsNullOrWhiteSpace( item.Summary ) )
+                {
+                    <p>@item.Summary</p>
+                }
+            </div>
+        }
+    }
+</section>

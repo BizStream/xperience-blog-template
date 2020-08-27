@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="BizStream Standard Rules" Description="These are the rules that define the BizStream recommended standard coding styles." ToolsVersion="16.0">
+  <Localization ResourceAssembly="Microsoft.VisualStudio.CodeAnalysis.RuleSets.Strings.dll" ResourceBaseName="Microsoft.VisualStudio.CodeAnalysis.RuleSets.Strings.Localized">
+    <Name Resource="BizStreamStandardRules_Name" />
+    <Description Resource="MinimumRecommendedRules_Description" />
+  </Localization>
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+
+    <!-- Suggest moving up to error -->
+    <Rule Id="CA1001" Action="Warning" /><!--Types that own disposable fields should be disposable https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable?view=vs-2019 -->
+    <Rule Id="CA1063" Action="Warning" /><!-- Implement IDisposable correctly https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1063-implement-idisposable-correctly?view=vs-2019 -->
+    <Rule Id="CA1065" Action="Warning" /><!-- Do not raise exceptions in unexpected locations https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations?view=vs-2019 -->
+    <Rule Id="CA1821" Action="Warning" /><!-- Remove empty finalizers https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1821-remove-empty-finalizers?view=vs-2019 -->
+
+    <!-- Suggest Removing or moving up to error   -->
+    <Rule Id="CA1060" Action="Warning" /><!-- Move P/Invokes to NativeMethods class https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1060-move-p-invokes-to-nativemethods-class?view=vs-2019 -->
+    <Rule Id="CA1301" Action="Warning" /><!-- Avoid duplicate accelerators https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1301-avoid-duplicate-accelerators?view=vs-2019 -->
+    <Rule Id="CA1400" Action="Warning" /><!-- P/Invoke entry points should exist https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1400-p-invoke-entry-points-should-exist?view=vs-2019 -->
+    <Rule Id="CA1401" Action="Warning" /><!-- P/Invokes should not be visible https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1401-p-invokes-should-not-be-visible?view=vs-2019 -->
+    <Rule Id="CA1403" Action="Warning" /><!-- Auto layout types should not be COM visible https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1403-auto-layout-types-should-not-be-com-visible?view=vs-2019 -->
+    <Rule Id="CA1404" Action="Warning" /><!-- Call GetLastError immediately after P/Invoke https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1404-call-getlasterror-immediately-after-p-invoke?view=vs-2019 -->
+    <Rule Id="CA1405" Action="Warning" /><!-- COM visible type base types should be COM visible https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1405-com-visible-type-base-types-should-be-com-visible?view=vs-2019 -->
+    <Rule Id="CA1410" Action="Warning" /><!-- COM registration methods should be matched https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1410-com-registration-methods-should-be-matched?view=vs-2019 -->
+    <Rule Id="CA1415" Action="Warning" /><!-- Declare P/Invokes correctly https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1415-declare-p-invokes-correctly?view=vs-2019 -->
+    <Rule Id="CA1901" Action="Warning" /><!-- P/Invoke declarations should be portable https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1901-p-invoke-declarations-should-be-portable?view=vs-2019 -->
+    <Rule Id="CA2101" Action="Warning" /><!-- Specify marshaling for P/Invoke string arguments https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments?view=vs-2019 -->
+    
+    <Rule Id="CA1009" Action="Warning" /><!-- Declare event handlers correctly https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1009-declare-event-handlers-correctly?view=vs-2019 -->
+    <Rule Id="CA1016" Action="Warning" /><!-- Mark assemblies with AssemblyVersionAttribute https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1016-mark-assemblies-with-assemblyversionattribute?view=vs-2019 -->
+    <Rule Id="CA1033" Action="Warning" /><!-- Interface methods should be callable by child types https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1033-interface-methods-should-be-callable-by-child-types?view=vs-2019 -->
+    <Rule Id="CA1049" Action="Warning" /><!-- Types that own native resources should be disposable https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1049-types-that-own-native-resources-should-be-disposable?view=vs-2019 -->
+    <Rule Id="CA1061" Action="Warning" /><!-- Do not hide base class methods https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1061-do-not-hide-base-class-methods?view=vs-2019 -->
+    <Rule Id="CA1900" Action="Warning" /><!-- Value type fields should be portable https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1900-value-type-fields-should-be-portable?view=vs-2019 -->
+    <Rule Id="CA2002" Action="Warning" /><!-- Do not lock on objects with weak identity https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2002-do-not-lock-on-objects-with-weak-identity?view=vs-2019 -->
+    <Rule Id="CA2100" Action="Warning" /><!-- Review SQL queries for security vulnerabilities https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2100-review-sql-queries-for-security-vulnerabilities?view=vs-2019 -->
+    <Rule Id="CA2108" Action="Warning" /><!-- Review declarative security on value types https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2108-review-declarative-security-on-value-types?view=vs-2019 -->
+    <Rule Id="CA2111" Action="Warning" /><!-- Pointers should not be visible https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2111-pointers-should-not-be-visible?view=vs-2019 -->
+    <Rule Id="CA2112" Action="Warning" /><!-- Secured types should not expose fields https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2112-secured-types-should-not-expose-fields?view=vs-2019 -->
+    <Rule Id="CA2114" Action="Warning" /><!-- Method security should be a superset of type https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2114-method-security-should-be-a-superset-of-type?view=vs-2019 -->
+    <Rule Id="CA2116" Action="Warning" /><!-- APTCA methods should only call APTCA methods https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2116-aptca-methods-should-only-call-aptca-methods?view=vs-2019 -->
+    <Rule Id="CA2117" Action="Warning" /><!-- APTCA types should only extend APTCA base types https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types?view=vs-2019 -->
+    <Rule Id="CA2122" Action="Warning" /><!-- Do not indirectly expose methods with link demands https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2122-do-not-indirectly-expose-methods-with-link-demands?view=vs-2019 -->
+    <Rule Id="CA2123" Action="Warning" /><!-- Override link demands should be identical to base https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2123-override-link-demands-should-be-identical-to-base?view=vs-2019 -->
+    <Rule Id="CA2124" Action="Warning" /><!-- Wrap vulnerable finally clauses in outer try https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2124-wrap-vulnerable-finally-clauses-in-outer-try?view=vs-2019 -->
+    <Rule Id="CA2126" Action="Warning" /><!-- Type link demands require inheritance demands https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2126-type-link-demands-require-inheritance-demands?view=vs-2019 -->
+    <Rule Id="CA2131" Action="Warning" /><!-- Security critical types may not participate in type equivalence https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2131-security-critical-types-may-not-participate-in-type-equivalence?view=vs-2019 -->
+    <Rule Id="CA2132" Action="Warning" /><!-- Default constructors must be at least as critical as base type default constructors https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors?view=vs-2019 -->
+    <Rule Id="CA2133" Action="Warning" /><!-- Delegates must bind to methods with consistent transparency https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2133-delegates-must-bind-to-methods-with-consistent-transparency?view=vs-2019 -->
+    <Rule Id="CA2134" Action="Warning" /><!-- Methods must keep consistent transparency when overriding base methods https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods?view=vs-2019 -->
+    <Rule Id="CA2137" Action="Warning" /><!-- Transparent methods must contain only verifiable IL https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2137-transparent-methods-must-contain-only-verifiable-il?view=vs-2019 -->
+    <Rule Id="CA2138" Action="Warning" /><!-- Transparent methods must not call methods with the SuppressUnmanagedCodeSecurity attribute https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute?view=vs-2019 -->
+    <Rule Id="CA2140" Action="Warning" /><!-- Transparent code must not reference security critical items https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2140-transparent-code-must-not-reference-security-critical-items?view=vs-2019 -->
+    <Rule Id="CA2141" Action="Warning" /><!-- Transparent methods must not satisfy LinkDemands https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2141-transparent-methods-must-not-satisfy-linkdemands?view=vs-2019 -->
+    <Rule Id="CA2146" Action="Warning" /><!-- Types must be at least as critical as their base types and interfaces https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces?view=vs-2019 -->
+    <Rule Id="CA2147" Action="Warning" /><!-- Transparent methods may not use security asserts https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2147-transparent-methods-may-not-use-security-asserts?view=vs-2019 -->
+    <Rule Id="CA2149" Action="Warning" /><!-- Transparent methods must not call into native code https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2149-transparent-methods-must-not-call-into-native-code?view=vs-2019 -->
+    <Rule Id="CA2200" Action="Warning" /><!-- Rethrow to preserve stack details https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2200-rethrow-to-preserve-stack-details?view=vs-2019 -->
+    <Rule Id="CA2202" Action="Warning" /><!-- Do not dispose objects multiple times https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2202-do-not-dispose-objects-multiple-times?view=vs-2019 -->
+    <Rule Id="CA2207" Action="Warning" /><!-- Initialize value type static fields inline https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2207-initialize-value-type-static-fields-inline?view=vs-2019 -->
+    <Rule Id="CA2212" Action="Warning" /><!-- Do not mark serviced components with WebMethod https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2212-do-not-mark-serviced-components-with-webmethod?view=vs-2019 -->
+    <Rule Id="CA2213" Action="Warning" /><!-- Disposable fields should be disposed https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2213-disposable-fields-should-be-disposed?view=vs-2019 -->
+    <Rule Id="CA2214" Action="Warning" /><!-- Do not call overridable methods in constructors https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2214-do-not-call-overridable-methods-in-constructors?view=vs-2019 -->
+    <Rule Id="CA2216" Action="Warning" /><!-- Disposable types should declare finalizer https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2216-disposable-types-should-declare-finalizer?view=vs-2019 -->
+    <Rule Id="CA2220" Action="Warning" /><!-- Finalizers should call base class finalizer https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2220-finalizers-should-call-base-class-finalizer?view=vs-2019 -->
+    <Rule Id="CA2229" Action="Warning" /><!-- Implement serialization constructors https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2229-implement-serialization-constructors?view=vs-2019 -->
+    <Rule Id="CA2231" Action="Warning" /><!-- Overload operator equals on overriding ValueType.Equals https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals?view=vs-2019 -->
+    <Rule Id="CA2232" Action="Warning" /><!-- Mark Windows Forms entry points with STAThread https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2232-mark-windows-forms-entry-points-with-stathread?view=vs-2019 -->
+    <Rule Id="CA2235" Action="Warning" /><!-- Mark all non-serializable fields https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2235-mark-all-non-serializable-fields?view=vs-2019 -->
+    <Rule Id="CA2236" Action="Warning" /><!-- Call base class methods on ISerializable types https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2236-call-base-class-methods-on-iserializable-types?view=vs-2019 -->
+    <Rule Id="CA2237" Action="Warning" /><!-- Mark ISerializable types with SerializableAttribute https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute?view=vs-2019 -->
+    <Rule Id="CA2238" Action="Warning" /><!-- Implement serialization methods correctly https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2238-implement-serialization-methods-correctly?view=vs-2019 -->
+    <Rule Id="CA2240" Action="Warning" /><!-- Implement ISerializable correctly https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2240-implement-iserializable-correctly?view=vs-2019 -->
+    <Rule Id="CA2241" Action="Warning" /><!-- Provide correct arguments to formatting methods https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2241-provide-correct-arguments-to-formatting-methods?view=vs-2019 -->
+    <Rule Id="CA2242" Action="Warning" /><!-- Test for NaN correctly https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2242-test-for-nan-correctly?view=vs-2019 -->
+    <Rule Id="CA1804" Action="Hidden" /><!--  Remove unused locals https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1804-remove-unused-locals?view=vs-2019 -->
+  </Rules>
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <!-- To see what's available here check out https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/DOCUMENTATION.md -->
+
+    <!-- suggest we re-evaluate. -->
+    <Rule Id="SA1115" Action="None" /><!-- ParameterMustFollowComma - A parameter within a C# method or indexer call or declaration does not begin on the same line as the previous parameter, or on the next line. -->
+
+    <Rule Id="SA0001" Action="None" /><!-- XmlCommentAnalysisDisabled - All diagnostics of XML documentation comments has been disabled due to the current project configuration. -->
+    <Rule Id="SA1101" Action="None" /><!-- PrefixLocalCallsWithThis - A call to an instance member of the local class or a base class is not prefixed with 'this.', within a C# code file. -->
+    <Rule Id="SA1124" Action="None" /><!-- DoNotUseRegions - The C# code contains a region. -->
+    <Rule Id="SA1200" Action="None" /><!-- UsingDirectivesMustBePlacedCorrectly - A C# using directive is placed outside of a namespace element. -->
+    <Rule Id="SA1413" Action="None" /><!-- UseTrailingCommasInMultiLineInitializers	- A multi-line initializer should use a comma on the last item. -->
+    <Rule Id="SA1516" Action="None" /><!-- ElementsMustBeSeparatedByBlankLine - Adjacent C# elements are not separated by a blank line. -->
+    <Rule Id="SA1600" Action="None" /><!-- ElementsMustBeDocumented - A C# code element is missing a documentation header. -->
+    <Rule Id="SA1601" Action="None" /><!-- PartialElementsMustBeDocumented - A C# partial element is missing a documentation header. -->
+    <Rule Id="SA1611" Action="None" /><!-- ElementParametersMustBeDocumented - A C# method, constructor, delegate or indexer element is missing documentation for one or more of its parameters. -->
+    <Rule Id="SA1615" Action="None" /><!-- ElementReturnValueMustBeDocumented - 	A C# element is missing documentation for its return value. -->
+    <Rule Id="SA1618" Action="None" /><!-- GenericTypeParametersMustBeDocumented - A generic C# element is missing documentation for one or more of its generic type parameters. -->
+    <Rule Id="SA1633" Action="None" /><!-- FileMustHaveHeader - A C# code file is missing a standard file header. -->
+    <Rule Id="SA1634" Action="None" /><!-- FileHeaderMustShowCopyright - The file header at the top of a C# code file is missing a copyright tag. -->
+    <Rule Id="SA1635" Action="None" /><!-- FileHeaderMustHaveCopyrightText - The file header at the top of a C# code file is missing copyright text. -->
+    <Rule Id="SA1636" Action="None" /><!-- FileHeaderCopyrightTextMustMatch - The file header at the top of a C# code file does not contain the appropriate copyright text. -->
+    <Rule Id="SA1637" Action="None" /><!-- FileHeaderMustContainFileName - The file header at the top of a C# code file is missing the file name. -->
+    <Rule Id="SA1638" Action="None" /><!-- FileHeaderFileNameDocumentationMustMatchFileName - The file tag within the file header at the top of a C# code file does not contain the name of the file. -->
+    <Rule Id="SA1652" Action="None" /><!-- EnableXmlDocumentationOutput - see SA0001 -->
+  </Rules>
+</RuleSet>

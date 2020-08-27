@@ -1,0 +1,918 @@
+﻿<cms_documenttype version="13.0">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>5504</ClassID>
+      <ClassDisplayName>* Base</ClassDisplayName>
+      <ClassName>BlogTemplate.BaseNode</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="BlogTemplate_BaseNode"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="BaseNodeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="OpenGraphTitle" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphDescription" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphImage" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphVideo" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//BlogTemplate_BaseNode" /&gt;
+      &lt;xs:field xpath="BaseNodeID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="BaseNodeID" columntype="integer" guid="8c9a31db-ec31-4bb1-892b-bc7b36634b5c" isPK="true" isunique="true" publicfield="false"&gt;&lt;properties&gt;&lt;fieldcaption&gt;BaseNodeID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DocumentName" columnsize="100" columntype="text" external="true" guid="15d630eb-2a4d-4fd9-b328-c417357b58e7" publicfield="false" system="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Metadata"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="DocumentPageTitle" columntype="longtext" external="true" guid="457e80f8-6891-4e23-bae0-afcd3dc4c03e" publicfield="false" system="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageDescription" columntype="longtext" external="true" guid="8dae06e2-1df2-452a-b584-1af099b56585" publicfield="false" system="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageKeyWords" columntype="longtext" external="true" guid="97a159da-2dc2-40a0-9590-66f047a059aa" publicfield="false" system="true" visible="true"&gt;&lt;properties&gt;&lt;explanationtext&gt;(separated by comma)&lt;/explanationtext&gt;&lt;fieldcaption&gt;Keywords&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="OpenGraph"&gt;&lt;properties&gt;&lt;caption&gt;Open Graph&lt;/caption&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="OpenGraphTitle" columnsize="200" columntype="text" guid="931db176-c488-4eae-a1b4-58d64d4e872a" publicfield="false" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphDescription" columnsize="500" columntype="text" guid="4cbfb6f5-3a17-4c8d-8090-8904a0e35648" publicfield="false" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphImage" columnsize="500" columntype="text" guid="c7d59aa2-2c73-49cf-86b8-20edebcab4a2" publicfield="false" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphVideo" columnsize="500" columntype="text" guid="5c9e7a9a-1a76-4b5d-bdc9-e72e01ccfffc" publicfield="false" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Video&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassNodeNameSource>DocumentName</ClassNodeNameSource>
+      <ClassTableName>BlogTemplate_BaseNode</ClassTableName>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassNodeAliasSource>DocumentName</ClassNodeAliasSource>
+      <ClassLastModified>2020-05-15T13:37:33.5291264-04:00</ClassLastModified>
+      <ClassGUID>9b2b695d-88ff-425b-b233-440456950d50</ClassGUID>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="4e15a602-d55e-4f70-99e5-e6ccddc3ffe5" name="BaseNodeID" searchable="True" tokenized="False" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassVersionGUID>bb9fbc09-e295-4f3f-87be-6cec08506ffd</ClassVersionGUID>
+      <ClassIsForm>false</ClassIsForm>
+      <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
+      <ClassIconClass>icon-doc-o</ClassIconClass>
+      <ClassUsesPageBuilder>false</ClassUsesPageBuilder>
+      <ClassIsNavigationItem>false</ClassIsNavigationItem>
+      <ClassHasURL>false</ClassHasURL>
+      <ClassHasMetadata>false</ClassHasMetadata>
+    </cms_class>
+    <cms_class>
+      <ClassID>5505</ClassID>
+      <ClassDisplayName>* Home</ClassDisplayName>
+      <ClassName>BlogTemplate.HomeNode</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="BlogTemplate_HomeNode"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="HomeNodeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="FeaturedAuthorGuid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="OpenGraphTitle" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphDescription" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphImage" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphVideo" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//BlogTemplate_HomeNode" /&gt;
+      &lt;xs:field xpath="HomeNodeID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="HomeNodeID" columntype="integer" guid="54016511-3640-4553-b967-5c704e48b345" isPK="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;HomeNodeID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DocumentName" columnsize="100" columntype="text" external="true" guid="15d630eb-2a4d-4fd9-b328-c417357b58e7" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="FeaturedAuthorGuid" columntype="guid" guid="028d9da6-fa94-479d-b734-82aa354fafa2" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Featured Author&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;BlogTemplate.AuthorDropdownControl&lt;/controlname&gt;&lt;DisplayActualValueAsItem&gt;False&lt;/DisplayActualValueAsItem&gt;&lt;EditText&gt;False&lt;/EditText&gt;&lt;SortItems&gt;False&lt;/SortItems&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category isinherited="true" name="Metadata"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="DocumentPageTitle" columntype="longtext" external="true" guid="457e80f8-6891-4e23-bae0-afcd3dc4c03e" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageDescription" columntype="longtext" external="true" guid="8dae06e2-1df2-452a-b584-1af099b56585" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageKeyWords" columntype="longtext" external="true" guid="97a159da-2dc2-40a0-9590-66f047a059aa" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;explanationtext&gt;(separated by comma)&lt;/explanationtext&gt;&lt;fieldcaption&gt;Keywords&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category isinherited="true" name="OpenGraph"&gt;&lt;properties&gt;&lt;caption&gt;Open Graph&lt;/caption&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="OpenGraphTitle" columnsize="200" columntype="text" guid="931db176-c488-4eae-a1b4-58d64d4e872a" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphDescription" columnsize="500" columntype="text" guid="4cbfb6f5-3a17-4c8d-8090-8904a0e35648" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphImage" columnsize="500" columntype="text" guid="c7d59aa2-2c73-49cf-86b8-20edebcab4a2" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphVideo" columnsize="500" columntype="text" guid="5c9e7a9a-1a76-4b5d-bdc9-e72e01ccfffc" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Video&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>BlogTemplate_HomeNode</ClassTableName>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassLastModified>2020-05-18T16:25:44.0713757-04:00</ClassLastModified>
+      <ClassGUID>17f8cbb8-290b-4d04-b8b5-50604646aa32</ClassGUID>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="4f81a76d-46fe-44a2-a579-66448478e6c7" name="HomeNodeID" searchable="True" tokenized="False" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassInheritsFromClassID>5504</ClassInheritsFromClassID>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassVersionGUID>b5bd7d69-60cf-4ca9-a675-3eacf3a17445</ClassVersionGUID>
+      <ClassIsForm>false</ClassIsForm>
+      <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
+      <ClassIconClass>icon-home</ClassIconClass>
+      <ClassUsesPageBuilder>false</ClassUsesPageBuilder>
+      <ClassIsNavigationItem>false</ClassIsNavigationItem>
+      <ClassHasURL>false</ClassHasURL>
+      <ClassHasMetadata>false</ClassHasMetadata>
+    </cms_class>
+    <cms_class>
+      <ClassID>5506</ClassID>
+      <ClassDisplayName>* Article</ClassDisplayName>
+      <ClassName>BlogTemplate.ArticleNode</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="BlogTemplate_ArticleNode"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="ArticleNodeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="Summary" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="AuthorGuid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" /&gt;
+              &lt;xs:element name="HeroImage" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="1000" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Content" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphTitle" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphDescription" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphImage" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphVideo" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//BlogTemplate_ArticleNode" /&gt;
+      &lt;xs:field xpath="ArticleNodeID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="ArticleNodeID" columntype="integer" guid="77c33d49-4637-4403-84ad-7cd7f32b15e4" isPK="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;ArticleNodeID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DocumentName" columnsize="100" columntype="text" external="true" guid="15d630eb-2a4d-4fd9-b328-c417357b58e7" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="Summary" columnsize="200" columntype="text" guid="4cc7f496-271b-4ef7-adbf-558d5db685f3" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Summary&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="AuthorGuid" columntype="guid" guid="dc37ba0d-189d-40ec-bdfe-d09520a6ad63" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Author&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;BlogTemplate.AuthorDropdownControl&lt;/controlname&gt;&lt;DisplayActualValueAsItem&gt;False&lt;/DisplayActualValueAsItem&gt;&lt;EditText&gt;False&lt;/EditText&gt;&lt;Query&gt;SELECT NULL, 'Select an author...'
+
+UNION (
+  SELECT DocumentGUID, DocumentName FROM
+    View_CMS_Tree_Joined WHERE ClassName = 'BlogTemplate.AuthorNode' AND NodeLinkedNodeID IS NULL
+)&lt;/Query&gt;&lt;SortItems&gt;False&lt;/SortItems&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="HeroImage" columnsize="1000" columntype="text" guid="903add98-7bf7-43e3-a6dd-d1afcc269100" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Hero Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="Content" columntype="longtext" guid="57f620ad-7a2d-4305-8b36-c15bc9a0f3c3" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Content&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;HtmlAreaControl&lt;/controlname&gt;&lt;Dialogs_Content_Hide&gt;False&lt;/Dialogs_Content_Hide&gt;&lt;HeightUnitType&gt;PX&lt;/HeightUnitType&gt;&lt;MediaDialogConfiguration&gt;True&lt;/MediaDialogConfiguration&gt;&lt;ShowAddStampButton&gt;False&lt;/ShowAddStampButton&gt;&lt;WidthUnitType&gt;PX&lt;/WidthUnitType&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category isinherited="true" name="Metadata"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="DocumentPageTitle" columntype="longtext" external="true" guid="457e80f8-6891-4e23-bae0-afcd3dc4c03e" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageDescription" columntype="longtext" external="true" guid="8dae06e2-1df2-452a-b584-1af099b56585" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageKeyWords" columntype="longtext" external="true" guid="97a159da-2dc2-40a0-9590-66f047a059aa" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;explanationtext&gt;(separated by comma)&lt;/explanationtext&gt;&lt;fieldcaption&gt;Keywords&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category isinherited="true" name="OpenGraph"&gt;&lt;properties&gt;&lt;caption&gt;Open Graph&lt;/caption&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="OpenGraphTitle" columnsize="200" columntype="text" guid="931db176-c488-4eae-a1b4-58d64d4e872a" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphDescription" columnsize="500" columntype="text" guid="4cbfb6f5-3a17-4c8d-8090-8904a0e35648" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphImage" columnsize="500" columntype="text" guid="c7d59aa2-2c73-49cf-86b8-20edebcab4a2" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphVideo" columnsize="500" columntype="text" guid="5c9e7a9a-1a76-4b5d-bdc9-e72e01ccfffc" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Video&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>BlogTemplate_ArticleNode</ClassTableName>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassLastModified>2020-06-23T02:34:36.432087-04:00</ClassLastModified>
+      <ClassGUID>680231ed-fb3b-4f43-945e-864fe3f38c2d</ClassGUID>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="0cd4663b-277a-4915-a010-cdca08d854f4" name="HeroImage" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="da366a16-3f7a-49ca-81ce-ee2bd4486ee7" name="ArticleNodeID" searchable="True" tokenized="False" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="f5200ea9-a54a-432e-8fc2-0d22fdb23765" name="Content" searchable="False" tokenized="True" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassInheritsFromClassID>5504</ClassInheritsFromClassID>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassVersionGUID>7841618f-eebf-4ad3-9fab-4a318696a860</ClassVersionGUID>
+      <ClassIsForm>false</ClassIsForm>
+      <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
+      <ClassIconClass>icon-l-header-menu-text</ClassIconClass>
+      <ClassUsesPageBuilder>false</ClassUsesPageBuilder>
+      <ClassIsNavigationItem>false</ClassIsNavigationItem>
+      <ClassHasURL>false</ClassHasURL>
+      <ClassHasMetadata>false</ClassHasMetadata>
+    </cms_class>
+    <cms_class>
+      <ClassID>5507</ClassID>
+      <ClassDisplayName>* About</ClassDisplayName>
+      <ClassName>BlogTemplate.AboutNode</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="BlogTemplate_AboutNode"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="AboutNodeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="OpenGraphTitle" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphDescription" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphImage" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphVideo" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//BlogTemplate_AboutNode" /&gt;
+      &lt;xs:field xpath="AboutNodeID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="AboutNodeID" columntype="integer" guid="9fed3869-b78f-4cde-b059-0cef3f0dd2a6" isPK="true" isunique="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;AboutNodeID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DocumentName" columnsize="100" columntype="text" external="true" guid="15d630eb-2a4d-4fd9-b328-c417357b58e7" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category isinherited="true" name="Metadata"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="DocumentPageTitle" columntype="longtext" external="true" guid="457e80f8-6891-4e23-bae0-afcd3dc4c03e" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageDescription" columntype="longtext" external="true" guid="8dae06e2-1df2-452a-b584-1af099b56585" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageKeyWords" columntype="longtext" external="true" guid="97a159da-2dc2-40a0-9590-66f047a059aa" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;explanationtext&gt;(separated by comma)&lt;/explanationtext&gt;&lt;fieldcaption&gt;Keywords&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category isinherited="true" name="OpenGraph"&gt;&lt;properties&gt;&lt;caption&gt;Open Graph&lt;/caption&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="OpenGraphTitle" columnsize="200" columntype="text" guid="931db176-c488-4eae-a1b4-58d64d4e872a" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphDescription" columnsize="500" columntype="text" guid="4cbfb6f5-3a17-4c8d-8090-8904a0e35648" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphImage" columnsize="500" columntype="text" guid="c7d59aa2-2c73-49cf-86b8-20edebcab4a2" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphVideo" columnsize="500" columntype="text" guid="5c9e7a9a-1a76-4b5d-bdc9-e72e01ccfffc" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Video&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>BlogTemplate_AboutNode</ClassTableName>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassLastModified>2020-07-23T11:26:16.3626721-04:00</ClassLastModified>
+      <ClassGUID>edc4092e-2033-4a50-970e-c0892b3c9f65</ClassGUID>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="85964c91-f348-4306-be82-39b2c7106888" name="AboutNodeID" searchable="True" tokenized="False" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassInheritsFromClassID>5504</ClassInheritsFromClassID>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassVersionGUID>187f12c0-7eb3-4a3e-bf87-4ea10478acab</ClassVersionGUID>
+      <ClassIsForm>false</ClassIsForm>
+      <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
+      <ClassIconClass>icon-i-circle</ClassIconClass>
+      <ClassURLPattern>/about</ClassURLPattern>
+      <ClassUsesPageBuilder>true</ClassUsesPageBuilder>
+      <ClassIsNavigationItem>false</ClassIsNavigationItem>
+      <ClassHasURL>true</ClassHasURL>
+      <ClassHasMetadata>false</ClassHasMetadata>
+    </cms_class>
+    <cms_class>
+      <ClassID>5508</ClassID>
+      <ClassDisplayName>* Author</ClassDisplayName>
+      <ClassName>BlogTemplate.AuthorNode</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="BlogTemplate_AuthorNode"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="AuthorNodeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="Image" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Description" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="1000" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="TwitterUrl" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="FacebookUrl" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="GitHubUrl" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphTitle" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphDescription" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphImage" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="OpenGraphVideo" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="500" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//BlogTemplate_AuthorNode" /&gt;
+      &lt;xs:field xpath="AuthorNodeID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="AuthorNodeID" columntype="integer" guid="f02decd6-0663-425d-8a36-834fefbfc1dc" isPK="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;AuthorNodeID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DocumentName" columnsize="100" columntype="text" external="true" guid="15d630eb-2a4d-4fd9-b328-c417357b58e7" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="Image" columnsize="500" columntype="text" guid="93ed7019-bffc-4275-a2a9-0feb64f759dd" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="Description" columnsize="1000" columntype="text" guid="30dc1216-9ff0-4544-81ba-1f9e5adef79a" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Social"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="TwitterUrl" columnsize="200" columntype="text" guid="63c941f5-d974-4b86-98ce-1f1cbb271324" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Twitter&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;rules&gt;&lt;rule errormsg="Please enter a valid twitter URL."&gt;{%Rule("(Value.Matches(\"http(?:s)?:\\\\/\\\\/(?:www\\\\.)?twitter\\\\.com\\\\/([a-zA-Z0-9_]+)\"))", "&amp;lt;rules&amp;gt;&amp;lt;r pos=\"0\" par=\"\" op=\"and\" n=\"RegExp\" &amp;gt;&amp;lt;p n=\"regexp\"&amp;gt;&amp;lt;t&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?twitter\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/t&amp;gt;&amp;lt;v&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?twitter\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/v&amp;gt;&amp;lt;r&amp;gt;0&amp;lt;/r&amp;gt;&amp;lt;d&amp;gt;&amp;lt;/d&amp;gt;&amp;lt;vt&amp;gt;text&amp;lt;/vt&amp;gt;&amp;lt;tv&amp;gt;0&amp;lt;/tv&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/r&amp;gt;&amp;lt;/rules&amp;gt;")|(identity)GlobalAdministrator|(hash)7f3af502055d916fcbd890249aafb4905f2deca2fd87022055f1915d1ee9c34a%}&lt;/rule&gt;&lt;/rules&gt;&lt;/field&gt;&lt;field allowempty="true" column="FacebookUrl" columnsize="200" columntype="text" guid="98ca646a-d0e1-4180-bea4-b1eeb0ef3db3" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Facebook&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;rules&gt;&lt;rule errormsg="Please enter a valid Facebook URL."&gt;{%Rule("(Value.Matches(\"http(?:s)?:\\\\/\\\\/(?:www\\\\.)?facebook\\\\.com\\\\/([a-zA-Z0-9_]+)\"))", "&amp;lt;rules&amp;gt;&amp;lt;r pos=\"0\" par=\"\" op=\"and\" n=\"RegExp\" &amp;gt;&amp;lt;p n=\"regexp\"&amp;gt;&amp;lt;t&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?facebook\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/t&amp;gt;&amp;lt;v&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?facebook\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/v&amp;gt;&amp;lt;r&amp;gt;0&amp;lt;/r&amp;gt;&amp;lt;d&amp;gt;&amp;lt;/d&amp;gt;&amp;lt;vt&amp;gt;text&amp;lt;/vt&amp;gt;&amp;lt;tv&amp;gt;0&amp;lt;/tv&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/r&amp;gt;&amp;lt;/rules&amp;gt;")|(identity)GlobalAdministrator|(hash)8d9b76fec8286add6e44dc842ad20d45c163e6cd8a88e3b42144a970fa5d1089%}&lt;/rule&gt;&lt;/rules&gt;&lt;/field&gt;&lt;field allowempty="true" column="GitHubUrl" columnsize="200" columntype="text" guid="a00c79e7-5492-4a4c-84b1-4c11d0c667a6" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;GitHub&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;rules&gt;&lt;rule errormsg="Please enter a valid GitHub URL."&gt;{%Rule("(Value.Matches(\"http(?:s)?:\\\\/\\\\/(?:www\\\\.)?github\\\\.com\\\\/([a-zA-Z0-9_]+)\"))", "&amp;lt;rules&amp;gt;&amp;lt;r pos=\"0\" par=\"\" op=\"and\" n=\"RegExp\" &amp;gt;&amp;lt;p n=\"regexp\"&amp;gt;&amp;lt;t&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?github\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/t&amp;gt;&amp;lt;v&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?github\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/v&amp;gt;&amp;lt;r&amp;gt;0&amp;lt;/r&amp;gt;&amp;lt;d&amp;gt;&amp;lt;/d&amp;gt;&amp;lt;vt&amp;gt;text&amp;lt;/vt&amp;gt;&amp;lt;tv&amp;gt;0&amp;lt;/tv&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/r&amp;gt;&amp;lt;/rules&amp;gt;")|(identity)GlobalAdministrator|(hash)7b5a658684a2a7ee52ec54592e93fc2e30e87b7a01c63b514049d2ca2cb784f9%}&lt;/rule&gt;&lt;/rules&gt;&lt;/field&gt;&lt;category isinherited="true" name="Metadata"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="DocumentPageTitle" columntype="longtext" external="true" guid="457e80f8-6891-4e23-bae0-afcd3dc4c03e" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageDescription" columntype="longtext" external="true" guid="8dae06e2-1df2-452a-b584-1af099b56585" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageKeyWords" columntype="longtext" external="true" guid="97a159da-2dc2-40a0-9590-66f047a059aa" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;explanationtext&gt;(separated by comma)&lt;/explanationtext&gt;&lt;fieldcaption&gt;Keywords&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category isinherited="true" name="OpenGraph"&gt;&lt;properties&gt;&lt;caption&gt;Open Graph&lt;/caption&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="OpenGraphTitle" columnsize="200" columntype="text" guid="931db176-c488-4eae-a1b4-58d64d4e872a" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphDescription" columnsize="500" columntype="text" guid="4cbfb6f5-3a17-4c8d-8090-8904a0e35648" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphImage" columnsize="500" columntype="text" guid="c7d59aa2-2c73-49cf-86b8-20edebcab4a2" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphVideo" columnsize="500" columntype="text" guid="5c9e7a9a-1a76-4b5d-bdc9-e72e01ccfffc" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Video&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassNodeNameSource>DocumentName</ClassNodeNameSource>
+      <ClassTableName>BlogTemplate_AuthorNode</ClassTableName>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassLastModified>2020-05-15T13:38:22.4368129-04:00</ClassLastModified>
+      <ClassGUID>23c33949-95cc-4c9c-ba55-f35b22dbbfdf</ClassGUID>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="34c455ed-6a4e-4eb3-8fd6-b8916aeec3ef" name="OpenGraphImage" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="379653d6-7402-4868-9e7c-1eb65db5c831" name="Description" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="3fc64cb0-b201-4180-9fb3-f0bde37eb92b" name="Image" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="4cb07dd7-10e3-40ae-a5c8-08f88318efdd" name="OpenGraphVideo" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="7317f633-2cea-4e4f-8de1-d303c4285161" name="OpenGraphDescription" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="9255d404-a491-4ae9-8a88-ceccf75ffb58" name="AuthorNodeID" searchable="True" tokenized="False" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="ad30df81-2e6b-4f70-bde5-d088301e7d38" name="GitHubUrl" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="dd2b243e-a62c-426e-bd48-f8d2fe24c5fa" name="TwitterUrl" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="efedf4b3-d678-4051-8b59-fee818e47c17" name="FacebookUrl" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="f6c48b0b-58f7-492f-b3ae-7070634018cd" name="OpenGraphTitle" searchable="False" tokenized="True" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassInheritsFromClassID>5504</ClassInheritsFromClassID>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassVersionGUID>79fa17a7-8199-4ed7-b6b3-f8014ce08ca0</ClassVersionGUID>
+      <ClassIsForm>false</ClassIsForm>
+      <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
+      <ClassIconClass>icon-user-frame</ClassIconClass>
+      <ClassUsesPageBuilder>false</ClassUsesPageBuilder>
+      <ClassIsNavigationItem>false</ClassIsNavigationItem>
+      <ClassHasURL>true</ClassHasURL>
+      <ClassHasMetadata>false</ClassHasMetadata>
+    </cms_class>
+    <cms_permission>
+      <PermissionID>15792</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>5505</ClassID>
+      <PermissionGUID>f08bb642-bf95-41e3-bf15-01121bbf95a1</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:23:10.3152589-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15816</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>5508</ClassID>
+      <PermissionGUID>d50375a1-fe62-48c3-9a78-05246a0e9985</PermissionGUID>
+      <PermissionLastModified>2020-05-11T15:10:47.8030397-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15800</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>5506</ClassID>
+      <PermissionGUID>1106210f-2f45-49e8-98a2-0905813ba53b</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:28:13.6060627-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15801</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>5506</ClassID>
+      <PermissionGUID>063a3345-f661-4199-ab24-0a27572007be</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:28:13.6225108-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15784</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>5504</ClassID>
+      <PermissionGUID>ca7df944-d14d-4f2e-a609-0e333292a2d9</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:14:34.0265957-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15802</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>5506</ClassID>
+      <PermissionGUID>6f0ada50-3676-4a41-9ea2-17a10f65f755</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:28:13.6189321-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15817</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>5508</ClassID>
+      <PermissionGUID>b6eebdce-15ee-4248-88d8-1c254bceb632</PermissionGUID>
+      <PermissionLastModified>2020-05-11T15:10:47.8063158-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15803</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>5506</ClassID>
+      <PermissionGUID>b13c2083-3dad-459e-b7cd-35893288d148</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:28:13.6263101-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15785</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>5504</ClassID>
+      <PermissionGUID>80f86815-6815-44ad-af9f-3af63f858fef</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:14:34.0389961-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15808</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>5507</ClassID>
+      <PermissionGUID>cb058dde-2db4-4571-b55b-47d2e594c6b6</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:46:44.3190491-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15809</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>5507</ClassID>
+      <PermissionGUID>19422873-4634-4db8-8f43-485f472d8f38</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:46:44.3227214-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15804</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>5506</ClassID>
+      <PermissionGUID>d67f762e-8d7e-4354-8154-4bbecbd249f0</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:28:13.6154592-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15805</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>5506</ClassID>
+      <PermissionGUID>b855374a-9cc6-4f86-b8a3-5446407315fe</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:28:13.6095377-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15786</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>5504</ClassID>
+      <PermissionGUID>c5162224-865e-4145-ad92-54edc239bdff</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:14:34.0469553-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15806</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>5506</ClassID>
+      <PermissionGUID>af95873a-0f21-4486-a85d-59f3f8a5e7d6</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:28:13.6125142-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15787</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>5504</ClassID>
+      <PermissionGUID>1f58c17e-e62c-4e2c-8003-5a82d5292282</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:14:34.0300675-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15818</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>5508</ClassID>
+      <PermissionGUID>4f5291ee-d436-4e81-bd68-5c77acf9dd0d</PermissionGUID>
+      <PermissionLastModified>2020-05-11T15:10:47.7672874-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15819</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>5508</ClassID>
+      <PermissionGUID>bd076a68-0d24-4ab5-ac45-5e65da4d2dce</PermissionGUID>
+      <PermissionLastModified>2020-05-11T15:10:47.8132596-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15810</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>5507</ClassID>
+      <PermissionGUID>40c50a03-98fd-4741-ae43-6c51a64fc31e</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:46:44.3011932-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15793</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>5505</ClassID>
+      <PermissionGUID>acb5d580-3959-46ef-a646-7d700f1583cb</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:23:10.3360915-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15788</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>5504</ClassID>
+      <PermissionGUID>fb601791-03ed-40a3-8ecb-87d63f268e00</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:14:34.0355238-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15789</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>5504</ClassID>
+      <PermissionGUID>fb74872c-cea0-4ddc-82f4-8b9567722e95</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:14:34.0424677-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15794</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>5505</ClassID>
+      <PermissionGUID>9c3e3c36-fb9e-4056-afe2-8bc22b61fa6f</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:23:10.32466-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15795</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>5505</ClassID>
+      <PermissionGUID>d60a1798-2d4d-4fb2-8386-8c4cbe45ed0a</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:23:10.3321001-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15796</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>5505</ClassID>
+      <PermissionGUID>a67d40cb-c82c-40ae-95e3-90318551810f</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:23:10.3092076-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15811</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>5507</ClassID>
+      <PermissionGUID>8a15ca2f-3e90-4240-a0cd-987a1e65096a</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:46:44.3096254-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15797</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>5505</ClassID>
+      <PermissionGUID>d3fb33bf-7a89-4900-8bbb-9d79fb33c1ae</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:23:10.3187069-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15807</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>5506</ClassID>
+      <PermissionGUID>42d3904b-1912-4d69-9e9a-a7f595ed5576</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:28:13.5997054-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15820</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>5508</ClassID>
+      <PermissionGUID>65478d50-45a9-4d19-8a96-aac80d82082c</PermissionGUID>
+      <PermissionLastModified>2020-05-11T15:10:47.7937975-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15812</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>5507</ClassID>
+      <PermissionGUID>11102eae-5208-417e-ab48-aed13b548dac</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:46:44.3165692-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15798</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>5505</ClassID>
+      <PermissionGUID>5e905bde-290f-40ff-965e-b5a8ef196d3f</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:23:10.3217069-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15790</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>5504</ClassID>
+      <PermissionGUID>1904b567-08c9-4fe6-97e1-b9b385e6dc7c</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:14:34.0325483-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15821</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>5508</ClassID>
+      <PermissionGUID>c65bc7e6-a78c-40fa-864a-c6c3b854f551</PermissionGUID>
+      <PermissionLastModified>2020-05-11T15:10:47.8000691-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15822</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>5508</ClassID>
+      <PermissionGUID>67059efd-c7ab-4a3b-9d8d-de4ab735e8ca</PermissionGUID>
+      <PermissionLastModified>2020-05-11T15:10:47.8097876-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15813</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>5507</ClassID>
+      <PermissionGUID>521789a8-d31f-49ac-93dd-df52af3cf85b</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:46:44.3130967-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15791</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>5504</ClassID>
+      <PermissionGUID>14ad9c8e-9342-4226-bc99-f147cef76968</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:14:34.0136973-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15823</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>5508</ClassID>
+      <PermissionGUID>76a14250-07da-421a-82ae-f72f6f1b5c20</PermissionGUID>
+      <PermissionLastModified>2020-05-11T15:10:47.7974084-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15814</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>5507</ClassID>
+      <PermissionGUID>82b32ecd-3bba-4770-a8b6-f92e4617fa87</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:46:44.3301622-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15815</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>5507</ClassID>
+      <PermissionGUID>9e4db9c8-2d81-4bc0-a8b7-ff23b4f703cf</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:46:44.3261674-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15799</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>5505</ClassID>
+      <PermissionGUID>52b7ef80-74d4-46e6-a0cf-ffbe7cc6d0b0</PermissionGUID>
+      <PermissionLastModified>2020-05-04T16:23:10.3286308-04:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_allowedchildclasses>
+      <ParentClassID>1095</ParentClassID>
+      <ChildClassID>5505</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>5383</ParentClassID>
+      <ChildClassID>5506</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>1095</ParentClassID>
+      <ChildClassID>5507</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>1095</ParentClassID>
+      <ChildClassID>5508</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>5383</ParentClassID>
+      <ChildClassID>5508</ChildClassID>
+    </cms_allowedchildclasses>
+  </NewDataSet>
+</cms_documenttype>

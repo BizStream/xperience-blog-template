@@ -1,0 +1,1 @@
+Compress-Archive -Path .\data\page-types-export\Data -DestinationPath data\page-types.zip

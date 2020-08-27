@@ -1,0 +1,26 @@
+﻿/// List to String (like JS's `join`)
+/// Converts Sass list to string using `$glue` separator.
+/// @param {list} $list
+/// @param {string} $glue [''] - What join list items with (ex `,`)
+/// @param {bool} $is-nested [false]
+/// @return {string}
+/// @link http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/ Source
+@function to-string($list, $glue: "", $is-nested: false) {
+  $result: null;
+
+  @for $i from 1 through length($list) {
+    $e: nth($list, $i);
+
+    @if type-of($e) == list {
+      $result: $result#{to-string($e, $glue, true)};
+    } @else {
+      $result: if(
+        $i != length($list) or $is-nested,
+        $result#{$e}#{$glue},
+        $result#{$e}
+      );
+    }
+  }
+
+  @return $result;
+}

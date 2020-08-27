@@ -1,0 +1,23 @@
+﻿@import "../utilities/_to-string.scss";
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+  line-height: $size;
+}
+
+/// Import Google Font
+/// @param {list} $variants - Font Weight and Style variants (i.e. `("300", "400", "400i")`) - `i` = italic
+/// @param {string} $family - Font Family with spaces as `+` (i.e. `Source+Sans+Pro`)
+/// @output `@import()` statement
+/// @example scss
+///   @include google-font($variants: ("300", "400", "400i", "700"), $family: "Source+Sans+Pro");
+///   // would output `@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700");`
+@mixin google-font($variants, $family) {
+  @import url('//fonts.googleapis.com/css?family=#{$family}:#{to-string($variants, ",")}');
+}

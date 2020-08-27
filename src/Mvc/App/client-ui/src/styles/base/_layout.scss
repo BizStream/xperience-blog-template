@@ -1,0 +1,30 @@
+html,
+body {
+  background-color: #f4f4f4;
+  color: #363636;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  &.unloading {
+    animation: fadeOut 0.45s;
+  }
+}
+
+main {
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 8px;
+  padding-top: 32px;
+}
+
+.column-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+  .column {
+    max-width: 50%;
+  }
+}

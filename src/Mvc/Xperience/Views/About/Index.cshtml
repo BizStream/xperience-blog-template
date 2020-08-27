@@ -1,0 +1,14 @@
+@{ ViewBag.ContainerClassName = "about"; }
+@section head 
+{
+    @Html.Kentico().PageBuilderStyles()
+}
+
+test
+
+@await Html.Kentico().EditableAreaAsync( "area1" )
+
+@section scripts
+{
+    @Html.Kentico().PageBuilderScripts()
+}

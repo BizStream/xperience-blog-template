@@ -1,0 +1,55 @@
+{
+  "name": "Xperience Blog",
+  "identity": "BizStream.Templates.Xperience.Blog",
+  "groupIdentity": "BizStream.Templates",
+  "shortName": "bzs-xp-blog",
+  "author": "BizStream",
+  "classifications": [
+    "Web",
+    "MVC",
+    "Solution",
+    "Custom Templates"
+  ],
+  "tags": {
+    "language": "C#"
+  },
+  "sourceName": "BlogTemplate",
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "**/.git/**",
+            ".template.config/**/*",
+            ".vs/**/*",
+            "packages/**/*",
+            "CMS/**/*",
+            "Lib/**/*",
+            "GlobalAssemblyInfo.cs",
+            "README.md",
+            "src/Mvc/Mvc/appsettings.Development.json"
+          ],
+          "include": [
+            "CMS/RegisterModules.cs"
+          ]
+        }
+      ]
+    }
+  ],
+  "postActions": [
+    {
+      "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+      "args": {
+        "executable": "pwsh",
+        "args": "tools/create-object-archive.ps1"
+      },
+      "manualInstructions": [
+        {
+          "text": "Run 'tools/create-object-archive.ps1'"
+        }
+      ],
+      "continueOnError": false,
+      "description ": "Creates an Object Archive for importing Object Types into Kentico."
+    }
+  ]
+}

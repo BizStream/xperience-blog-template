@@ -1,0 +1,19 @@
+﻿@model MetaData
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+@if( !string.IsNullOrWhiteSpace( Model?.Title ) )
+{
+    <meta name="title" content="@Model.Title" />
+}
+
+@if( !string.IsNullOrWhiteSpace( Model?.Description ) )
+{
+    <meta name="description" content="@Model.Description" />
+}
+
+@if( Model?.Keywords?.Any() == true )
+{
+    <meta name="keywords" content="@string.Join( ',', Model.Keywords )" />
+}

@@ -1,0 +1,38 @@
+﻿@import "../components/author.scss";
+@import "../mixins/_font";
+
+.home {
+  .title {
+    font-weight: 900;
+    padding-bottom: 32px;
+  }
+
+  .author {
+    padding-left: 12px;
+  }
+
+  .article-listing {
+    padding: 8px;
+
+    .article-item {
+      margin: 24px 0;
+
+      .article-title {
+        text-decoration: none;
+
+        h3 {
+          display: inline-block;
+        }
+      }
+
+      .article-published-at {
+        @include font-size(14px);
+
+        &::before {
+          content: "\2022";
+          margin: 0px 8px;
+        }
+      }
+    }
+  }
+}

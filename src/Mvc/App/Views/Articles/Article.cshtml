@@ -1,0 +1,40 @@
+﻿@model ArticleViewModel
+
+@{ ViewBag.ContainerClassName = "article"; }
+
+@section head {
+    <environment names="Development">
+        <link href="https://localhost:10001/article.min.css" rel="stylesheet" />
+    </environment>
+    <environment names="Production">
+        <link href="/article.min.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+}
+
+<h1>@Model.Title</h1>
+
+<span class="article-published-at" title="Published:">
+    @Model.PublishedAt.ToShortDateString()
+    @if( Model.ModifiedAt != DateTime.MinValue && Model.ModifiedAt != Model.PublishedAt )
+    {
+        <span class="article-updated-at" title="Last edited:">@Model.ModifiedAt.ToShortDateString()</span>
+    }
+</span>
+
+@if( Model.HeroImageUrl != null )
+{
+    <img class="article-hero" src="@Model.HeroImageUrl" />
+}
+
+<section class="article-content">@Html.Raw( Model.Content )</section>
+
+@section scripts {
+    <environment names="Development">
+        <script src="https://localhost:10001/article.min.js"></script>
+    </environment>
+    <environment names="Production">
+        <script src="/article.min.js" asp-append-version="true"></script>
+    </environment>
+}
+
+@await Component.InvokeAsync( "Author", new { authorGuid = Model.AuthorGuid } )

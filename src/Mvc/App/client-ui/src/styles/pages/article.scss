@@ -1,0 +1,25 @@
+@import "../components/author.scss";
+@import "../mixins/_font";
+
+.article {
+  .article-content {
+    line-height: 1.175em;
+    padding: 12px 0px;
+  }
+
+  .article-hero {
+    border-radius: 3px;
+    display: block;
+    margin: 10px auto;
+    max-height: 500px;
+  }
+
+  .article-published-at {
+    @include font-size(14px);
+
+    .article-updated-at::before {
+      content: "\2022";
+      margin: 0px 8px;
+    }
+  }
+}

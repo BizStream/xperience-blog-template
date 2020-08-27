@@ -1,0 +1,12 @@
+@model ComponentViewModel<TextWidgetProperties>
+
+@using(
+    Html.Kentico().BeginInlineEditor( 
+        "text-editor",
+        nameof( Model.Properties.Content ),
+        new {  @class = "text-editor" } 
+    ) 
+)
+{
+    @Html.Raw( Model.Properties.Content )
+}

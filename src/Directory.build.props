@@ -1,0 +1,41 @@
+<Project>
+
+    <!-- Some setting we won't want to apply to the CMSApp, so define a property for conditions to reference. -->
+    <PropertyGroup Condition=" '$(MSBuildProjectName)' == 'CMSApp' ">
+        <IsCmsApp>true</IsCmsApp>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <!-- Create a property to easily reference the root of the `src` folder -->
+        <SourceRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</SourceRoot>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" $(IsCmsApp) != 'true' ">
+        <!-- Disable legacy analyzers, and enable roslyn analyzers with the default ruleset -->
+        <RunCodeAnalysis>false</RunCodeAnalysis>
+        <RunAnalyzers>true</RunAnalyzers>
+        <CodeAnalysisRuleSet>$(SourceRoot)\default.ruleset</CodeAnalysisRuleSet>
+
+        <LangVersion>latest</LangVersion>
+        <TargetFramework>netstandard2.0</TargetFramework>
+
+        <!--
+            Define a property for the version of Kentico.
+      
+            This makes upgrading Kentico a bit easier, if you're using the property when referencing the `Kentico.Libraries` NuGet package:
+            <PackageReference Include="Kentico.Libraries" Version="$(TargetKenticoVersion)" />
+
+            If ^this is how you're referencing the nuget package, during an upgrade, simply update the value below to update the package reference across all projects in the solution.
+        -->
+        <TargetKenticoVersion>13.0.0-b7472.17674</TargetKenticoVersion>
+
+        <IncludeKenticoReferences>false</IncludeKenticoReferences>
+        <IncludeKenticoTestReferences>false</IncludeKenticoTestReferences>
+        <IncludeKenticoWebReferences>false</IncludeKenticoWebReferences>
+    </PropertyGroup>
+
+    <!-- <PropertyGroup>
+        <RestoreSources>$(RestoreSources);$(SourceRoot)/../packages;https://api.nuget.org/v3/index.json</RestoreSources>
+    </PropertyGroup> -->
+
+</Project>
