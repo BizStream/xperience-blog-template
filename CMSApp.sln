@@ -4,8 +4,6 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSApp", "CMS\CMSApp.csproj", "{BB8817AE-48DF-4672-A1CB-CFB7441B88DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Infrastructure.Xperience.CMSIntegration", "src\Infrastructure\Xperience\CMSIntegration\BlogTemplate.Infrastructure.Xperience.CMSIntegration.csproj", "{9D7EF530-1A1B-47CD-BEDC-5F5EB080AE68}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{815A17C8-7DA8-401E-B2BF-2DC7562D5A7B}"
 	ProjectSection(SolutionItems) = preProject
 		src\Directory.build.props = src\Directory.build.props
@@ -15,6 +13,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1B22056A-1F9B-4BD0-9B80-B7EDABC12B96}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xperience", "Xperience", "{073EBB20-139C-442F-AA1C-71013805838A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{9FA51880-267B-4F06-BB9D-F668A72C6F1A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage", "src\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage.csproj", "{714CDBF6-113E-4DCB-ACA9-73BF8F567AAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,18 +28,19 @@ Global
 		{BB8817AE-48DF-4672-A1CB-CFB7441B88DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB8817AE-48DF-4672-A1CB-CFB7441B88DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB8817AE-48DF-4672-A1CB-CFB7441B88DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D7EF530-1A1B-47CD-BEDC-5F5EB080AE68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D7EF530-1A1B-47CD-BEDC-5F5EB080AE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D7EF530-1A1B-47CD-BEDC-5F5EB080AE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D7EF530-1A1B-47CD-BEDC-5F5EB080AE68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{714CDBF6-113E-4DCB-ACA9-73BF8F567AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{714CDBF6-113E-4DCB-ACA9-73BF8F567AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{714CDBF6-113E-4DCB-ACA9-73BF8F567AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{714CDBF6-113E-4DCB-ACA9-73BF8F567AAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9D7EF530-1A1B-47CD-BEDC-5F5EB080AE68} = {073EBB20-139C-442F-AA1C-71013805838A}
 		{1B22056A-1F9B-4BD0-9B80-B7EDABC12B96} = {815A17C8-7DA8-401E-B2BF-2DC7562D5A7B}
 		{073EBB20-139C-442F-AA1C-71013805838A} = {1B22056A-1F9B-4BD0-9B80-B7EDABC12B96}
+		{9FA51880-267B-4F06-BB9D-F668A72C6F1A} = {073EBB20-139C-442F-AA1C-71013805838A}
+		{714CDBF6-113E-4DCB-ACA9-73BF8F567AAC} = {9FA51880-267B-4F06-BB9D-F668A72C6F1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66CE6D2A-A7B0-47D0-9DF9-843D4D6B39EF}

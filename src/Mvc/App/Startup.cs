@@ -1,8 +1,8 @@
 using System.Reflection;
 using BlogTemplate.Infrastructure.Extensions;
-using BlogTemplate.Infrastructure.Xperience.Retrievers;
+using BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers;
 using BlogTemplate.Mvc.App.Extensions;
-using BlogTemplate.Mvc.Xperience.Controllers;
+using BlogTemplate.Mvc.Kentico.Xperience.Controllers;
 using CMS.SiteProvider;
 using Kentico.Content.Web.Mvc;
 using Kentico.PageBuilder.Web.Mvc;

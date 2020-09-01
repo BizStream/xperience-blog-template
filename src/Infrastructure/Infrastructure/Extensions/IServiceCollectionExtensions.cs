@@ -1,8 +1,8 @@
 ﻿using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
-using BlogTemplate.Infrastructure.Xperience.Abstractions.Retrievers;
-using BlogTemplate.Infrastructure.Xperience.Retrievers;
-using BlogTemplate.Infrastructure.Xperience.Services;
+using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.Retrievers;
+using BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers;
+using BlogTemplate.Infrastructure.Kentico.Xperience.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BlogTemplate.Infrastructure.Extensions

@@ -14,7 +14,7 @@ namespace BlogTemplate.Mvc.App.Extensions
     public static class IServiceCollectionExtensions
     {
         #region Fields
-        private static readonly Assembly KenticoMappingsAssembly = typeof( Infrastructure.Xperience.Mappings.ArticleMappingProfile ).Assembly;
+        private static readonly Assembly KenticoMappingsAssembly = typeof( Infrastructure.Kentico.Xperience.Mappings.ArticleMappingProfile ).Assembly;
         private static readonly Assembly MvcMappingsAssembly = typeof( Mvc.App.Mappings.HomeMappingProfile ).Assembly;
         #endregion
 

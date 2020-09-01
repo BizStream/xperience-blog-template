@@ -1,16 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <IncludeKenticoReferences>true</IncludeKenticoReferences>
         <Version>1.0.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.6" />
+        <PackageReference Include="AutoMapper" Version="9.0.0" />
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="$(SourceRoot)\Infrastructure\Abstractions\BlogTemplate.Infrastructure.Abstractions.csproj" />
-        <ProjectReference Include="$(SourceRoot)\Infrastructure\Kentico\Xperience\Xperience\BlogTemplate.Infrastructure.Kentico.Xperience.csproj" />
+        <ProjectReference Include="$(SourceRoot)\Infrastructure\Kentico\Xperience\Abstractions\BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.csproj" />
     </ItemGroup>
-    
+
 </Project>
