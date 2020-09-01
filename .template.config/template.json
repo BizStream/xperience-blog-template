@@ -23,14 +23,10 @@
             ".template.config/**/*",
             ".vs/**/*",
             "packages/**/*",
-            "CMS/**/*",
             "Lib/**/*",
             "GlobalAssemblyInfo.cs",
             "README.md",
             "src/Mvc/Mvc/appsettings.Development.json"
-          ],
-          "include": [
-            "CMS/RegisterModules.cs"
           ]
         }
       ]
