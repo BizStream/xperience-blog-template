@@ -8,8 +8,11 @@ The following repository contains a .NET Core CLI Template solution, intended to
 
 1. Install the Template
 
-   - Via NuGet: `TODO`
-   - Locally: `dotnet new -i .\xperience-blog-template`
+   - Via NuGet:
+      - TODO: `dotnet new -i BizStream.Templates.Kentico.Xperience.Blog`
+   - Locally:
+     - TODO: `git clone https://github.com/bizstream/xperience-blog-template`
+     - `dotnet new -i .\xperience-blog-template`
 
 2. Using the Kentico Installer, create a starting Kentico Solution.
 
@@ -57,7 +60,7 @@ Projects within the solution are organized in a nested-folder structure, wherein
 - `Core`
 
   The "Core" layer of the solution is intended to define the domain-level abstractions (Domain Model), as well as other "low-level" abstractions/implementations. For example, the project within `Core/Abstractions` (`BlogTemplate.Core.Abstractions`) defines the Domain Models for a blog.
-  
+
   A folder, `Core/Extensions` (`BlogTemplate.Core.Extensions`), could exists that may contain extension methods to Domain Models or System Types (such as `int`, `string`, `DateTime`). Projects within this layer should be light weight, decoupled, and avoid dependencies on specific technologies or platforms outside the solution's Domain or runtime.
 
 - `Infrastructure`
@@ -75,5 +78,3 @@ Projects within the solution are organized in a nested-folder structure, wherein
   The `Mvc/App` (`BlogTemplate.Mvc.App`) scope represents the runnable Mvc Site, and is intended to encapsulate the configuration and startup of the features that compose the Mvc App. Additionally, this scope is intended to contain implementations of Mvc-specific functionality that conforms to the Domain Model. For Mvc-specific functionality that is tightly-coupled to a dependency (tech/platform), it is recommended to create nested scopes to encapsulate the dependency's functionality (e.g. `BlogTemplate.Mvc.Kentico.Xperience`).
 
   The `Mvc/Kentico/Xperience` scope contains Mvc-specific implementations that are tightly coupled to the Kentico Xperience platform. This primarily entails features that utilize Page Builder/Form Builder functionality.
-  
- 

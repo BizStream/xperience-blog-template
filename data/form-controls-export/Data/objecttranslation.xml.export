@@ -1,0 +1,11 @@
+﻿<objecttranslation version="13.0">
+  <NewDataSet>
+    <objecttranslation>
+      <ClassName>cms_formusercontrol</ClassName>
+      <ID>144</ID>
+      <CodeName>DropDownListControl</CodeName>
+      <GUID>aa0326d6-453c-47c5-a67b-de30b8136d91</GUID>
+      <ObjectType>cms.formusercontrol</ObjectType>
+    </objecttranslation>
+  </NewDataSet>
+</objecttranslation>

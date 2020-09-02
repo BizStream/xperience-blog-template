@@ -1,0 +1,37 @@
+﻿<cms_formusercontrol version="13.0">
+  <NewDataSet>
+    <cms_formusercontrol>
+      <UserControlID>715</UserControlID>
+      <UserControlDisplayName>* Author Dropdown</UserControlDisplayName>
+      <UserControlCodeName>BlogTemplate.AuthorDropdownControl</UserControlCodeName>
+      <UserControlFileName></UserControlFileName>
+      <UserControlForText>true</UserControlForText>
+      <UserControlForLongText>false</UserControlForLongText>
+      <UserControlForInteger>false</UserControlForInteger>
+      <UserControlForDecimal>false</UserControlForDecimal>
+      <UserControlForDateTime>false</UserControlForDateTime>
+      <UserControlForBoolean>false</UserControlForBoolean>
+      <UserControlForFile>false</UserControlForFile>
+      <UserControlShowInDocumentTypes>true</UserControlShowInDocumentTypes>
+      <UserControlShowInSystemTables>false</UserControlShowInSystemTables>
+      <UserControlShowInWebParts>false</UserControlShowInWebParts>
+      <UserControlShowInReports>false</UserControlShowInReports>
+      <UserControlGUID>e4a615b6-9f54-4496-ad14-39146816853f</UserControlGUID>
+      <UserControlLastModified>2020-05-18T16:25:59.7384982-04:00</UserControlLastModified>
+      <UserControlForGuid>true</UserControlForGuid>
+      <UserControlShowInCustomTables>true</UserControlShowInCustomTables>
+      <UserControlParameters>&lt;form version="2"&gt;&lt;field column="Options" guid="55450d22-7dc1-4d0e-886a-3d6255ee2f6b" visible="" /&gt;&lt;field column="SortItems" guid="c46bd379-1b80-4f74-a130-8292bbb4abdf" /&gt;&lt;field column="Query" guid="d4f7e110-520a-48d6-9f36-7ee41480fdbc" resolvedefaultvalue="True"&gt;&lt;properties&gt;&lt;defaultvalue&gt;SELECT NULL, 'Select an author...'
+
+UNION (
+  SELECT DocumentGUID, DocumentName FROM
+    View_CMS_Tree_Joined WHERE ClassName = 'BlogTemplate.AuthorNode' AND NodeLinkedNodeID IS NULL
+)&lt;/defaultvalue&gt;&lt;/properties&gt;&lt;/field&gt;&lt;field column="Macro" guid="9680c2e2-7cd0-4568-9d4e-b2ac832f09f0" /&gt;&lt;field column="TextFormat" guid="84a6ee8d-e8b5-48de-9334-50a37e9e8455" /&gt;&lt;field column="ValueFormat" guid="5fa5e843-b1d8-491d-aaeb-c211cef9130f" /&gt;&lt;field column="EditText" guid="1eae05fb-3f05-4f54-847b-cf66a25d410e" /&gt;&lt;field column="OnChangeClientScript" guid="f232a54c-e397-43d4-8ba4-b1010392b65c" /&gt;&lt;field column="DisplayActualValueAsItem" guid="e57015cb-7872-4333-ac30-aa9e7fc29f7b" /&gt;&lt;/form&gt;</UserControlParameters>
+      <UserControlForDocAttachments>false</UserControlForDocAttachments>
+      <UserControlParentID>144</UserControlParentID>
+      <UserControlIsSystem>false</UserControlIsSystem>
+      <UserControlForBinary>false</UserControlForBinary>
+      <UserControlForDocRelationships>false</UserControlForDocRelationships>
+      <UserControlClassName></UserControlClassName>
+    </cms_formusercontrol>
+  </NewDataSet>
+</cms_formusercontrol>
