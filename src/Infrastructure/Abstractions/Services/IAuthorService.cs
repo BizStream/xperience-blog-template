@@ -16,9 +16,6 @@ namespace BlogTemplate.Infrastructure.Abstractions.Services
         /// <summary> Retrieve all <see cref="Author"/>s. </summary>
         IEnumerable<Author> GetAuthors( );
 
-        /// <summary> Retrieve the "featured" <see cref="Author"/>. </summary>
-        // Author GetFeaturedAuthor( );
-
     }
 
 }

@@ -13,6 +13,11 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Resolvers
 
         public DateTime Resolve( TreeNode source, object destination, DateTime destMember, ResolutionContext context )
         {
+            if( source == null )
+            {
+                throw new ArgumentNullException( nameof( source ) );
+            }
+
             var published = source.GetDateTimeValue( SyntheticDocumentFields.PublishedAtDate, source.DocumentPublishFrom );
             return published != DateTime.MinValue
                 ? published

@@ -19,6 +19,11 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Resolvers
 
         public DateTime Resolve( TreeNode source, object destination, DateTime destMember, ResolutionContext context )
         {
+            if( source == null )
+            {
+                throw new ArgumentNullException( nameof( source ) );
+            }
+
             var modified = source.GetDateTimeValue( SyntheticDocumentFields.ModifiedAtDate, source.DocumentModifiedWhen );
             return modified != DateTime.MinValue
                 ? modified

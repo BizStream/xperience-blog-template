@@ -6,7 +6,7 @@ using BlogTemplate.Mvc.App.Mappings.Resolvers;
 namespace BlogTemplate.Mvc.App.Mappings.Extensions
 {
 
-    public static class IMappingExpressionExtensions
+    public static partial class IMappingExpressionExtensions
     {
 
         public static IMappingExpression<TEntity, TViewModel> IncludeMetaData<TEntity, TViewModel>( this IMappingExpression<TEntity, TViewModel> expression )

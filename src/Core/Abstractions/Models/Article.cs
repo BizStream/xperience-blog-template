@@ -2,7 +2,7 @@
 
 namespace BlogTemplate.Core.Abstractions.Models
 {
-    
+
     /// <summary> Represents an instance of marketing content. </summary>
     public class Article : IAuthored
     {

@@ -17,6 +17,11 @@ namespace BlogTemplate.Mvc.App.Mappings.Resolvers
 
         public Uri Resolve( Article article, object destination, Uri destMember, ResolutionContext context )
         {
+            if( article == null )
+            {
+                throw new ArgumentNullException( nameof( article ) );
+            }
+
             var url = linkGenerator.GetPathByAction( "Article", "Articles", new { article.Slug } );
             return new Uri( url, UriKind.Relative );
         }

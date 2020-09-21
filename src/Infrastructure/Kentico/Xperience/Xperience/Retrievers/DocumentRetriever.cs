@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.Retrievers;
 using CMS.DataEngine;
@@ -59,6 +58,11 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers
             where TQuery : IDocumentQuery<TQuery, TNode>, new()
             where TNode : TreeNode, new()
         {
+            if( query == null )
+            {
+                throw new ArgumentNullException( nameof( query ) );
+            }
+
             var publishedColumn = new QueryColumn( "CASE WHEN DocumentPublishFrom IS NOT NULL THEN DocumentPublishFrom ELSE DocumentCreatedWhen END" );
             var modifiedColumn = new QueryColumn( $"CASE WHEN DocumentModifiedWhen IS NOT NULL THEN DocumentModifiedWhen ELSE {publishedColumn} END" );
 
