@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B860E184-6889-41E0-89DA-B664B29509A6}"
 	ProjectSection(SolutionItems) = preProject
+		src\CodeStyleSuppressions.cs = src\CodeStyleSuppressions.cs
+		src\default.ruleset = src\default.ruleset
 		src\Directory.build.props = src\Directory.build.props
 		src\Directory.build.targets = src\Directory.build.targets
 	EndProjectSection
@@ -33,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Mvc.Kentico.Xp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Mvc.Abstractions", "src\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj", "{826A7FA1-1080-4A5B-A206-3D40F38379E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Infrastructure.Kentico..Xperience.Modules.AzureStorage", "src\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico..Xperience.Modules.AzureStorage.csproj", "{EC322775-9149-4485-B2C7-DC48F8B4415C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage", "src\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage.csproj", "{EC322775-9149-4485-B2C7-DC48F8B4415C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{B7E6A2C9-4682-4211-A3CC-79428E223BE3}"
 EndProject
