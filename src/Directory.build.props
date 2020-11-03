@@ -27,7 +27,7 @@
 
             If ^this is how you're referencing the nuget package, during an upgrade, simply update the value below to update the package reference across all projects in the solution.
         -->
-        <TargetKenticoVersion>13.0.0-b7472.17674</TargetKenticoVersion>
+        <TargetKenticoVersion>13.0.0</TargetKenticoVersion>
 
         <IncludeKenticoReferences>false</IncludeKenticoReferences>
         <IncludeKenticoTestReferences>false</IncludeKenticoTestReferences>
