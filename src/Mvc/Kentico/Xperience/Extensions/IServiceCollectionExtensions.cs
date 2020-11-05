@@ -1,4 +1,5 @@
 using System;
+using BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers;
 using CMS.Base;
 using Kentico.Content.Web.Mvc;
 using Kentico.Content.Web.Mvc.Routing;

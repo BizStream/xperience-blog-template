@@ -1,9 +1,8 @@
 using System.Reflection;
 using BlogTemplate.Infrastructure.Extensions;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers;
 using BlogTemplate.Mvc.App.Extensions;
 using BlogTemplate.Mvc.Kentico.Xperience.Controllers;
-using CMS.SiteProvider;
+using BlogTemplate.Mvc.Kentico.Xperience.Extensions;
 using Kentico.Content.Web.Mvc;
 using Kentico.PageBuilder.Web.Mvc;
 using Kentico.Web.Mvc;
@@ -77,16 +76,10 @@ namespace BlogTemplate.Mvc.App
             app.UseCors();
 
             app.UseStaticFiles();
-            app.UseRepsonseCaching();
+            app.UseResponseCaching();
             app.UseResponseCompression();
 
-            app.UseKentico(
-                features =>
-                {
-                    features.UsePageBuilder();
-                    features.UsePreview();
-                }
-            );
+            app.UseKentico();
 
             app.UseRouting();
             app.UseAuthorization();
