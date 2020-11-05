@@ -3,8 +3,6 @@ using BlogTemplate.Infrastructure.Extensions;
 using BlogTemplate.Mvc.App.Extensions;
 using BlogTemplate.Mvc.Kentico.Xperience.Controllers;
 using BlogTemplate.Mvc.Kentico.Xperience.Extensions;
-using Kentico.Content.Web.Mvc;
-using Kentico.PageBuilder.Web.Mvc;
 using Kentico.Web.Mvc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,8 +20,10 @@ namespace BlogTemplate.Mvc.App
         private static readonly Assembly MvcAssembly = typeof( Startup ).Assembly;
         #endregion
 
+        #region Properties
         public IConfiguration Configuration { get; }
         public IHostEnvironment Environment { get; }
+        #endregion
 
         public Startup( IConfiguration configuration, IHostEnvironment environment )
         {
