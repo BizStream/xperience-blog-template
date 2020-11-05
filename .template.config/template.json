@@ -1,6 +1,6 @@
 {
   "name": "Xperience Blog",
-  "identity": "BizStream.Templates.Kentico.Xperience.Blog",
+  "identity": "BizStream.Xperience.BlogTemplate",
   "groupIdentity": "BizStream.Templates",
   "shortName": "bzs-xp-blog",
   "author": "BizStream",
