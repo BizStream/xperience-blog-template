@@ -9,9 +9,9 @@ The following repository contains a .NET Core CLI Template solution, intended to
 1. Install the Template
 
    - Via NuGet:
-     - TODO: `dotnet new -i BizStream.Templates.Kentico.Xperience.Blog`
+     - `dotnet new -i BizStream.Xperience.BlogTemplate`
    - Locally:
-     - TODO: `git clone https://github.com/bizstream/xperience-blog-template`
+     - `git clone https://github.com/bizstream/xperience-blog-template`
      - `dotnet new -i .\xperience-blog-template`
 
 2. Using the Kentico Installer, create a starting Kentico Solution.
@@ -31,7 +31,7 @@ The following repository contains a .NET Core CLI Template solution, intended to
 
    - Run `dotnet new bzs-xp-blog -n <Solution Name> -o <Kentico Solution Folder>`
      - `<Solution Name>` will be used as the starting prefix of all generated class libraries, we recommend using the `SiteName` specified in the Kentico Installer (e.g. `dotnet new bzs-xp-blog -n MyBlog` will result in the creation of `MyBlog.sln`, `MyBlog.Core.Abstractions`, `MyBlog.Infrastracture.Abstractions`, etc).
-     - `<Kentico Solution Folder>` should be the path to the folder containing the `CMSApp`, and other Kentico components installed in the previous steps.
+     - `<Kentico Solution Folder>` should be the path to the parent folder containing the `CMSApp`, and other Kentico components created by the Kentico Installer.
    - Open `CMSApp.sln` to ensure the solution was configured
      - Ensure that `<Solution Name>.Infrastructure.Kentico.Xperience.Modules.AzureStorage` has been added to the Solution, along with `default.ruleset` and other root solution files.
      - Ensure that `CMSApp.csproj` references the `<Solution Name>.Infrastructure.Kentico.Xperience.Modules.AzureStorage` project.
