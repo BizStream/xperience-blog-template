@@ -42,6 +42,7 @@ The following repository contains a .NET Core CLI Template solution, intended to
    - If the template was created successfully, your solution should now contain a `.\data` folder. This folder should contain `.zip` archives containing Kentico Object Types.
      - If these archives do not exists, execute the `.\tools\create-object-archive.ps1` within the root of the solution folder.
    - Import Objects into Kentico via the `Sites > Import site or objects` tool.
+     - **NOTE**: After import, Page Types may need to be assigned to your Site.
    - The `.\data` folder may optionally be removed from the Solution.
 
 ### Configuring HTTPS/SSL
