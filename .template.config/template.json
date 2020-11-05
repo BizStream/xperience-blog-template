@@ -20,6 +20,7 @@
         {
           "exclude": [
             "**/.git/**",
+            "**/node_modules/**",
             ".template.config/**/*",
             ".vs/**/*",
             "packages/**/*",
