@@ -21,19 +21,6 @@ namespace BlogTemplate.Mvc.App.Extensions
         public static IServiceCollection AddBlogMappings( this IServiceCollection services )
             => services.AddAutoMapper( KenticoMappingsAssembly, MvcMappingsAssembly );
 
-        public static OptionsBuilder<StaticFileOptions> AddEmbeddedStaticFileProvider( this IServiceCollection services, Assembly assembly, string root )
-            => services.AddOptions<StaticFileOptions>()
-                .PostConfigure<IWebHostEnvironment>(
-                    ( options, environment ) =>
-                    {
-                        options.ContentTypeProvider ??= new FileExtensionContentTypeProvider();
-                        options.FileProvider ??= environment.WebRootFileProvider;
-
-                        var embeddedFileProvider = new ManifestEmbeddedFileProvider( assembly, root );
-                        options.FileProvider = new CompositeFileProvider( options.FileProvider, embeddedFileProvider );
-                    }
-                );
-
     }
 
 }

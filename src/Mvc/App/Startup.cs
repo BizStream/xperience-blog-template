@@ -23,10 +23,14 @@ namespace BlogTemplate.Mvc.App
         private static readonly Assembly MvcAssembly = typeof( Startup ).Assembly;
         #endregion
 
-        public Startup( IConfiguration configuration )
-            => Configuration = configuration;
-
         public IConfiguration Configuration { get; }
+        public IHostEnvironment Environment { get; }
+
+        public Startup( IConfiguration configuration, IHostEnvironment environment )
+        {
+            Configuration = configuration;
+            Environment = environment;
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices( IServiceCollection services )
@@ -36,25 +40,27 @@ namespace BlogTemplate.Mvc.App
             RazorRuntimeCompilationMvcBuilderExtensions.AddRazorRuntimeCompilation( mvcBuilder );
 #endif
 
-            services.AddCors();
-            services.AddResponseCompression( options => options.EnableForHttps = true );
-            services.AddKentico();
+            services.AddAuthentication();
+            services.AddAuthorization();
 
+            services.AddCors();
+            services.AddRouting( options => options.LowercaseUrls = true );
+            services.AddResponseCaching();
+            services.AddResponseCompression( options => options.EnableForHttps = true );
+
+            services.AddBlogKentico( Environment );
             services.AddBlogMappings();
             services.AddBlogServices();
 
-            // configure how documents are queried
-            services.AddOptions<DocumentRetrieverOptions>()
-                .PostConfigure( options => options.SiteID = SiteContext.CurrentSiteID );
-
-            services.AddEmbeddedStaticFileProvider( MvcAssembly, UIRootPath );
-            services.AddEmbeddedStaticFileProvider( typeof( AboutController ).Assembly, UIRootPath );
+            services.AddOptions<StaticFileOptions>()
+                .ConfigureEmbeddedProvider( MvcAssembly, UIRootPath )
+                .ConfigureEmbeddedProvider( typeof( AboutController ).Assembly, UIRootPath );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure( IApplicationBuilder app, IWebHostEnvironment env )
+        public void Configure( IApplicationBuilder app )
         {
-            if( env.IsDevelopment() )
+            if( Environment.IsDevelopment() )
             {
                 app.UseDeveloperExceptionPage();
             }
@@ -68,9 +74,11 @@ namespace BlogTemplate.Mvc.App
 
             app.UseHttpsRedirection();
             app.UseCookiePolicy();
-            app.UseStaticFiles();
-            app.UseResponseCompression();
             app.UseCors();
+
+            app.UseStaticFiles();
+            app.UseRepsonseCaching();
+            app.UseResponseCompression();
 
             app.UseKentico(
                 features =>
@@ -82,6 +90,7 @@ namespace BlogTemplate.Mvc.App
 
             app.UseRouting();
             app.UseAuthorization();
+            app.UseAuthentication();
             app.UseEndpoints(
                 endpoints =>
                 {
