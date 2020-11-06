@@ -2,6 +2,10 @@
 
 The following repository contains a .NET Core CLI Template solution, intended to simplify the creation and spin-up of Kentico Xperience Mvc solutions.
 
+[![Build Status](https://teambzs.visualstudio.com/xperience-blog-template/_apis/build/status/package?branchName=main)](https://teambzs.visualstudio.com/xperience-blog-template/_build/latest?definitionId=141&branchName=main)
+
+> TODO: nuget package badge
+
 ## Getting Started
 
 ### Create a Solution
