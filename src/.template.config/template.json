@@ -2,13 +2,14 @@
   "name": "Xperience Blog",
   "identity": "BizStream.Xperience.BlogTemplate",
   "groupIdentity": "BizStream.Templates",
-  "shortName": "bzs-xp-blog",
+  "shortName": "xperience-blog",
   "author": "BizStream",
   "classifications": [
     "Web",
     "MVC",
     "Solution",
-    "Custom Templates"
+    "Custom Templates",
+    "Xperience"
   ],
   "tags": {
     "language": "C#"
@@ -21,12 +22,10 @@
           "exclude": [
             "**/.git/**",
             "**/node_modules/**",
-            ".template.config/**/*",
-            ".vs/**/*",
-            "packages/**/*",
-            "Lib/**/*",
-            "GlobalAssemblyInfo.cs",
-            "README.md",
+            "**/.vs/**",
+            "**/.vscode/**",
+            "packages/**",
+            "Lib/**",
             "src/Mvc/Mvc/appsettings.Development.json"
           ]
         }
@@ -37,7 +36,7 @@
     {
       "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
       "args": {
-        "executable": "pwsh",
+        "executable": "powershell",
         "args": "tools/create-object-archive.ps1"
       },
       "manualInstructions": [

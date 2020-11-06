@@ -27,9 +27,9 @@ The following repository contains a .NET Core CLI Template solution, intended to
 
    - Delete `WebApp.sln`, `<SiteName>.sln`, and the `.\<SiteName>` folder containing a blank Mvc project.
 
-4. Initialize the BizStream Blog Template within the solution
+4. Initialize the Xperience Blog Template within the solution
 
-   - Run `dotnet new bzs-xp-blog -n <Solution Name> -o <Kentico Solution Folder>`
+   - Run `dotnet new xperience-blog -n <Solution Name> -o <Kentico Solution Folder>`
      - `<Solution Name>` will be used as the starting prefix of all generated class libraries, we recommend using the `SiteName` specified in the Kentico Installer (e.g. `dotnet new bzs-xp-blog -n MyBlog` will result in the creation of `MyBlog.sln`, `MyBlog.Core.Abstractions`, `MyBlog.Infrastracture.Abstractions`, etc).
      - `<Kentico Solution Folder>` should be the path to the parent folder containing the `CMSApp`, and other Kentico components created by the Kentico Installer.
    - Open `CMSApp.sln` to ensure the solution was configured
