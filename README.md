@@ -2,9 +2,9 @@
 
 The following repository contains a .NET Core CLI Template solution, intended to simplify the creation and spin-up of Kentico Xperience Mvc solutions.
 
+![License](https://img.shields.io/github/license/bizstream/xperience-blog-template)
 [![Build Status](https://teambzs.visualstudio.com/xperience-blog-template/_apis/build/status/package?branchName=main)](https://teambzs.visualstudio.com/xperience-blog-template/_build/latest?definitionId=141&branchName=main)
-
-> TODO: nuget package badge
+![NuGet Version](https://img.shields.io/nuget/v/BizStream.Xperience.BlogTemplate)
 
 ## Getting Started
 
