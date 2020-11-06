@@ -1,0 +1,73 @@
+# This pipeline builds an artifact of a publishable .NET Core CLI Template NuGet package
+
+name: $(Date:yyyyMMdd)$(Rev:-r)
+pool:
+  vmImage: "windows-latest"
+
+pr:
+  branches:
+    include:
+      - develop
+      - feature/*
+
+trigger:
+  branches:
+    include:
+      - main
+      - develop
+
+steps:
+  - task: Npm@1
+    displayName: "restore client-ui dependencies"
+    inputs:
+      command: "ci"
+      workingDir: "src/Mvc/App/client-ui"
+
+  - task: Npm@1
+    displayName: "build client-ui"
+    inputs:
+      command: "custom"
+      workingDir: "src/Mvc/App/client-ui"
+      customCommand: "run build"
+
+  - task: DotNetCoreCLI@2
+    displayName: "restore mvc dependencies"
+    inputs:
+      command: "restore"
+      projects: "src/Mvc/App/BlogTemplate.Mvc.App.csproj"
+
+  - task: DotNetCoreCLI@2
+    displayName: "build mvc"
+    inputs:
+      command: "build"
+      projects: "src/Mvc/App/BlogTemplate.Mvc.App.csproj"
+      arguments: "-c Release --no-restore"
+
+  - task: DotNetCoreCLI@2
+    displayName: "create mvc deployable"
+    inputs:
+      command: "publish"
+      publishWebProjects: false
+      projects: "src/Mvc/App/BlogTemplate.Mvc.App.csproj"
+      arguments: '-o "$(build.artifactstagingdirectory)/mvc" --no-build'
+
+  - task: DotNetCoreCLI@2
+    displayName: "create package deployable"
+    inputs:
+      command: "pack"
+      projects: "src/Mvc/App/BlogTemplate.Mvc.App.csproj"
+      arguments: '-o "$(build.artifactstagingdirectory)/package" --no-build'
+
+  # TODO: add appsettings.bzs-dev.json to mvc artifact from DevOps Secrets
+
+  - task: PublishBuildArtifacts@1
+    displayName: "publish mvc artifact"
+    inputs:
+      PathtoPublish: "$(build.artifactstagingdirectory)/mvc"
+      ArtifactName: "blogtemplate-mvc"
+
+  - task: PublishBuildArtifacts@1
+    displayName: "publish package artifact"
+    inputs:
+      PathtoPublish: "$(build.artifactstagingdirectory)/package"
+      ArtifactName: "blogtemplate-package"
