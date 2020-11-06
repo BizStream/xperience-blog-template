@@ -1,0 +1,8 @@
+<Project>
+
+  <!-- Versioning -->
+  <PropertyGroup>
+    <UseGitVersioning>true</UseGitVersioning>
+  </PropertyGroup>
+
+</Project>

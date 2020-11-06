@@ -22,7 +22,6 @@ steps:
     inputs:
       command: 'pack'
       packagesToPack: 'BizStream.Xperience.BlogTemplate.csproj'
-      configuration: 'Release'
       versioningScheme: 'off'
 
   - task: PublishBuildArtifacts@1

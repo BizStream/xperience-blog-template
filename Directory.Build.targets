@@ -1,0 +1,36 @@
+<Project>
+
+  <!-- Versioning -->
+  <ItemGroup Condition=" '$(UseGitVersioning)' == 'true' ">
+    <PackageReference Include="GitInfo" Version="2.1.2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(UseGitVersioning)' == 'true' ">
+    <GitBranch Condition="'$(BUILD_SOURCEBRANCHNAME)' != ''">$(BUILD_SOURCEBRANCHNAME)</GitBranch>
+    <GitThisAssembly>false</GitThisAssembly>
+    <GitSkipCache>true</GitSkipCache>
+    <GitIgnoreTagVersion>true</GitIgnoreTagVersion>
+
+    <!-- default prefix -->
+    <VersionPrefix Condition=" '$(VersionPrefix)' == '' ">1.0.0</VersionPrefix>
+
+    <GenerateNuspecDependsOn>SetVersion;$(GenerateNuspecDependsOn)</GenerateNuspecDependsOn>
+    <GetPackageVersionDependsOn>SetVersion;$(GetPackageVersionDependsOn)</GetPackageVersionDependsOn>
+  </PropertyGroup>
+
+  <Target Name="SetVersion" BeforeTargets="PrepareForBuild;GetAssemblyVersion;GetPackageVersion;Pack" DependsOnTargets="GitInfo" Condition="'$(GitInfoImported)' == 'true' And '$(ExcludeRestorePackageImports)' != 'true'">
+    <PropertyGroup>
+      <Configuration Condition=" '$(GitBranch)' == 'main' ">Release</Configuration>
+
+      <VersionSuffix>alpha+$(GitCommit)</VersionSuffix>
+      <VersionSuffix Condition=" '$(GitBranch)' == 'develop' ">beta+$(GitCommit)</VersionSuffix>
+      <VersionSuffix Condition=" '$(GitBranch)' == 'main' "></VersionSuffix>
+
+      <Version>$(VersionPrefix)</Version>
+      <Version Condition=" '$(VersionSuffix)' != '' ">$(VersionPrefix)-$(VersionSuffix)</Version>
+
+      <PackageVersion>$(Version)</PackageVersion>
+    </PropertyGroup>
+  </Target>
+
+</Project>
