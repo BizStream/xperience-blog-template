@@ -21,9 +21,10 @@
         {
           "exclude": [
             "**/.git/**",
-            "**/node_modules/**",
             "**/.vs/**",
             "**/.vscode/**",
+            "**/client-ui/dist/**",
+            "**/node_modules/**",
             "packages/**",
             "Lib/**",
             "src/Mvc/Mvc/appsettings.Development.json"

@@ -8,6 +8,7 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
 
+    <!-- disable Nuget pack excludes, which excludes .gitignore/.editorconfig from the packaged template -->
     <NoDefaultExcludes>true</NoDefaultExcludes>
   </PropertyGroup>
 
