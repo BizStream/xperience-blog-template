@@ -20,9 +20,10 @@ steps:
   - task: DotNetCoreCLI@2
     displayName: "create deployable"
     inputs:
-      command: "pack"
-      projects: "BizStream.Experience.BlogTemplate.csproj"
-      arguments: '-c Release -o "$(build.artifactstagingdirectory)"'
+      command: 'pack'
+      packagesToPack: 'BizStream.Xperience.BlogTemplate.csproj'
+      configuration: 'Release'
+      versioningScheme: 'off'
 
   - task: PublishBuildArtifacts@1
     displayName: "publish artifact"
