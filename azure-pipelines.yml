@@ -21,8 +21,8 @@ steps:
     displayName: "create deployable"
     inputs:
       command: "pack"
-      projects: "src/Mvc/App/BlogTemplate.Mvc.App.csproj"
-      arguments: '-o "$(build.artifactstagingdirectory)" --no-build'
+      projects: "BizStream.Experience.BlogTemplate.csproj"
+      arguments: '-c Release -o "$(build.artifactstagingdirectory)"'
 
   - task: PublishBuildArtifacts@1
     displayName: "publish artifact"
