@@ -49,7 +49,7 @@ steps:
       command: "publish"
       publishWebProjects: false
       projects: "src/src/Mvc/App/BlogTemplate.Mvc.App.csproj"
-      arguments: '-o "$(build.artifactstagingdirectory)" --no-build'
+      arguments: '-c Release -o "$(build.artifactstagingdirectory)" --no-build'
 
   # TODO: add appsettings.bzs-dev.json to mvc artifact from DevOps Secrets
 
