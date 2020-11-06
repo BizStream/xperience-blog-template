@@ -1,0 +1,60 @@
+# This pipeline creates an artifact of a runnable Mvc site if the Blog Template
+
+name: $(Date:yyyyMMdd)$(Rev:-r)
+pool:
+  vmImage: "windows-latest"
+
+pr:
+  branches:
+    include:
+      - develop
+      - feature/*
+
+trigger:
+  branches:
+    include:
+      - main
+      - develop
+
+steps:
+  - task: Npm@1
+    displayName: "restore client-ui dependencies"
+    inputs:
+      command: "ci"
+      workingDir: "src/Mvc/App/client-ui"
+
+  - task: Npm@1
+    displayName: "build client-ui"
+    inputs:
+      command: "custom"
+      workingDir: "src/Mvc/App/client-ui"
+      customCommand: "run build"
+
+  - task: DotNetCoreCLI@2
+    displayName: "restore mvc dependencies"
+    inputs:
+      command: "restore"
+      projects: "src/Mvc/App/BlogTemplate.Mvc.App.csproj"
+
+  - task: DotNetCoreCLI@2
+    displayName: "build mvc"
+    inputs:
+      command: "build"
+      projects: "src/Mvc/App/BlogTemplate.Mvc.App.csproj"
+      arguments: "-c Release --no-restore"
+
+  - task: DotNetCoreCLI@2
+    displayName: "create deployable"
+    inputs:
+      command: "publish"
+      publishWebProjects: false
+      projects: "src/Mvc/App/BlogTemplate.Mvc.App.csproj"
+      arguments: '-o "$(build.artifactstagingdirectory)" --no-build'
+
+  # TODO: add appsettings.bzs-dev.json to mvc artifact from DevOps Secrets
+
+  - task: PublishBuildArtifacts@1
+    displayName: "publish artifact"
+    inputs:
+      PathtoPublish: "$(build.artifactstagingdirectory)"
+      ArtifactName: "blogtemplate-mvc"
