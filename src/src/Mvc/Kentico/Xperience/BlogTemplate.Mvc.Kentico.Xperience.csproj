@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
-        <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
         <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
         <IncludeKenticoWebReferences>true</IncludeKenticoWebReferences>
         <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -17,17 +16,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="3.1.8" />
-    </ItemGroup>
-
-    <ItemGroup>
         <ProjectReference Include="$(SourceRoot)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
         <ProjectReference Include="$(SourceRoot)\Infrastructure\Infrastructure\BlogTemplate.Infrastructure.csproj" />
         <ProjectReference Include="$(SourceRoot)\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <EmbeddedResource Include="client-ui\dist\**\*" />
     </ItemGroup>
 
 </Project>
