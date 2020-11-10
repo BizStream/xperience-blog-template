@@ -39,11 +39,13 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers
 
             if( options.Value.Version == DocumentVersion.Latest )
             {
-                typedQuery = typedQuery.LatestVersion( true );
+                typedQuery = typedQuery.LatestVersion( true )
+                    .Published( false );
             }
             else if( options.Value.Version == DocumentVersion.Published )
             {
-                typedQuery = typedQuery.PublishedVersion( true );
+                typedQuery = typedQuery.LatestVersion( true )
+                    .Published( true );
             }
 
             if( options.Value.SiteID.HasValue )

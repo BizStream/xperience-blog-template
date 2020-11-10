@@ -1,12 +1,14 @@
 using System;
+using System.Linq;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers;
-using CMS.Base;
 using Kentico.Content.Web.Mvc;
 using Kentico.Content.Web.Mvc.Routing;
 using Kentico.PageBuilder.Web.Mvc;
 using Kentico.Scheduler.Web.Mvc;
 using Kentico.Web.Mvc;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -46,11 +48,37 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
 
             // configure how documents are queried
             services.AddOptions<DocumentRetrieverOptions>()
-                .PostConfigure<ISiteService>(
-                    ( options, siteService ) => options.SiteID = siteService.CurrentSite.SiteID
-                );
+                .ConfigureCurrentSite()
+                .ConfigurePreviewMode();
 
+            DecorateMemoryCacheWithPreviewSupport( services );
             return services;
+        }
+
+        private static void DecorateMemoryCacheWithPreviewSupport( IServiceCollection services )
+        {
+            var cache = services.FirstOrDefault(
+                descriptor => descriptor.ServiceType == typeof( IMemoryCache )
+            );
+
+            if( cache == null )
+            {
+                throw new ArgumentException( $"Cannot decorate '{nameof( IMemoryCache )}': there is not an implementation registered to the Service Collection." );
+            }
+
+            var cacheType = cache.ImplementationType;
+            var cacheImplementation = ServiceDescriptor.Describe( cacheType, cacheType, cache.Lifetime );
+
+            // replace the original descriptor with the concrete IMemoryCache implementation
+            services.Remove( cache );
+            services.Add( cacheImplementation );
+
+            services.AddScoped<IMemoryCache>(
+                provider => new MemoryCacheWithPreviewSupport(
+                    ( IMemoryCache )provider.GetRequiredService( cacheType ),
+                    provider.GetRequiredService<IHttpContextAccessor>()
+                )
+            );
         }
 
     }
