@@ -7,6 +7,7 @@ using Microsoft.Extensions.Caching.Memory;
 namespace BlogTemplate.Mvc.Kentico.Xperience
 {
 
+    /// <summary> Decorator implementation of <see cref="IMemoryCache"/> that disables caching when Preview Mode is active. </summary>
     public sealed class MemoryCacheWithPreviewSupport : IMemoryCache
     {
         #region Fields
@@ -52,6 +53,8 @@ namespace BlogTemplate.Mvc.Kentico.Xperience
         {
             if( IsPreview() )
             {
+                // nada
+
                 value = default;
                 return false;
             }

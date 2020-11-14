@@ -50,7 +50,7 @@ const configureInlineEditor = (
   options = { src: `editors/${identifier}.js` }
 ) =>
   configureBundle(identifier, {
-    dest: '../wwwroot/PageBuilder/Admin/InlineEditors',
+    dest: `../wwwroot/PageBuilder/Admin/InlineEditors/${identifier}/`,
     ...options
   })
 

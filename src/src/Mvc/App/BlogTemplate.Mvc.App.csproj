@@ -13,7 +13,7 @@
 
     <ItemGroup>
         <ProjectReference Include="$(SourceRoot)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
-        <ProjectReference Include="$(SourceRoot)\Mvc\Kentico\Xperience\BlogTemplate.Mvc.Kentico.Xperience.csproj" />
+        <ProjectReference Include="$(SourceRoot)\Mvc\Kentico\Xperience\Xperience\BlogTemplate.Mvc.Kentico.Xperience.csproj" />
     </ItemGroup>
 
 </Project>

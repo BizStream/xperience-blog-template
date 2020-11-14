@@ -31,13 +31,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xperience", "Xperience", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions", "src\Infrastructure\Kentico\Xperience\Abstractions\BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.csproj", "{C5374C09-6594-4797-9C49-64C92534C829}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Mvc.Kentico.Xperience", "src\Mvc\Kentico\Xperience\BlogTemplate.Mvc.Kentico.Xperience.csproj", "{EEBC2FEB-5398-438B-9452-9D24F40C0C3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Mvc.Kentico.Xperience", "src\Mvc\Kentico\Xperience\Xperience\BlogTemplate.Mvc.Kentico.Xperience.csproj", "{EEBC2FEB-5398-438B-9452-9D24F40C0C3B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Mvc.Abstractions", "src\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj", "{826A7FA1-1080-4A5B-A206-3D40F38379E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage", "src\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage.csproj", "{EC322775-9149-4485-B2C7-DC48F8B4415C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{B7E6A2C9-4682-4211-A3CC-79428E223BE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kentico", "Kentico", "{3790181D-4CE6-4254-B204-5A3B9172B597}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xperience", "Xperience", "{BB2B92BB-AC45-4340-9FAA-213F7F3A2E7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage", "src\Mvc\Kentico\Xperience\StaticWebAssetsStorage\BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage.csproj", "{78C35AA0-71F1-40FD-9C54-59E485FFF491}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,6 +163,18 @@ Global
 		{EC322775-9149-4485-B2C7-DC48F8B4415C}.Release|x64.Build.0 = Release|Any CPU
 		{EC322775-9149-4485-B2C7-DC48F8B4415C}.Release|x86.ActiveCfg = Release|Any CPU
 		{EC322775-9149-4485-B2C7-DC48F8B4415C}.Release|x86.Build.0 = Release|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Debug|x64.Build.0 = Debug|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Debug|x86.Build.0 = Debug|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Release|x64.ActiveCfg = Release|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Release|x64.Build.0 = Release|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Release|x86.ActiveCfg = Release|Any CPU
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -176,6 +194,9 @@ Global
 		{826A7FA1-1080-4A5B-A206-3D40F38379E3} = {94594988-8059-4DCA-ACBE-36D574B6897D}
 		{EC322775-9149-4485-B2C7-DC48F8B4415C} = {B7E6A2C9-4682-4211-A3CC-79428E223BE3}
 		{B7E6A2C9-4682-4211-A3CC-79428E223BE3} = {7D405550-B613-44B2-BE5D-7A7E3D85B610}
+		{3790181D-4CE6-4254-B204-5A3B9172B597} = {94594988-8059-4DCA-ACBE-36D574B6897D}
+		{BB2B92BB-AC45-4340-9FAA-213F7F3A2E7F} = {3790181D-4CE6-4254-B204-5A3B9172B597}
+		{78C35AA0-71F1-40FD-9C54-59E485FFF491} = {BB2B92BB-AC45-4340-9FAA-213F7F3A2E7F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BFB6A919-F1DF-436F-9252-D5741A1B7341}
