@@ -40,6 +40,7 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage.IO
 
         protected override AbstractFile CreateFileProviderObject( )
             => new StaticWebAssetsFile( rclPath, rootPath );
+
     }
 
 }

@@ -30,7 +30,6 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage
             }
 
             var configuration = Service.Resolve<IConfiguration>();
-
             var paths = StaticWebAssetsHelper.GetRCLPaths( environment, configuration );
             foreach( var (basePath, path) in paths )
             {
@@ -41,11 +40,12 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage
                 }
 
                 // `BuilderAssetsProvider` prepends the `IWebHostEnvironment.WebRootPath` when resolving configured bundles/scripts/styles
-                var rclPath = Path.Combine( environment.WebRootPath, basePath.Replace( "/", "\\" ) );
-                var provider = new StaticWebAssetsStorageProvider( rclPath, path );
+                var rclPath = Path.Combine(
+                    environment.WebRootPath,
+                    basePath.Replace( "/", "\\" )
+                );
 
-                // maps the absolute `BasePath`; allows kentico's PageBuilder infrastructure to discover+generate a VirtualContext url to RCL static files
-                CMSIO.StorageHelper.MapStoragePath( rclPath, provider );
+                CMSIO.StorageHelper.MapStoragePath( rclPath, new StaticWebAssetsStorageProvider( rclPath, path ) );
             }
         }
 
