@@ -15,7 +15,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Converters
                 return null;
             }
 
-            if( source.StartsWith( "~/getmedia" ) )
+            if( source.StartsWith( "~/getmedia", StringComparison.InvariantCultureIgnoreCase ) )
             {
                 return new Uri( SiteContext.CurrentSite.SitePresentationURL + source.TrimStart( '~' ), UriKind.Absolute );
             }
