@@ -59,6 +59,19 @@ To configure .NET with a custom certificate, edit the `Kestrel:Certificates` opt
 
 > For development purposes, we recommend using [`mkcert`](https://github.com/FiloSottile/mkcert) to create certificates that will not result in a "Invalid certificate warning" from browsers. `mkcert` uses a Local CA to generate valid certificates that are **not** self-signed.
 
+To create a new cert using `mkcert`, perform the following steps:
+
+- `mkcert -install`
+- `mkcert -pkcs12 localhost`
+- `mv localhost.p12 local-dev.pfx`
+- Place `local-dev.pfx` within `src\Mvc\App\App_Data`
+
+### Media Storage
+
+The templated solution includes an Xperience Module that configures all sites to use an Azure Storage Provider (`BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage`). By default, this module **is not registered**.
+
+To enable it, uncomment the `RegisterModuleAttribute` line within the `RegisterModules.cs` files located at `src\Mvc\Kentico\Xperience\Xperience\RegisterModules.cs`, and `CMS\RegisterModules.cs`, and provide the relevant `CMSAzureAccountName` and `CMSAzureSharedKey` setting keys within `CMS\web.config` and `src\Mvc\App\appsettings.json`, and relevant transforms.
+
 ## Architecture
 
 The provided solution's architecture is strongly influenced by SOLID principles, with the intention to organize, separate, and distinguish the logical couplings and dependencies within the solution.
