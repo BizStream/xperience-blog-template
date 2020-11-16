@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers;
+using BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage;
 using Kentico.Content.Web.Mvc;
 using Kentico.Content.Web.Mvc.Routing;
 using Kentico.PageBuilder.Web.Mvc;
@@ -50,6 +51,10 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
             services.AddOptions<DocumentRetrieverOptions>()
                 .ConfigureCurrentSite()
                 .ConfigurePreviewMode();
+
+            // add RCL bundles (requires `StaticWebAssetsStorageModule` to be registered)
+            services.AddOptions<PageBuilderBundlesOptions>()
+                .ConfigureRCLBundle( typeof( IServiceCollectionExtensions ).Assembly, "dist\\PageBuilder" );
 
             DecorateMemoryCacheWithPreviewSupport( services );
             return services;

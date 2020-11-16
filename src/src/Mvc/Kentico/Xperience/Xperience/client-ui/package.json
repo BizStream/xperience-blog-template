@@ -4,7 +4,8 @@
     "description": "Client side UI implementation for the Xperience BlogTemplate Mvc Components.",
     "main": "index.js",
     "scripts": {
-        "build": "npx rollup -c"
+        "build": "npx rollup -c",
+        "start": "npx rollup -c -w"
     },
     "author": "BizStream",
     "browserslist": "> 0.25%, not dead",

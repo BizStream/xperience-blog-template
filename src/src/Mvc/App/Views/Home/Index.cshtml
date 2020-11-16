@@ -1,14 +1,8 @@
 ﻿@model HomeViewModel
 
 @{ ViewBag.ContainerClassName = "home"; }
-
 @section head {
-    <environment names="Development">
-        <link href="https://localhost:10001/home.min.css" rel="stylesheet" />
-    </environment>
-    <environment names="Production">
-        <link href="/home.min.css" rel="stylesheet" asp-append-version="true" />
-    </environment>
+    <link href="/dist/home.min.css" rel="stylesheet" asp-append-version="true" />
 }
 
 <h1 class="title">@Model.Title</h1>
@@ -20,10 +14,5 @@
 @await Html.PartialAsync( "_RecentArticles", Model.RecentArticles )
 
 @section scripts {
-    <environment names="Development">
-        <script src="https://localhost:10001/home.min.js"></script>
-    </environment>
-    <environment names="Production">
-        <script src="/home.min.js" asp-append-version="true"></script>
-    </environment>
+    <script src="/dist/home.min.js" asp-append-version="true"></script>
 }

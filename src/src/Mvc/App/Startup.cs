@@ -15,11 +15,6 @@ namespace BlogTemplate.Mvc.App
 
     public class Startup
     {
-        #region Fields
-        private const string UIRootPath = "client-ui/dist";
-        private static readonly Assembly MvcAssembly = typeof( Startup ).Assembly;
-        #endregion
-
         #region Properties
         public IConfiguration Configuration { get; }
         public IHostEnvironment Environment { get; }
@@ -50,10 +45,6 @@ namespace BlogTemplate.Mvc.App
             services.AddBlogKentico( Environment );
             services.AddBlogMappings();
             services.AddBlogServices();
-
-            services.AddOptions<StaticFileOptions>()
-                .ConfigureEmbeddedProvider( MvcAssembly, UIRootPath )
-                .ConfigureEmbeddedProvider( typeof( AboutController ).Assembly, UIRootPath );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

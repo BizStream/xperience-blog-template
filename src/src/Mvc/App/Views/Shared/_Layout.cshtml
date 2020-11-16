@@ -3,18 +3,13 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <title>@Model.Title</title>
     @await Html.PartialAsync( "Head/_Meta", Model.Meta )
     @await Html.PartialAsync( "Head/_OpenGraph", Model.OpenGraph )
 
-    <environment names="Development">
-        <link href="https://localhost:10001/master.min.css" rel="stylesheet" />
-    </environment>
-    <environment names="Production">
-        <link href="/master.min.css" rel="stylesheet" asp-append-version="true" />
-    </environment>
-
+    <link href="/dist/master.min.css" rel="stylesheet" asp-append-version="true" />
     @await RenderSectionAsync( "head", required: false )
 </head>
 
@@ -23,13 +18,8 @@
         @RenderBody()
     </main>
 
-    <environment names="Development">
-        <script src="https://localhost:10001/master.min.js"></script>
-    </environment>
-    <environment names="Production">
-        <script src="/master.min.js" asp-append-version="true"></script>
-    </environment>
-
+    <script src="/dist/master.min.js" asp-append-version="true"></script>
     @await RenderSectionAsync( "scripts", required: false )
 </body>
+
 </html>

@@ -444,4 +444,5 @@ $RECYCLE.BIN/
 # Sorry, you can't have our keys :(
 src/src/Mvc/App/appsettings.Development.json
 
-**/client-ui/dist/*
+# Ignore compiled static assets
+**/wwwroot/dist/*

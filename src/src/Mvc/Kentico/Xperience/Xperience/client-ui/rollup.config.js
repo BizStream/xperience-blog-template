@@ -11,7 +11,7 @@ const production = !process.env.ROLLUP_WATCH
 const configureBundle = (
   name,
   { dest, src } = {
-    dest: 'dist',
+    dest: '../wwwroot/dist',
     src: `${name}.js`
   }
 ) => {
@@ -50,7 +50,7 @@ const configureInlineEditor = (
   options = { src: `editors/${identifier}.js` }
 ) =>
   configureBundle(identifier, {
-    dest: 'dist/content/inlineeditors',
+    dest: `../wwwroot/dist/PageBuilder/Admin/InlineEditors/${identifier}/`,
     ...options
   })
 
