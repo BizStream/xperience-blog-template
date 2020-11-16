@@ -1,5 +1,4 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Mvc.App.Mappings.Extensions;
 using BlogTemplate.Mvc.App.Mappings.Resolvers;
@@ -16,6 +15,7 @@ namespace BlogTemplate.Mvc.App.Mappings
             CreateMap<Article, ArticleViewModel>()
                 .IncludeMetaData()
                 .IncludeOpenGraphData()
+                .ForMember( viewModel => viewModel.Heading, opt => opt.MapFrom( article => article.Title ) )
                 .ForMember( viewModel => viewModel.ModifiedAt, opt => opt.MapFrom( article => article.LastAuthoredAt ) );
 
             CreateMap<Article, ArticleListingItem>()

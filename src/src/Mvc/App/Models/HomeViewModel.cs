@@ -10,6 +10,8 @@ namespace BlogTemplate.Mvc.App.Models
 
         public Guid? FeaturedAuthorGuid { get; set; }
 
+        public string Heading { get; set; }
+
         public IEnumerable<ArticleListingItem> RecentArticles { get; set; }
 
     }

@@ -16,7 +16,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
         {
             CreateMap<ArticleNode, Article>()
                 .IncludeAuthored()
-                .ForMember( article => article.HeroImageUrl, opt => opt.ConvertUsing<StringToUriConverter, string>( node => node.HeroImage ) )
+                .ForMember( article => article.HeroImageUrl, opt => opt.ConvertMediaPathToUri( node => node.HeroImage ) )
                 .ForMember( article => article.PublishedAt, opt => opt.MapFrom<DocumentPublishDateResolver>() )
                 .ForMember( article => article.Slug, opt => opt.MapFrom( node => node.NodeAlias ) )
                 .ForMember( article => article.Summary, opt => opt.MapFrom( node => node.Summary ) )
