@@ -40,9 +40,9 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage
         /*
          * The following methods were copied (and slightly modified) from the StaticWebAssets source code:
          *  https://github.com/dotnet/aspnetcore/blob/3e9ae8e5eee2930da0096ab4ca4976f5938df648/src/Hosting/Hosting/src/StaticWebAssets/StaticWebAssetsLoader.cs#L55
-         *       
+         *
          *  MS decided to make them `internal`, but we need them for resolving the absolute paths to configure PageBuilder to locate _our_ RCL's static files
-         *  This is all required due to Kentico's `BuilderAssetsProvider` (also `internal`), being hardcoded to only use the `IWebHostEnvironment.IFileProvder` 
+         *  This is all required due to Kentico's `BuilderAssetsProvider` (also `internal`), being hardcoded to only use the `IWebHostEnvironment.IFileProvder`
          *  for Kentico's RCL package (`BuilderAssetsProvider.GetLibraryBundleVirtualPaths`), and `CMS.IO.FileInfo` being used for the configurable
          *  page builder assets (`BuilderAssetsProvider.GetWebRootBundleVirtualPaths`).
          */

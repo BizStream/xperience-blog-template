@@ -18,9 +18,6 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
 
     public static class IServiceCollectionExtensions
     {
-        #region Fields
-        private const string KenticoMvcRCLBasePath = "_content/Kentico.Content.Web.Rcl";
-        #endregion
 
         public static IServiceCollection AddBlogKentico( this IServiceCollection services, IHostEnvironment environment )
         {
@@ -55,9 +52,9 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
                 .ConfigureCurrentSite()
                 .ConfigurePreviewMode();
 
-            // add RCL bundles (require `StaticWebAssetsStorageModule` to be registered)
+            // add RCL bundles (requires `StaticWebAssetsStorageModule` to be registered)
             services.AddOptions<PageBuilderBundlesOptions>()
-                .ConfigureRCLBundles();
+                .ConfigureRCLBundle( typeof( IServiceCollectionExtensions ).Assembly );
 
             DecorateMemoryCacheWithPreviewSupport( services );
             return services;
