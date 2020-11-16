@@ -22,8 +22,8 @@
     <PropertyGroup>
       <Configuration Condition=" '$(GitBranch)' == 'main' ">Release</Configuration>
 
-      <VersionSuffix>alpha+$(GitCommit)</VersionSuffix>
-      <VersionSuffix Condition=" '$(GitBranch)' == 'develop' ">beta+$(GitCommit)</VersionSuffix>
+      <VersionSuffix>alpha.$(GitCommit)</VersionSuffix>
+      <VersionSuffix Condition=" '$(GitBranch)' == 'develop' ">beta.$(GitCommit)</VersionSuffix>
       <VersionSuffix Condition=" '$(GitBranch)' == 'main' "></VersionSuffix>
 
       <Version>$(VersionPrefix)</Version>
