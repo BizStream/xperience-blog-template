@@ -54,7 +54,7 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
 
             // add RCL bundles (requires `StaticWebAssetsStorageModule` to be registered)
             services.AddOptions<PageBuilderBundlesOptions>()
-                .ConfigureRCLBundle( typeof( IServiceCollectionExtensions ).Assembly );
+                .ConfigureRCLBundle( typeof( IServiceCollectionExtensions ).Assembly, "dist\\PageBuilder" );
 
             DecorateMemoryCacheWithPreviewSupport( services );
             return services;

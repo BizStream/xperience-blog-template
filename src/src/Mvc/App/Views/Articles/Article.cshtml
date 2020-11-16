@@ -1,9 +1,8 @@
 ﻿@model ArticleViewModel
 
 @{ ViewBag.ContainerClassName = "article"; }
-
 @section head {
-    <link href="/article.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="/dist/article.min.css" rel="stylesheet" asp-append-version="true" />
 }
 
 <h1>@Model.Title</h1>
@@ -24,7 +23,7 @@
 <section class="article-content">@Html.Raw( Model.Content )</section>
 
 @section scripts {
-    <script src="/article.min.js" asp-append-version="true"></script>
+    <script src="/dist/article.min.js" asp-append-version="true"></script>
 }
 
 @await Component.InvokeAsync( "Author", new { authorGuid = Model.AuthorGuid } )

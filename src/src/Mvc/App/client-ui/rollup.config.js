@@ -14,13 +14,13 @@ const configureBundle = (name, entryFile) => {
   return {
     input: `src/${entryFile}`,
     output: {
-      file: `../wwwroot/${name}.min.js`,
+      file: `../wwwroot/dist/${name}.min.js`,
       format: 'cjs',
       plugins: [terser()],
       sourcemap: !production
     },
     plugins: [
-      clean({ targets: [`dist/${name}.min.js`, `dist/${name}.min.css`] }),
+      clean({ targets: [`../wwwroot/dist/${name}.min.js`, `../wwwroot/dist/${name}.min.css`] }),
       resolve(),
       commonjs(),
       babel({

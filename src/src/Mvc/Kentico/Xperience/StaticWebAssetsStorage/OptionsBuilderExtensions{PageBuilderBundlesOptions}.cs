@@ -9,7 +9,14 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage
     public static partial class OptionsBuilderExtensions
     {
 
-        public static OptionsBuilder<PageBuilderBundlesOptions> ConfigureRCLBundle( this OptionsBuilder<PageBuilderBundlesOptions> options, Assembly assembly )
+        /// <summary> Configures Page Builder to discover static files bundled via an RCL. </summary>
+        /// <param name="assembly"> The Assembly representing the RCL (the <see cref="AssemblyName.Name"/> is used to generating the RCL file path). </param>
+        /// <param name="rootPath"> A custom path within the RCL in which PageBuilder assets are located. </param>
+        public static OptionsBuilder<PageBuilderBundlesOptions> ConfigureRCLBundle(
+            this OptionsBuilder<PageBuilderBundlesOptions> options,
+            Assembly assembly,
+            string rootPath = "PageBuilder"
+        )
         {
             if( options == null )
             {
@@ -19,7 +26,7 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage
             return options.Configure(
                 options =>
                 {
-                    var basePath = $"_content\\{assembly.GetName().Name}\\PageBuilder";
+                    var basePath = $"_content\\{assembly.GetName().Name}\\{rootPath}";
                     var adminPath = $"{basePath}\\Admin";
                     var publicPath = $"{basePath}\\Public";
 
