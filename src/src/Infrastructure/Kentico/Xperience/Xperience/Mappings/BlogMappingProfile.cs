@@ -7,13 +7,14 @@ using CMS.DocumentEngine;
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
 {
 
-    public class HomeMappingProfile : Profile
+    public class BlogMappingProfile : Profile
     {
 
-        public HomeMappingProfile( )
+        public BlogMappingProfile( )
         {
-            CreateMap<HomeNode, Home>()
-                .ForMember( home => home.FeaturedAuthorGuid, opt => opt.Condition( node => node.FeaturedAuthorGuid != Guid.Empty ) );
+            CreateMap<HomeNode, Blog>()
+                .ForMember( blog => blog.FeaturedAuthorGuid, opt => opt.Condition( node => node.FeaturedAuthorGuid != Guid.Empty ) )
+                .ForMember( blog => blog.Name, opt => opt.MapFrom( node => node.DocumentName ) );
 
             CreateMap<HomeNode, MetaData>()
                 .IncludeBase<TreeNode, MetaData>();

@@ -11,9 +11,10 @@ namespace BlogTemplate.Mvc.App.Mappings
 
         public HomeMappingProfile( )
         {
-            CreateMap<Home, HomeViewModel>()
+            CreateMap<Blog, HomeViewModel>()
                 .IncludeMetaData()
-                .IncludeOpenGraphData();
+                .IncludeOpenGraphData()
+                .ForMember( viewModel => viewModel.Heading, opt => opt.MapFrom( blog => blog.Name ) );
         }
 
     }

@@ -13,31 +13,31 @@ namespace BlogTemplate.Mvc.App.Controllers
     {
         #region Fields
         private readonly IArticleService articleService;
-        private readonly IHomeService homeService;
+        private readonly IBlogService blogService;
         private readonly IMapper mapper;
         #endregion
 
         public HomeController(
             IArticleService articleService,
-            IHomeService homeService,
+            IBlogService blogService,
             IMapper mapper
         )
         {
             this.articleService = articleService;
-            this.homeService = homeService;
+            this.blogService = blogService;
             this.mapper = mapper;
         }
 
         [HttpGet]
         public IActionResult Index( )
         {
-            var home = homeService.GetHome();
-            if( home == null )
+            var blog = blogService.GetBlog();
+            if( blog == null )
             {
                 return NotFound();
             }
 
-            var viewModel = mapper.Map<HomeViewModel>( home );
+            var viewModel = mapper.Map<HomeViewModel>( blog );
             viewModel.RecentArticles = articleService.GetRecentArticles()
                 .Select( mapper.Map<ArticleListingItem> );
 

@@ -40,8 +40,8 @@ namespace BlogTemplate.Infrastructure.Extensions
 
         public static IServiceCollection AddHomeServices( this IServiceCollection services )
         {
-            services.AddTransient<IHomeService, HomeService>();
-            services.AddTransient<IMetaDataService<Home>, HomeService>();
+            services.AddTransient<IBlogService, BlogService>();
+            services.AddTransient<IMetaDataService<Blog>, BlogService>();
 
             return services;
         }

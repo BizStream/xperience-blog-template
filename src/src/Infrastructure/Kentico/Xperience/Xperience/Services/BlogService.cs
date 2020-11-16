@@ -12,7 +12,7 @@ using Microsoft.Extensions.Caching.Memory;
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
 {
 
-    public class HomeService : IHomeService, IMetaDataService<Home>
+    public class BlogService : IBlogService, IMetaDataService<Blog>
     {
         #region Fields
         private readonly IMemoryCache cache;
@@ -20,7 +20,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
         private readonly IMapper mapper;
         #endregion
 
-        public HomeService(
+        public BlogService(
             IMemoryCache cache,
             IDocumentRetriever documentRetriever,
             IMapper mapper
@@ -31,7 +31,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             this.mapper = mapper;
         }
 
-        public Home GetHome( )
+        public Blog GetBlog( )
         {
             var node = GetHomeNode();
             if( node == null )
@@ -39,7 +39,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                 return null;
             }
 
-            return mapper.Map<Home>( node );
+            return mapper.Map<Blog>( node );
         }
 
         private HomeNode GetHomeNode( )
@@ -63,7 +63,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                 }
             );
 
-        public MetaData GetMetaData( Home entity )
+        public MetaData GetMetaData( Blog entity )
         {
             var node = GetHomeNode();
             if( node == null )
@@ -74,7 +74,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             return mapper.Map<MetaData>( node );
         }
 
-        public OpenGraphData GetOpenGraphData( Home entity )
+        public OpenGraphData GetOpenGraphData( Blog entity )
         {
             var node = GetHomeNode();
             if( node == null )
