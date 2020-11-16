@@ -2,37 +2,51 @@
   <NewDataSet>
     <objecttranslation>
       <ClassName>cms_class</ClassName>
-      <ID>5504</ID>
+      <ID>5515</ID>
       <CodeName>BlogTemplate.BaseNode</CodeName>
       <GUID>9b2b695d-88ff-425b-b233-440456950d50</GUID>
       <ObjectType>cms.documenttype</ObjectType>
     </objecttranslation>
     <objecttranslation>
       <ClassName>cms_class</ClassName>
-      <ID>5505</ID>
+      <ID>5516</ID>
       <CodeName>BlogTemplate.HomeNode</CodeName>
       <GUID>17f8cbb8-290b-4d04-b8b5-50604646aa32</GUID>
       <ObjectType>cms.documenttype</ObjectType>
     </objecttranslation>
     <objecttranslation>
       <ClassName>cms_class</ClassName>
-      <ID>5506</ID>
+      <ID>5517</ID>
       <CodeName>BlogTemplate.ArticleNode</CodeName>
       <GUID>680231ed-fb3b-4f43-945e-864fe3f38c2d</GUID>
       <ObjectType>cms.documenttype</ObjectType>
     </objecttranslation>
     <objecttranslation>
       <ClassName>cms_class</ClassName>
-      <ID>5507</ID>
+      <ID>5518</ID>
       <CodeName>BlogTemplate.AboutNode</CodeName>
       <GUID>edc4092e-2033-4a50-970e-c0892b3c9f65</GUID>
       <ObjectType>cms.documenttype</ObjectType>
     </objecttranslation>
     <objecttranslation>
       <ClassName>cms_class</ClassName>
-      <ID>5508</ID>
+      <ID>5519</ID>
       <CodeName>BlogTemplate.AuthorNode</CodeName>
       <GUID>23c33949-95cc-4c9c-ba55-f35b22dbbfdf</GUID>
+      <ObjectType>cms.documenttype</ObjectType>
+    </objecttranslation>
+    <objecttranslation>
+      <ClassName>cms_class</ClassName>
+      <ID>5520</ID>
+      <CodeName>BlogTemplate.AuthorFolder</CodeName>
+      <GUID>6f2898e0-45fd-4c8b-8394-075379082476</GUID>
+      <ObjectType>cms.documenttype</ObjectType>
+    </objecttranslation>
+    <objecttranslation>
+      <ClassName>cms_class</ClassName>
+      <ID>5521</ID>
+      <CodeName>BlogTemplate.ArticleFolder</CodeName>
+      <GUID>ae8a5374-e56b-4370-93b6-dd396f45b85f</GUID>
       <ObjectType>cms.documenttype</ObjectType>
     </objecttranslation>
     <objecttranslation>

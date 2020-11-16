@@ -1,7 +1,7 @@
 ﻿<cms_formusercontrol version="13.0">
   <NewDataSet>
     <cms_formusercontrol>
-      <UserControlID>715</UserControlID>
+      <UserControlID>716</UserControlID>
       <UserControlDisplayName>* Author Dropdown</UserControlDisplayName>
       <UserControlCodeName>BlogTemplate.AuthorDropdownControl</UserControlCodeName>
       <UserControlFileName></UserControlFileName>

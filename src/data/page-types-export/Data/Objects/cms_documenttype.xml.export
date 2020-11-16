@@ -1,7 +1,35 @@
 ﻿<cms_documenttype version="13.0">
   <NewDataSet>
     <cms_class>
-      <ClassID>5504</ClassID>
+      <ClassID>5520</ClassID>
+      <ClassDisplayName>* Author Folder</ClassDisplayName>
+      <ClassName>BlogTemplate.AuthorFolder</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>false</ClassIsCoupledClass>
+      <ClassXmlSchema></ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2" /&gt;</ClassFormDefinition>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassLastModified>2020-11-16T17:07:38.6744219-05:00</ClassLastModified>
+      <ClassGUID>6f2898e0-45fd-4c8b-8394-075379082476</ClassGUID>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search /&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassVersionGUID>b16fc2c9-e168-48ed-9a78-a6cef2d5e7ce</ClassVersionGUID>
+      <ClassIsForm>false</ClassIsForm>
+      <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
+      <ClassIconClass>icon-users</ClassIconClass>
+      <ClassUsesPageBuilder>false</ClassUsesPageBuilder>
+      <ClassIsNavigationItem>false</ClassIsNavigationItem>
+      <ClassHasURL>true</ClassHasURL>
+      <ClassHasMetadata>false</ClassHasMetadata>
+    </cms_class>
+    <cms_class>
+      <ClassID>5515</ClassID>
       <ClassDisplayName>* Base</ClassDisplayName>
       <ClassName>BlogTemplate.BaseNode</ClassName>
       <ClassUsesVersioning>false</ClassUsesVersioning>
@@ -61,15 +89,16 @@
       <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
       <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
       <ClassNodeAliasSource>DocumentName</ClassNodeAliasSource>
-      <ClassLastModified>2020-05-15T13:37:33.5291264-04:00</ClassLastModified>
+      <ClassLastModified>2020-11-16T17:07:43.8024325-05:00</ClassLastModified>
       <ClassGUID>9b2b695d-88ff-425b-b233-440456950d50</ClassGUID>
       <ClassIsCustomTable>false</ClassIsCustomTable>
       <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
       <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
       <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
       <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="4e15a602-d55e-4f70-99e5-e6ccddc3ffe5" name="BaseNodeID" searchable="True" tokenized="False" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassInheritsFromClassID>0</ClassInheritsFromClassID>
       <ClassSearchEnabled>true</ClassSearchEnabled>
-      <ClassVersionGUID>bb9fbc09-e295-4f3f-87be-6cec08506ffd</ClassVersionGUID>
+      <ClassVersionGUID>bd118602-bf88-4b0e-846b-2188be42e95d</ClassVersionGUID>
       <ClassIsForm>false</ClassIsForm>
       <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
       <ClassIconClass>icon-doc-o</ClassIconClass>
@@ -79,7 +108,7 @@
       <ClassHasMetadata>false</ClassHasMetadata>
     </cms_class>
     <cms_class>
-      <ClassID>5505</ClassID>
+      <ClassID>5516</ClassID>
       <ClassDisplayName>* Home</ClassDisplayName>
       <ClassName>BlogTemplate.HomeNode</ClassName>
       <ClassUsesVersioning>false</ClassUsesVersioning>
@@ -139,26 +168,26 @@
       <ClassTableName>BlogTemplate_HomeNode</ClassTableName>
       <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
       <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
-      <ClassLastModified>2020-05-18T16:25:44.0713757-04:00</ClassLastModified>
+      <ClassLastModified>2020-11-16T17:07:48.7564041-05:00</ClassLastModified>
       <ClassGUID>17f8cbb8-290b-4d04-b8b5-50604646aa32</ClassGUID>
       <ClassIsCustomTable>false</ClassIsCustomTable>
       <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
       <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
       <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
       <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="4f81a76d-46fe-44a2-a579-66448478e6c7" name="HomeNodeID" searchable="True" tokenized="False" /&gt;&lt;/search&gt;</ClassSearchSettings>
-      <ClassInheritsFromClassID>5504</ClassInheritsFromClassID>
+      <ClassInheritsFromClassID>5515</ClassInheritsFromClassID>
       <ClassSearchEnabled>true</ClassSearchEnabled>
-      <ClassVersionGUID>b5bd7d69-60cf-4ca9-a675-3eacf3a17445</ClassVersionGUID>
+      <ClassVersionGUID>7b69e3c0-64dd-4b23-9ccf-e3b9dcfa4a98</ClassVersionGUID>
       <ClassIsForm>false</ClassIsForm>
       <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
       <ClassIconClass>icon-home</ClassIconClass>
       <ClassUsesPageBuilder>false</ClassUsesPageBuilder>
       <ClassIsNavigationItem>false</ClassIsNavigationItem>
-      <ClassHasURL>false</ClassHasURL>
-      <ClassHasMetadata>false</ClassHasMetadata>
+      <ClassHasURL>true</ClassHasURL>
+      <ClassHasMetadata>true</ClassHasMetadata>
     </cms_class>
     <cms_class>
-      <ClassID>5506</ClassID>
+      <ClassID>5517</ClassID>
       <ClassDisplayName>* Article</ClassDisplayName>
       <ClassName>BlogTemplate.ArticleNode</ClassName>
       <ClassUsesVersioning>false</ClassUsesVersioning>
@@ -244,26 +273,27 @@ UNION (
       <ClassTableName>BlogTemplate_ArticleNode</ClassTableName>
       <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
       <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
-      <ClassLastModified>2020-06-23T02:34:36.432087-04:00</ClassLastModified>
+      <ClassLastModified>2020-11-16T17:07:18.2472989-05:00</ClassLastModified>
       <ClassGUID>680231ed-fb3b-4f43-945e-864fe3f38c2d</ClassGUID>
       <ClassIsCustomTable>false</ClassIsCustomTable>
       <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
       <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
       <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
       <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="0cd4663b-277a-4915-a010-cdca08d854f4" name="HeroImage" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="da366a16-3f7a-49ca-81ce-ee2bd4486ee7" name="ArticleNodeID" searchable="True" tokenized="False" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="f5200ea9-a54a-432e-8fc2-0d22fdb23765" name="Content" searchable="False" tokenized="True" /&gt;&lt;/search&gt;</ClassSearchSettings>
-      <ClassInheritsFromClassID>5504</ClassInheritsFromClassID>
+      <ClassInheritsFromClassID>5515</ClassInheritsFromClassID>
       <ClassSearchEnabled>true</ClassSearchEnabled>
-      <ClassVersionGUID>7841618f-eebf-4ad3-9fab-4a318696a860</ClassVersionGUID>
+      <ClassVersionGUID>b570a351-37eb-4179-b23d-3dd29b6c02ce</ClassVersionGUID>
       <ClassIsForm>false</ClassIsForm>
       <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
       <ClassIconClass>icon-l-header-menu-text</ClassIconClass>
+      <ClassURLPattern>articles/{%NodeAlias%}</ClassURLPattern>
       <ClassUsesPageBuilder>false</ClassUsesPageBuilder>
       <ClassIsNavigationItem>false</ClassIsNavigationItem>
-      <ClassHasURL>false</ClassHasURL>
-      <ClassHasMetadata>false</ClassHasMetadata>
+      <ClassHasURL>true</ClassHasURL>
+      <ClassHasMetadata>true</ClassHasMetadata>
     </cms_class>
     <cms_class>
-      <ClassID>5507</ClassID>
+      <ClassID>5518</ClassID>
       <ClassDisplayName>* About</ClassDisplayName>
       <ClassName>BlogTemplate.AboutNode</ClassName>
       <ClassUsesVersioning>false</ClassUsesVersioning>
@@ -322,27 +352,54 @@ UNION (
       <ClassTableName>BlogTemplate_AboutNode</ClassTableName>
       <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
       <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
-      <ClassLastModified>2020-07-23T11:26:16.3626721-04:00</ClassLastModified>
+      <ClassLastModified>2020-11-16T17:07:12.9948666-05:00</ClassLastModified>
       <ClassGUID>edc4092e-2033-4a50-970e-c0892b3c9f65</ClassGUID>
       <ClassIsCustomTable>false</ClassIsCustomTable>
       <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
       <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
       <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
       <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="85964c91-f348-4306-be82-39b2c7106888" name="AboutNodeID" searchable="True" tokenized="False" /&gt;&lt;/search&gt;</ClassSearchSettings>
-      <ClassInheritsFromClassID>5504</ClassInheritsFromClassID>
+      <ClassInheritsFromClassID>5515</ClassInheritsFromClassID>
       <ClassSearchEnabled>true</ClassSearchEnabled>
-      <ClassVersionGUID>187f12c0-7eb3-4a3e-bf87-4ea10478acab</ClassVersionGUID>
+      <ClassVersionGUID>721abc03-5689-4c92-b05d-f3c4b37ce17a</ClassVersionGUID>
       <ClassIsForm>false</ClassIsForm>
       <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
       <ClassIconClass>icon-i-circle</ClassIconClass>
-      <ClassURLPattern>/about</ClassURLPattern>
       <ClassUsesPageBuilder>true</ClassUsesPageBuilder>
+      <ClassIsNavigationItem>false</ClassIsNavigationItem>
+      <ClassHasURL>true</ClassHasURL>
+      <ClassHasMetadata>true</ClassHasMetadata>
+    </cms_class>
+    <cms_class>
+      <ClassID>5521</ClassID>
+      <ClassDisplayName>* Article Folder</ClassDisplayName>
+      <ClassName>BlogTemplate.ArticleFolder</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>false</ClassIsCoupledClass>
+      <ClassXmlSchema></ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2" /&gt;</ClassFormDefinition>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassLastModified>2020-11-16T17:07:23.5007618-05:00</ClassLastModified>
+      <ClassGUID>ae8a5374-e56b-4370-93b6-dd396f45b85f</ClassGUID>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search /&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassVersionGUID>c1af3f6a-fd8b-4834-879c-b0c82d30c451</ClassVersionGUID>
+      <ClassIsForm>false</ClassIsForm>
+      <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
+      <ClassIconClass>icon-folder</ClassIconClass>
+      <ClassUsesPageBuilder>false</ClassUsesPageBuilder>
       <ClassIsNavigationItem>false</ClassIsNavigationItem>
       <ClassHasURL>true</ClassHasURL>
       <ClassHasMetadata>false</ClassHasMetadata>
     </cms_class>
     <cms_class>
-      <ClassID>5508</ClassID>
+      <ClassID>5519</ClassID>
       <ClassDisplayName>* Author</ClassDisplayName>
       <ClassName>BlogTemplate.AuthorNode</ClassName>
       <ClassUsesVersioning>false</ClassUsesVersioning>
@@ -431,34 +488,34 @@ UNION (
     &lt;/xs:unique&gt;
   &lt;/xs:element&gt;
 &lt;/xs:schema&gt;</ClassXmlSchema>
-      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="AuthorNodeID" columntype="integer" guid="f02decd6-0663-425d-8a36-834fefbfc1dc" isPK="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;AuthorNodeID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DocumentName" columnsize="100" columntype="text" external="true" guid="15d630eb-2a4d-4fd9-b328-c417357b58e7" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="Image" columnsize="500" columntype="text" guid="93ed7019-bffc-4275-a2a9-0feb64f759dd" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="Description" columnsize="1000" columntype="text" guid="30dc1216-9ff0-4544-81ba-1f9e5adef79a" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Social"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="TwitterUrl" columnsize="200" columntype="text" guid="63c941f5-d974-4b86-98ce-1f1cbb271324" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Twitter&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;rules&gt;&lt;rule errormsg="Please enter a valid twitter URL."&gt;{%Rule("(Value.Matches(\"http(?:s)?:\\\\/\\\\/(?:www\\\\.)?twitter\\\\.com\\\\/([a-zA-Z0-9_]+)\"))", "&amp;lt;rules&amp;gt;&amp;lt;r pos=\"0\" par=\"\" op=\"and\" n=\"RegExp\" &amp;gt;&amp;lt;p n=\"regexp\"&amp;gt;&amp;lt;t&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?twitter\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/t&amp;gt;&amp;lt;v&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?twitter\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/v&amp;gt;&amp;lt;r&amp;gt;0&amp;lt;/r&amp;gt;&amp;lt;d&amp;gt;&amp;lt;/d&amp;gt;&amp;lt;vt&amp;gt;text&amp;lt;/vt&amp;gt;&amp;lt;tv&amp;gt;0&amp;lt;/tv&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/r&amp;gt;&amp;lt;/rules&amp;gt;")|(identity)GlobalAdministrator|(hash)7f3af502055d916fcbd890249aafb4905f2deca2fd87022055f1915d1ee9c34a%}&lt;/rule&gt;&lt;/rules&gt;&lt;/field&gt;&lt;field allowempty="true" column="FacebookUrl" columnsize="200" columntype="text" guid="98ca646a-d0e1-4180-bea4-b1eeb0ef3db3" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Facebook&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;rules&gt;&lt;rule errormsg="Please enter a valid Facebook URL."&gt;{%Rule("(Value.Matches(\"http(?:s)?:\\\\/\\\\/(?:www\\\\.)?facebook\\\\.com\\\\/([a-zA-Z0-9_]+)\"))", "&amp;lt;rules&amp;gt;&amp;lt;r pos=\"0\" par=\"\" op=\"and\" n=\"RegExp\" &amp;gt;&amp;lt;p n=\"regexp\"&amp;gt;&amp;lt;t&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?facebook\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/t&amp;gt;&amp;lt;v&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?facebook\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/v&amp;gt;&amp;lt;r&amp;gt;0&amp;lt;/r&amp;gt;&amp;lt;d&amp;gt;&amp;lt;/d&amp;gt;&amp;lt;vt&amp;gt;text&amp;lt;/vt&amp;gt;&amp;lt;tv&amp;gt;0&amp;lt;/tv&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/r&amp;gt;&amp;lt;/rules&amp;gt;")|(identity)GlobalAdministrator|(hash)8d9b76fec8286add6e44dc842ad20d45c163e6cd8a88e3b42144a970fa5d1089%}&lt;/rule&gt;&lt;/rules&gt;&lt;/field&gt;&lt;field allowempty="true" column="GitHubUrl" columnsize="200" columntype="text" guid="a00c79e7-5492-4a4c-84b1-4c11d0c667a6" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;GitHub&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;rules&gt;&lt;rule errormsg="Please enter a valid GitHub URL."&gt;{%Rule("(Value.Matches(\"http(?:s)?:\\\\/\\\\/(?:www\\\\.)?github\\\\.com\\\\/([a-zA-Z0-9_]+)\"))", "&amp;lt;rules&amp;gt;&amp;lt;r pos=\"0\" par=\"\" op=\"and\" n=\"RegExp\" &amp;gt;&amp;lt;p n=\"regexp\"&amp;gt;&amp;lt;t&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?github\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/t&amp;gt;&amp;lt;v&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?github\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/v&amp;gt;&amp;lt;r&amp;gt;0&amp;lt;/r&amp;gt;&amp;lt;d&amp;gt;&amp;lt;/d&amp;gt;&amp;lt;vt&amp;gt;text&amp;lt;/vt&amp;gt;&amp;lt;tv&amp;gt;0&amp;lt;/tv&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/r&amp;gt;&amp;lt;/rules&amp;gt;")|(identity)GlobalAdministrator|(hash)7b5a658684a2a7ee52ec54592e93fc2e30e87b7a01c63b514049d2ca2cb784f9%}&lt;/rule&gt;&lt;/rules&gt;&lt;/field&gt;&lt;category isinherited="true" name="Metadata"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="DocumentPageTitle" columntype="longtext" external="true" guid="457e80f8-6891-4e23-bae0-afcd3dc4c03e" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageDescription" columntype="longtext" external="true" guid="8dae06e2-1df2-452a-b584-1af099b56585" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageKeyWords" columntype="longtext" external="true" guid="97a159da-2dc2-40a0-9590-66f047a059aa" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;explanationtext&gt;(separated by comma)&lt;/explanationtext&gt;&lt;fieldcaption&gt;Keywords&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category isinherited="true" name="OpenGraph"&gt;&lt;properties&gt;&lt;caption&gt;Open Graph&lt;/caption&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="OpenGraphTitle" columnsize="200" columntype="text" guid="931db176-c488-4eae-a1b4-58d64d4e872a" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphDescription" columnsize="500" columntype="text" guid="4cbfb6f5-3a17-4c8d-8090-8904a0e35648" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphImage" columnsize="500" columntype="text" guid="c7d59aa2-2c73-49cf-86b8-20edebcab4a2" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphVideo" columnsize="500" columntype="text" guid="5c9e7a9a-1a76-4b5d-bdc9-e72e01ccfffc" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Video&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="AuthorNodeID" columntype="integer" guid="f02decd6-0663-425d-8a36-834fefbfc1dc" isPK="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;AuthorNodeID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DocumentName" columnsize="100" columntype="text" external="true" guid="15d630eb-2a4d-4fd9-b328-c417357b58e7" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="Image" columnsize="500" columntype="text" guid="93ed7019-bffc-4275-a2a9-0feb64f759dd" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="Description" columnsize="1000" columntype="text" guid="30dc1216-9ff0-4544-81ba-1f9e5adef79a" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Social"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="TwitterUrl" columnsize="200" columntype="text" guid="63c941f5-d974-4b86-98ce-1f1cbb271324" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Twitter&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;rules&gt;&lt;rule errormsg="Please enter a valid twitter URL."&gt;{%Rule("(Value.Matches(\"http(?:s)?:\\\\/\\\\/(?:www\\\\.)?twitter\\\\.com\\\\/([a-zA-Z0-9_]+)\"))", "&amp;lt;rules&amp;gt;&amp;lt;r pos=\"0\" par=\"\" op=\"and\" n=\"RegExp\" &amp;gt;&amp;lt;p n=\"regexp\"&amp;gt;&amp;lt;t&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?twitter\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/t&amp;gt;&amp;lt;v&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?twitter\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/v&amp;gt;&amp;lt;r&amp;gt;0&amp;lt;/r&amp;gt;&amp;lt;d&amp;gt;&amp;lt;/d&amp;gt;&amp;lt;vt&amp;gt;text&amp;lt;/vt&amp;gt;&amp;lt;tv&amp;gt;0&amp;lt;/tv&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/r&amp;gt;&amp;lt;/rules&amp;gt;")|(identity)GlobalAdministrator|(hash)2284caa347365d57c9f4d517c095afb3143936f4ef8e83910a71e53bf2361889%}&lt;/rule&gt;&lt;/rules&gt;&lt;/field&gt;&lt;field allowempty="true" column="FacebookUrl" columnsize="200" columntype="text" guid="98ca646a-d0e1-4180-bea4-b1eeb0ef3db3" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Facebook&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;rules&gt;&lt;rule errormsg="Please enter a valid Facebook URL."&gt;{%Rule("(Value.Matches(\"http(?:s)?:\\\\/\\\\/(?:www\\\\.)?facebook\\\\.com\\\\/([a-zA-Z0-9_]+)\"))", "&amp;lt;rules&amp;gt;&amp;lt;r pos=\"0\" par=\"\" op=\"and\" n=\"RegExp\" &amp;gt;&amp;lt;p n=\"regexp\"&amp;gt;&amp;lt;t&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?facebook\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/t&amp;gt;&amp;lt;v&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?facebook\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/v&amp;gt;&amp;lt;r&amp;gt;0&amp;lt;/r&amp;gt;&amp;lt;d&amp;gt;&amp;lt;/d&amp;gt;&amp;lt;vt&amp;gt;text&amp;lt;/vt&amp;gt;&amp;lt;tv&amp;gt;0&amp;lt;/tv&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/r&amp;gt;&amp;lt;/rules&amp;gt;")|(identity)GlobalAdministrator|(hash)95c7d6446577bfc9d738f66e1d8d39d2f2b7fc22d1cca0bd94f14cb3efb2c11b%}&lt;/rule&gt;&lt;/rules&gt;&lt;/field&gt;&lt;field allowempty="true" column="GitHubUrl" columnsize="200" columntype="text" guid="a00c79e7-5492-4a4c-84b1-4c11d0c667a6" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;GitHub&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;rules&gt;&lt;rule errormsg="Please enter a valid GitHub URL."&gt;{%Rule("(Value.Matches(\"http(?:s)?:\\\\/\\\\/(?:www\\\\.)?github\\\\.com\\\\/([a-zA-Z0-9_]+)\"))", "&amp;lt;rules&amp;gt;&amp;lt;r pos=\"0\" par=\"\" op=\"and\" n=\"RegExp\" &amp;gt;&amp;lt;p n=\"regexp\"&amp;gt;&amp;lt;t&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?github\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/t&amp;gt;&amp;lt;v&amp;gt;http(?:s)?:\\/\\/(?:www\\.)?github\\.com\\/([a-zA-Z0-9_]+)&amp;lt;/v&amp;gt;&amp;lt;r&amp;gt;0&amp;lt;/r&amp;gt;&amp;lt;d&amp;gt;&amp;lt;/d&amp;gt;&amp;lt;vt&amp;gt;text&amp;lt;/vt&amp;gt;&amp;lt;tv&amp;gt;0&amp;lt;/tv&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/r&amp;gt;&amp;lt;/rules&amp;gt;")|(identity)GlobalAdministrator|(hash)1645415bb0f0bc15ca0721b27781721ef670114e4a5121c8a59014b29c2039c2%}&lt;/rule&gt;&lt;/rules&gt;&lt;/field&gt;&lt;category isinherited="true" name="Metadata"&gt;&lt;properties&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="DocumentPageTitle" columntype="longtext" external="true" guid="457e80f8-6891-4e23-bae0-afcd3dc4c03e" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageDescription" columntype="longtext" external="true" guid="8dae06e2-1df2-452a-b584-1af099b56585" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="DocumentPageKeyWords" columntype="longtext" external="true" guid="97a159da-2dc2-40a0-9590-66f047a059aa" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;explanationtext&gt;(separated by comma)&lt;/explanationtext&gt;&lt;fieldcaption&gt;Keywords&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category isinherited="true" name="OpenGraph"&gt;&lt;properties&gt;&lt;caption&gt;Open Graph&lt;/caption&gt;&lt;collapsedbydefault&gt;True&lt;/collapsedbydefault&gt;&lt;collapsible&gt;True&lt;/collapsible&gt;&lt;visible&gt;True&lt;/visible&gt;&lt;/properties&gt;&lt;/category&gt;&lt;field allowempty="true" column="OpenGraphTitle" columnsize="200" columntype="text" guid="931db176-c488-4eae-a1b4-58d64d4e872a" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Title&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphDescription" columnsize="500" columntype="text" guid="4cbfb6f5-3a17-4c8d-8090-8904a0e35648" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextAreaControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Wrap&gt;True&lt;/Wrap&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphImage" columnsize="500" columntype="text" guid="c7d59aa2-2c73-49cf-86b8-20edebcab4a2" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Image&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="OpenGraphVideo" columnsize="500" columntype="text" guid="5c9e7a9a-1a76-4b5d-bdc9-e72e01ccfffc" isinherited="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Video&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;MediaSelectionControl&lt;/controlname&gt;&lt;ShowPreview&gt;True&lt;/ShowPreview&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
       <ClassNodeNameSource>DocumentName</ClassNodeNameSource>
       <ClassTableName>BlogTemplate_AuthorNode</ClassTableName>
       <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
       <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
-      <ClassLastModified>2020-05-15T13:38:22.4368129-04:00</ClassLastModified>
+      <ClassLastModified>2020-11-16T17:07:33.6735998-05:00</ClassLastModified>
       <ClassGUID>23c33949-95cc-4c9c-ba55-f35b22dbbfdf</ClassGUID>
       <ClassIsCustomTable>false</ClassIsCustomTable>
       <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
       <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
       <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
       <ClassSearchSettings>&lt;search&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="34c455ed-6a4e-4eb3-8fd6-b8916aeec3ef" name="OpenGraphImage" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="379653d6-7402-4868-9e7c-1eb65db5c831" name="Description" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="3fc64cb0-b201-4180-9fb3-f0bde37eb92b" name="Image" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="4cb07dd7-10e3-40ae-a5c8-08f88318efdd" name="OpenGraphVideo" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="7317f633-2cea-4e4f-8de1-d303c4285161" name="OpenGraphDescription" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="False" azureretrievable="True" azuresearchable="False" content="False" id="9255d404-a491-4ae9-8a88-ceccf75ffb58" name="AuthorNodeID" searchable="True" tokenized="False" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="ad30df81-2e6b-4f70-bde5-d088301e7d38" name="GitHubUrl" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="dd2b243e-a62c-426e-bd48-f8d2fe24c5fa" name="TwitterUrl" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="efedf4b3-d678-4051-8b59-fee818e47c17" name="FacebookUrl" searchable="False" tokenized="True" /&gt;&lt;item azurecontent="True" azureretrievable="False" azuresearchable="True" content="True" id="f6c48b0b-58f7-492f-b3ae-7070634018cd" name="OpenGraphTitle" searchable="False" tokenized="True" /&gt;&lt;/search&gt;</ClassSearchSettings>
-      <ClassInheritsFromClassID>5504</ClassInheritsFromClassID>
+      <ClassInheritsFromClassID>5515</ClassInheritsFromClassID>
       <ClassSearchEnabled>true</ClassSearchEnabled>
-      <ClassVersionGUID>79fa17a7-8199-4ed7-b6b3-f8014ce08ca0</ClassVersionGUID>
+      <ClassVersionGUID>b3fac510-fcd4-4432-924d-1858a28eb20e</ClassVersionGUID>
       <ClassIsForm>false</ClassIsForm>
       <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;BlogTemplate&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
       <ClassIconClass>icon-user-frame</ClassIconClass>
       <ClassUsesPageBuilder>false</ClassUsesPageBuilder>
       <ClassIsNavigationItem>false</ClassIsNavigationItem>
       <ClassHasURL>true</ClassHasURL>
-      <ClassHasMetadata>false</ClassHasMetadata>
+      <ClassHasMetadata>true</ClassHasMetadata>
     </cms_class>
     <cms_permission>
-      <PermissionID>15792</PermissionID>
+      <PermissionID>16181</PermissionID>
       <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
       <PermissionName>Modify</PermissionName>
-      <ClassID>5505</ClassID>
+      <ClassID>5516</ClassID>
       <PermissionGUID>f08bb642-bf95-41e3-bf15-01121bbf95a1</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:23:10.3152589-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
@@ -466,10 +523,10 @@ UNION (
       <PermissionOrder>2</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15816</PermissionID>
+      <PermissionID>16205</PermissionID>
       <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
       <PermissionName>Delete</PermissionName>
-      <ClassID>5508</ClassID>
+      <ClassID>5519</ClassID>
       <PermissionGUID>d50375a1-fe62-48c3-9a78-05246a0e9985</PermissionGUID>
       <PermissionLastModified>2020-05-11T15:10:47.8030397-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
@@ -477,10 +534,21 @@ UNION (
       <PermissionOrder>5</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15800</PermissionID>
+      <PermissionID>16214</PermissionID>
       <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
       <PermissionName>Modify</PermissionName>
-      <ClassID>5506</ClassID>
+      <ClassID>5520</ClassID>
+      <PermissionGUID>119c3786-3904-469b-99e7-077f79b6ad99</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:03:59.077874-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16189</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>5517</ClassID>
       <PermissionGUID>1106210f-2f45-49e8-98a2-0905813ba53b</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:28:13.6060627-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
@@ -488,10 +556,10 @@ UNION (
       <PermissionOrder>2</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15801</PermissionID>
+      <PermissionID>16190</PermissionID>
       <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
       <PermissionName>ExploreTree</PermissionName>
-      <ClassID>5506</ClassID>
+      <ClassID>5517</ClassID>
       <PermissionGUID>063a3345-f661-4199-ab24-0a27572007be</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:28:13.6225108-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
@@ -499,10 +567,10 @@ UNION (
       <PermissionOrder>7</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15784</PermissionID>
+      <PermissionID>16173</PermissionID>
       <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
       <PermissionName>Modify</PermissionName>
-      <ClassID>5504</ClassID>
+      <ClassID>5515</ClassID>
       <PermissionGUID>ca7df944-d14d-4f2e-a609-0e333292a2d9</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:14:34.0265957-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
@@ -510,10 +578,21 @@ UNION (
       <PermissionOrder>2</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15802</PermissionID>
+      <PermissionID>16223</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>5521</ClassID>
+      <PermissionGUID>8aa328ea-f927-43c2-959d-0ed82a083cd3</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:05:11.1237747-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16191</PermissionID>
       <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
       <PermissionName>Destroy</PermissionName>
-      <ClassID>5506</ClassID>
+      <ClassID>5517</ClassID>
       <PermissionGUID>6f0ada50-3676-4a41-9ea2-17a10f65f755</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:28:13.6189321-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
@@ -521,10 +600,21 @@ UNION (
       <PermissionOrder>6</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15817</PermissionID>
+      <PermissionID>16220</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>5520</ClassID>
+      <PermissionGUID>e86b8a42-f5ca-4352-a7d3-1b5eeab3860a</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:03:59.1716253-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16206</PermissionID>
       <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
       <PermissionName>Destroy</PermissionName>
-      <ClassID>5508</ClassID>
+      <ClassID>5519</ClassID>
       <PermissionGUID>b6eebdce-15ee-4248-88d8-1c254bceb632</PermissionGUID>
       <PermissionLastModified>2020-05-11T15:10:47.8063158-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
@@ -532,10 +622,21 @@ UNION (
       <PermissionOrder>6</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15803</PermissionID>
+      <PermissionID>16215</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>5520</ClassID>
+      <PermissionGUID>f09a6432-4ba1-4056-8f83-24458ef3fa06</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:03:59.0934929-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16192</PermissionID>
       <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
       <PermissionName>ModifyPermissions</PermissionName>
-      <ClassID>5506</ClassID>
+      <ClassID>5517</ClassID>
       <PermissionGUID>b13c2083-3dad-459e-b7cd-35893288d148</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:28:13.6263101-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
@@ -543,10 +644,10 @@ UNION (
       <PermissionOrder>8</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15785</PermissionID>
+      <PermissionID>16174</PermissionID>
       <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
       <PermissionName>Destroy</PermissionName>
-      <ClassID>5504</ClassID>
+      <ClassID>5515</ClassID>
       <PermissionGUID>80f86815-6815-44ad-af9f-3af63f858fef</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:14:34.0389961-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
@@ -554,10 +655,10 @@ UNION (
       <PermissionOrder>6</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15808</PermissionID>
+      <PermissionID>16197</PermissionID>
       <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
       <PermissionName>Delete</PermissionName>
-      <ClassID>5507</ClassID>
+      <ClassID>5518</ClassID>
       <PermissionGUID>cb058dde-2db4-4571-b55b-47d2e594c6b6</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:46:44.3190491-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
@@ -565,10 +666,10 @@ UNION (
       <PermissionOrder>5</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15809</PermissionID>
+      <PermissionID>16198</PermissionID>
       <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
       <PermissionName>Destroy</PermissionName>
-      <ClassID>5507</ClassID>
+      <ClassID>5518</ClassID>
       <PermissionGUID>19422873-4634-4db8-8f43-485f472d8f38</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:46:44.3227214-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
@@ -576,10 +677,10 @@ UNION (
       <PermissionOrder>6</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15804</PermissionID>
+      <PermissionID>16193</PermissionID>
       <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
       <PermissionName>Delete</PermissionName>
-      <ClassID>5506</ClassID>
+      <ClassID>5517</ClassID>
       <PermissionGUID>d67f762e-8d7e-4354-8154-4bbecbd249f0</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:28:13.6154592-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
@@ -587,10 +688,10 @@ UNION (
       <PermissionOrder>5</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15805</PermissionID>
+      <PermissionID>16194</PermissionID>
       <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
       <PermissionName>CreateSpecific</PermissionName>
-      <ClassID>5506</ClassID>
+      <ClassID>5517</ClassID>
       <PermissionGUID>b855374a-9cc6-4f86-b8a3-5446407315fe</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:28:13.6095377-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
@@ -598,10 +699,10 @@ UNION (
       <PermissionOrder>3</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15786</PermissionID>
+      <PermissionID>16175</PermissionID>
       <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
       <PermissionName>ModifyPermissions</PermissionName>
-      <ClassID>5504</ClassID>
+      <ClassID>5515</ClassID>
       <PermissionGUID>c5162224-865e-4145-ad92-54edc239bdff</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:14:34.0469553-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
@@ -609,10 +710,21 @@ UNION (
       <PermissionOrder>8</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15806</PermissionID>
+      <PermissionID>16218</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>5520</ClassID>
+      <PermissionGUID>b8410497-4ac5-4268-856b-58027fbb16c6</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:03:59.1404103-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16195</PermissionID>
       <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
       <PermissionName>Create</PermissionName>
-      <ClassID>5506</ClassID>
+      <ClassID>5517</ClassID>
       <PermissionGUID>af95873a-0f21-4486-a85d-59f3f8a5e7d6</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:28:13.6125142-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
@@ -620,10 +732,10 @@ UNION (
       <PermissionOrder>4</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15787</PermissionID>
+      <PermissionID>16176</PermissionID>
       <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
       <PermissionName>CreateSpecific</PermissionName>
-      <ClassID>5504</ClassID>
+      <ClassID>5515</ClassID>
       <PermissionGUID>1f58c17e-e62c-4e2c-8003-5a82d5292282</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:14:34.0300675-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
@@ -631,10 +743,10 @@ UNION (
       <PermissionOrder>3</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15818</PermissionID>
+      <PermissionID>16207</PermissionID>
       <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
       <PermissionName>Read</PermissionName>
-      <ClassID>5508</ClassID>
+      <ClassID>5519</ClassID>
       <PermissionGUID>4f5291ee-d436-4e81-bd68-5c77acf9dd0d</PermissionGUID>
       <PermissionLastModified>2020-05-11T15:10:47.7672874-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
@@ -642,10 +754,10 @@ UNION (
       <PermissionOrder>1</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15819</PermissionID>
+      <PermissionID>16208</PermissionID>
       <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
       <PermissionName>ModifyPermissions</PermissionName>
-      <ClassID>5508</ClassID>
+      <ClassID>5519</ClassID>
       <PermissionGUID>bd076a68-0d24-4ab5-ac45-5e65da4d2dce</PermissionGUID>
       <PermissionLastModified>2020-05-11T15:10:47.8132596-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
@@ -653,10 +765,21 @@ UNION (
       <PermissionOrder>8</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15810</PermissionID>
+      <PermissionID>16228</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>5521</ClassID>
+      <PermissionGUID>56767193-6516-4382-9218-63595b30dc79</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:05:11.2018995-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16199</PermissionID>
       <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
       <PermissionName>Read</PermissionName>
-      <ClassID>5507</ClassID>
+      <ClassID>5518</ClassID>
       <PermissionGUID>40c50a03-98fd-4741-ae43-6c51a64fc31e</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:46:44.3011932-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
@@ -664,10 +787,21 @@ UNION (
       <PermissionOrder>1</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15793</PermissionID>
+      <PermissionID>16219</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>5520</ClassID>
+      <PermissionGUID>0c64cec4-bab1-4a1c-89b8-70eec7ac80cd</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:03:59.1559933-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16182</PermissionID>
       <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
       <PermissionName>ModifyPermissions</PermissionName>
-      <ClassID>5505</ClassID>
+      <ClassID>5516</ClassID>
       <PermissionGUID>acb5d580-3959-46ef-a646-7d700f1583cb</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:23:10.3360915-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
@@ -675,10 +809,10 @@ UNION (
       <PermissionOrder>8</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15788</PermissionID>
+      <PermissionID>16177</PermissionID>
       <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
       <PermissionName>Delete</PermissionName>
-      <ClassID>5504</ClassID>
+      <ClassID>5515</ClassID>
       <PermissionGUID>fb601791-03ed-40a3-8ecb-87d63f268e00</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:14:34.0355238-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
@@ -686,10 +820,10 @@ UNION (
       <PermissionOrder>5</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15789</PermissionID>
+      <PermissionID>16178</PermissionID>
       <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
       <PermissionName>ExploreTree</PermissionName>
-      <ClassID>5504</ClassID>
+      <ClassID>5515</ClassID>
       <PermissionGUID>fb74872c-cea0-4ddc-82f4-8b9567722e95</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:14:34.0424677-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
@@ -697,10 +831,10 @@ UNION (
       <PermissionOrder>7</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15794</PermissionID>
+      <PermissionID>16183</PermissionID>
       <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
       <PermissionName>Delete</PermissionName>
-      <ClassID>5505</ClassID>
+      <ClassID>5516</ClassID>
       <PermissionGUID>9c3e3c36-fb9e-4056-afe2-8bc22b61fa6f</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:23:10.32466-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
@@ -708,10 +842,10 @@ UNION (
       <PermissionOrder>5</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15795</PermissionID>
+      <PermissionID>16184</PermissionID>
       <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
       <PermissionName>ExploreTree</PermissionName>
-      <ClassID>5505</ClassID>
+      <ClassID>5516</ClassID>
       <PermissionGUID>d60a1798-2d4d-4fb2-8386-8c4cbe45ed0a</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:23:10.3321001-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
@@ -719,10 +853,21 @@ UNION (
       <PermissionOrder>7</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15796</PermissionID>
+      <PermissionID>16225</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>5521</ClassID>
+      <PermissionGUID>bcaff648-5fcc-488e-baa5-8fc00a82212d</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:05:11.1394065-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16185</PermissionID>
       <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
       <PermissionName>Read</PermissionName>
-      <ClassID>5505</ClassID>
+      <ClassID>5516</ClassID>
       <PermissionGUID>a67d40cb-c82c-40ae-95e3-90318551810f</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:23:10.3092076-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
@@ -730,10 +875,10 @@ UNION (
       <PermissionOrder>1</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15811</PermissionID>
+      <PermissionID>16200</PermissionID>
       <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
       <PermissionName>Modify</PermissionName>
-      <ClassID>5507</ClassID>
+      <ClassID>5518</ClassID>
       <PermissionGUID>8a15ca2f-3e90-4240-a0cd-987a1e65096a</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:46:44.3096254-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
@@ -741,10 +886,10 @@ UNION (
       <PermissionOrder>2</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15797</PermissionID>
+      <PermissionID>16186</PermissionID>
       <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
       <PermissionName>CreateSpecific</PermissionName>
-      <ClassID>5505</ClassID>
+      <ClassID>5516</ClassID>
       <PermissionGUID>d3fb33bf-7a89-4900-8bbb-9d79fb33c1ae</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:23:10.3187069-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
@@ -752,10 +897,10 @@ UNION (
       <PermissionOrder>3</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15807</PermissionID>
+      <PermissionID>16196</PermissionID>
       <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
       <PermissionName>Read</PermissionName>
-      <ClassID>5506</ClassID>
+      <ClassID>5517</ClassID>
       <PermissionGUID>42d3904b-1912-4d69-9e9a-a7f595ed5576</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:28:13.5997054-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
@@ -763,10 +908,10 @@ UNION (
       <PermissionOrder>1</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15820</PermissionID>
+      <PermissionID>16209</PermissionID>
       <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
       <PermissionName>Modify</PermissionName>
-      <ClassID>5508</ClassID>
+      <ClassID>5519</ClassID>
       <PermissionGUID>65478d50-45a9-4d19-8a96-aac80d82082c</PermissionGUID>
       <PermissionLastModified>2020-05-11T15:10:47.7937975-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
@@ -774,10 +919,10 @@ UNION (
       <PermissionOrder>2</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15812</PermissionID>
+      <PermissionID>16201</PermissionID>
       <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
       <PermissionName>Create</PermissionName>
-      <ClassID>5507</ClassID>
+      <ClassID>5518</ClassID>
       <PermissionGUID>11102eae-5208-417e-ab48-aed13b548dac</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:46:44.3165692-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
@@ -785,10 +930,10 @@ UNION (
       <PermissionOrder>4</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15798</PermissionID>
+      <PermissionID>16187</PermissionID>
       <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
       <PermissionName>Create</PermissionName>
-      <ClassID>5505</ClassID>
+      <ClassID>5516</ClassID>
       <PermissionGUID>5e905bde-290f-40ff-965e-b5a8ef196d3f</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:23:10.3217069-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
@@ -796,10 +941,10 @@ UNION (
       <PermissionOrder>4</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15790</PermissionID>
+      <PermissionID>16179</PermissionID>
       <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
       <PermissionName>Create</PermissionName>
-      <ClassID>5504</ClassID>
+      <ClassID>5515</ClassID>
       <PermissionGUID>1904b567-08c9-4fe6-97e1-b9b385e6dc7c</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:14:34.0325483-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
@@ -807,10 +952,21 @@ UNION (
       <PermissionOrder>4</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15821</PermissionID>
+      <PermissionID>16217</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>5520</ClassID>
+      <PermissionGUID>0f5b47dc-5bad-4cf5-a0a3-be17f434ba3d</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:03:59.1247745-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16210</PermissionID>
       <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
       <PermissionName>Create</PermissionName>
-      <ClassID>5508</ClassID>
+      <ClassID>5519</ClassID>
       <PermissionGUID>c65bc7e6-a78c-40fa-864a-c6c3b854f551</PermissionGUID>
       <PermissionLastModified>2020-05-11T15:10:47.8000691-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
@@ -818,10 +974,54 @@ UNION (
       <PermissionOrder>4</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15822</PermissionID>
+      <PermissionID>16226</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>5521</ClassID>
+      <PermissionGUID>89f8d340-229d-4a8a-82d3-c85ab061384c</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:05:11.1706568-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16216</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>5520</ClassID>
+      <PermissionGUID>95b5b3b8-0bc6-4e72-91f2-ca58401a4998</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:03:59.1091236-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16221</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>5521</ClassID>
+      <PermissionGUID>76e7a5c5-bd73-479c-9c36-ca6bdff4f2d6</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:05:11.0769033-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16224</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>5521</ClassID>
+      <PermissionGUID>ff1ddf7c-9d1e-4aa3-9c0f-d44c63235400</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:05:11.1394065-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16211</PermissionID>
       <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
       <PermissionName>ExploreTree</PermissionName>
-      <ClassID>5508</ClassID>
+      <ClassID>5519</ClassID>
       <PermissionGUID>67059efd-c7ab-4a3b-9d8d-de4ab735e8ca</PermissionGUID>
       <PermissionLastModified>2020-05-11T15:10:47.8097876-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
@@ -829,10 +1029,10 @@ UNION (
       <PermissionOrder>7</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15813</PermissionID>
+      <PermissionID>16202</PermissionID>
       <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
       <PermissionName>CreateSpecific</PermissionName>
-      <ClassID>5507</ClassID>
+      <ClassID>5518</ClassID>
       <PermissionGUID>521789a8-d31f-49ac-93dd-df52af3cf85b</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:46:44.3130967-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
@@ -840,10 +1040,32 @@ UNION (
       <PermissionOrder>3</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15791</PermissionID>
+      <PermissionID>16222</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>5521</ClassID>
+      <PermissionGUID>e084dc2c-fbc2-4b01-a044-ebe255a596b9</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:05:11.0925284-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16213</PermissionID>
       <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
       <PermissionName>Read</PermissionName>
-      <ClassID>5504</ClassID>
+      <ClassID>5520</ClassID>
+      <PermissionGUID>f45697e4-5095-4319-a12f-ec3cdfdba520</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:03:59.0153688-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16180</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>5515</ClassID>
       <PermissionGUID>14ad9c8e-9342-4226-bc99-f147cef76968</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:14:34.0136973-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
@@ -851,10 +1073,10 @@ UNION (
       <PermissionOrder>1</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15823</PermissionID>
+      <PermissionID>16212</PermissionID>
       <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
       <PermissionName>CreateSpecific</PermissionName>
-      <ClassID>5508</ClassID>
+      <ClassID>5519</ClassID>
       <PermissionGUID>76a14250-07da-421a-82ae-f72f6f1b5c20</PermissionGUID>
       <PermissionLastModified>2020-05-11T15:10:47.7974084-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
@@ -862,10 +1084,10 @@ UNION (
       <PermissionOrder>3</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15814</PermissionID>
+      <PermissionID>16203</PermissionID>
       <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
       <PermissionName>ModifyPermissions</PermissionName>
-      <ClassID>5507</ClassID>
+      <ClassID>5518</ClassID>
       <PermissionGUID>82b32ecd-3bba-4770-a8b6-f92e4617fa87</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:46:44.3301622-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
@@ -873,10 +1095,21 @@ UNION (
       <PermissionOrder>8</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15815</PermissionID>
+      <PermissionID>16227</PermissionID>
       <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
       <PermissionName>ExploreTree</PermissionName>
-      <ClassID>5507</ClassID>
+      <ClassID>5521</ClassID>
+      <PermissionGUID>d9072a54-8077-4b23-8c5b-fecf8060fad5</PermissionGUID>
+      <PermissionLastModified>2020-11-10T15:05:11.186276-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>16204</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>5518</ClassID>
       <PermissionGUID>9e4db9c8-2d81-4bc0-a8b7-ff23b4f703cf</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:46:44.3261674-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
@@ -884,10 +1117,10 @@ UNION (
       <PermissionOrder>7</PermissionOrder>
     </cms_permission>
     <cms_permission>
-      <PermissionID>15799</PermissionID>
+      <PermissionID>16188</PermissionID>
       <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
       <PermissionName>Destroy</PermissionName>
-      <ClassID>5505</ClassID>
+      <ClassID>5516</ClassID>
       <PermissionGUID>52b7ef80-74d4-46e6-a0cf-ffbe7cc6d0b0</PermissionGUID>
       <PermissionLastModified>2020-05-04T16:23:10.3286308-04:00</PermissionLastModified>
       <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
@@ -896,23 +1129,39 @@ UNION (
     </cms_permission>
     <cms_allowedchildclasses>
       <ParentClassID>1095</ParentClassID>
-      <ChildClassID>5505</ChildClassID>
+      <ChildClassID>5516</ChildClassID>
     </cms_allowedchildclasses>
     <cms_allowedchildclasses>
       <ParentClassID>5383</ParentClassID>
-      <ChildClassID>5506</ChildClassID>
+      <ChildClassID>5517</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>5521</ParentClassID>
+      <ChildClassID>5517</ChildClassID>
     </cms_allowedchildclasses>
     <cms_allowedchildclasses>
       <ParentClassID>1095</ParentClassID>
-      <ChildClassID>5507</ChildClassID>
+      <ChildClassID>5518</ChildClassID>
     </cms_allowedchildclasses>
     <cms_allowedchildclasses>
       <ParentClassID>1095</ParentClassID>
-      <ChildClassID>5508</ChildClassID>
+      <ChildClassID>5519</ChildClassID>
     </cms_allowedchildclasses>
     <cms_allowedchildclasses>
       <ParentClassID>5383</ParentClassID>
-      <ChildClassID>5508</ChildClassID>
+      <ChildClassID>5519</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>5520</ParentClassID>
+      <ChildClassID>5519</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>1095</ParentClassID>
+      <ChildClassID>5520</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>1095</ParentClassID>
+      <ChildClassID>5521</ChildClassID>
     </cms_allowedchildclasses>
   </NewDataSet>
 </cms_documenttype>
