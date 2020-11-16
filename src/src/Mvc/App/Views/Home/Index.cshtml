@@ -5,7 +5,7 @@
     <link href="/dist/home.min.css" rel="stylesheet" asp-append-version="true" />
 }
 
-<h1 class="title">@Model.Title</h1>
+<h1 class="title">@Model.Heading</h1>
 @if( Model.FeaturedAuthorGuid.HasValue )
 {   
     @await Component.InvokeAsync( "Author", new { authorGuid = Model.FeaturedAuthorGuid } )

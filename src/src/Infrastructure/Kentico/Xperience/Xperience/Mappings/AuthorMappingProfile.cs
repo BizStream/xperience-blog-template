@@ -2,6 +2,7 @@
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Converters;
+using BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Extensions;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
 {
@@ -16,7 +17,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
                 .ForMember( author => author.Description, opt => opt.MapFrom( node => node.Description ) )
                 .ForMember( author => author.FacebookUrl, opt => opt.ConvertUsing<StringToUriConverter, string>() )
                 .ForMember( author => author.GitHubUrl, opt => opt.ConvertUsing<StringToUriConverter, string>() )
-                .ForMember( author => author.ImageUrl, opt => opt.ConvertUsing<StringToUriConverter, string>( node => node.Image ) )
+                .ForMember( author => author.ImageUrl, opt => opt.ConvertMediaPathToUri( node => node.Image ) )
                 .ForMember( author => author.Name, opt => opt.MapFrom( node => node.DocumentName ) )
                 .ForMember( author => author.TwitterUrl, opt => opt.ConvertUsing<StringToUriConverter, string>() );
         }

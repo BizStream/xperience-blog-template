@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Linq;
 using AutoMapper;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Converters;
+using BlogTemplate.Infrastructure.Kentico.Xperience.Extensions;
+using BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Extensions;
 using CMS.DocumentEngine;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
@@ -17,6 +19,10 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
                 .ForMember( meta => meta.Description, opt => opt.MapFrom( node => node.DocumentPageDescription ) )
                 .ForMember( meta => meta.Keywords, opt => opt.MapFrom(
                     node => node.DocumentPageKeyWords.Split( new[] { "," }, StringSplitOptions.RemoveEmptyEntries )
+                        .Concat( node.GetDocumentTags() )
+                        .Select( keyword => keyword.Trim() )
+                        .Distinct()
+                        .OrderBy( keyword => keyword )
                 ) )
                 .ForMember( meta => meta.Title, opt => opt.MapFrom( node => node.GetStringValue( nameof( TreeNode.DocumentPageTitle ), node.DocumentName ) ) );
 
@@ -25,7 +31,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
                     openGraphData => openGraphData.Description,
                     opt => opt.MapFrom( node => node.GetStringValue( nameof( BaseNode.OpenGraphDescription ), node.DocumentPageDescription ) )
                 )
-                .ForMember( openGraphData => openGraphData.ImageUrl, opt => opt.ConvertUsing<StringToUriConverter, string>( node => node.GetStringValue( nameof( BaseNode.OpenGraphImage ), string.Empty ) ) )
+                .ForMember( openGraphData => openGraphData.ImageUrl, opt => opt.ConvertMediaPathToUri( node => node.GetStringValue( nameof( BaseNode.OpenGraphImage ), string.Empty ) ) )
                 .ForMember(
                     openGraphData => openGraphData.Title,
                     opt => opt.MapFrom( node => node.GetStringValue(
@@ -33,7 +39,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
                             node.GetStringValue( nameof( TreeNode.DocumentPageTitle ), node.DocumentName )
                     ) )
                 )
-                .ForMember( openGraphData => openGraphData.VideoUrl, opt => opt.ConvertUsing<StringToUriConverter, string>( node => node.GetStringValue( nameof( BaseNode.OpenGraphVideo ), string.Empty ) ) );
+                .ForMember( openGraphData => openGraphData.VideoUrl, opt => opt.ConvertMediaPathToUri( node => node.GetStringValue( nameof( BaseNode.OpenGraphVideo ), string.Empty ) ) );
         }
 
     }

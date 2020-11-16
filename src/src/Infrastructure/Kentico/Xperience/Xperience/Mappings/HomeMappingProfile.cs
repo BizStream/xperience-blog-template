@@ -13,7 +13,6 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
         public HomeMappingProfile( )
         {
             CreateMap<HomeNode, Home>()
-                .ForMember( home => home.Title, opt => opt.MapFrom( node => node.DocumentName ) )
                 .ForMember( home => home.FeaturedAuthorGuid, opt => opt.Condition( node => node.FeaturedAuthorGuid != Guid.Empty ) );
 
             CreateMap<HomeNode, MetaData>()

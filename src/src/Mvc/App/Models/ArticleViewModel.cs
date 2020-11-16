@@ -11,6 +11,8 @@ namespace BlogTemplate.Mvc.App.Models
 
         public string Content { get; set; }
 
+        public string Heading { get; set; }
+
         public Uri HeroImageUrl { get; set; }
 
         public DateTime ModifiedAt { get; set; }

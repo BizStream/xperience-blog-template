@@ -54,7 +54,6 @@ namespace BlogTemplate.Mvc.Kentico.Xperience
             if( IsPreview() )
             {
                 // nada
-
                 value = default;
                 return false;
             }

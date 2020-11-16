@@ -7,14 +7,14 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Converters
     public class StringToUriConverter : IValueConverter<string, Uri>
     {
 
-        public Uri Convert( string url, ResolutionContext context )
+        public Uri Convert( string source, ResolutionContext context )
         {
-            if( string.IsNullOrWhiteSpace( url ) )
+            if( string.IsNullOrWhiteSpace( source ) )
             {
                 return default;
             }
 
-            return new Uri( url, UriKind.Absolute );
+            return new Uri( source, UriKind.Absolute );
         }
 
     }
