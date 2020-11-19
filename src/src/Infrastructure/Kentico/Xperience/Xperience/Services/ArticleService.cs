@@ -8,7 +8,6 @@ using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.Retrievers;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Extensions;
-using CMS.DocumentEngine;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
