@@ -16,4 +16,9 @@
         <ProjectReference Include="$(SourceRoot)\Mvc\Kentico\Xperience\Xperience\BlogTemplate.Mvc.Kentico.Xperience.csproj" />
     </ItemGroup>
 
+    <Target Name="Compile client-ui" BeforeTargets="Build">
+        <Exec Command="npm ci" WorkingDirectory="$(SourceRoot)\Mvc\App\client-ui" />
+        <Exec Command="npm run build" WorkingDirectory="$(SourceRoot)\Mvc\App\client-ui" />
+    </Target>
+
 </Project>

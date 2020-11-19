@@ -17,25 +17,13 @@ trigger:
       - develop
 
 steps:
-  - task: Npm@1
-    displayName: "restore client-ui dependencies"
-    inputs:
-      command: "ci"
-      workingDir: "src/src/Mvc/App/client-ui"
-
-  - task: Npm@1
-    displayName: "build client-ui"
-    inputs:
-      command: "custom"
-      workingDir: "src/src/Mvc/App/client-ui"
-      customCommand: "run build"
-
   - task: DotNetCoreCLI@2
-    displayName: "restore mvc dependencies"
+    displayName: "restore dependencies"
     inputs:
       command: "restore"
       projects: "src/src/Mvc/App/BlogTemplate.Mvc.App.csproj"
 
+  # NOTE: MSBuild executes npm build tasks for us
   - task: DotNetCoreCLI@2
     displayName: "build mvc"
     inputs:
