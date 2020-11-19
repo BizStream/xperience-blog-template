@@ -16,7 +16,6 @@ namespace BlogTemplate.Mvc.App
             => Host.CreateDefaultBuilder( args )
                 .ConfigureWebHostDefaults(
                     webBuilder => webBuilder.UseStartup<Startup>()
-                        .UseKestrel()
                         .UseStaticWebAssets()
                 );
 
