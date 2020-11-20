@@ -49,23 +49,6 @@ The following repository contains a .NET Core CLI Template solution, intended to
      - **NOTE**: After import, Page Types may need to be assigned to your Site.
    - The `.\data` folder may optionally be removed from the Solution.
 
-### Configuring HTTPS/SSL
-
-The templated Mvc project `BlogTemplate.Mvc.App` is configured to compile front-end assets as Embedded Resource for `Release` (production) builds. Due to this, the project uses `rollup-plugin-server` to allow for live reloading, without having to rebuild the Mvc App project. To satisfy these restrictions, the Mvc application and the `rollup-plugin-server` are configured to use the same local development certificate, located at `App_Data\local-dev.pfx`, by default.
-
-To configure rollup with a custom certificate, edit the `https` section of the `serve` plugin options in `rollup.config.js`.
-
-To configure .NET with a custom certificate, edit the `Kestrel:Certificates` options within the `appsettings.json`.
-
-> For development purposes, we recommend using [`mkcert`](https://github.com/FiloSottile/mkcert) to create certificates that will not result in a "Invalid certificate warning" from browsers. `mkcert` uses a Local CA to generate valid certificates that are **not** self-signed.
-
-To create a new cert using `mkcert`, perform the following steps:
-
-- `mkcert -install`
-- `mkcert -pkcs12 localhost`
-- `mv localhost.p12 local-dev.pfx`
-- Place `local-dev.pfx` within `src\Mvc\App\App_Data`
-
 ### Media Storage
 
 The templated solution includes an Xperience Module that configures all sites to use an Azure Storage Provider (`BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage`). By default, this module **is not registered**.
