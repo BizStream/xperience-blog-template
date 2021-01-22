@@ -8,6 +8,8 @@ The following repository contains a .NET Core CLI Template solution, intended to
 
 ## Getting Started
 
+Before installing the template, it is recommened to have the [latest](https://dotnet.microsoft.com/download/dotnet/5.0) net5.0 SDK installed.
+
 ### Create a Solution
 
 1. Install the Template
@@ -69,7 +71,7 @@ Projects within the solution are organized in a nested-folder structure, wherein
 
 - `Infrastructure`
 
-  The "Infrastructure" layer is where we "do shit". The "scope" of this layer is quite wide, as it is intended to contain nested "scopes" for coupled technologies/platforms (dependencies). The most important nested "scope" within this layer is `Infrastructure/Abstractions` (`BlogTemplate.Infrastructure.Abstractions`), which is intended to define contracts relevant to the solution's domain. An example of this is `IAuthorService`, a contract that defines how the `Author` domain model may be retrieved. Additional nested "scopes" within `Infrastructure` are intended to encapsulate dependencies to coupled technologies/platforms, ideally to facilitate the implementation of a contract defined within the `Infrastructure/Abstractions` scope.
+  The "Infrastructure" layer is where we "do stuff". The "scope" of this layer is quite wide, as it is intended to contain nested "scopes" for coupled technologies/platforms (dependencies). The most important nested "scope" within this layer is `Infrastructure/Abstractions` (`BlogTemplate.Infrastructure.Abstractions`), which is intended to define contracts relevant to the solution's domain. An example of this is `IAuthorService`, a contract that defines how the `Author` domain model may be retrieved. Additional nested "scopes" within `Infrastructure` are intended to encapsulate dependencies to coupled technologies/platforms, ideally to facilitate the implementation of a contract defined within the `Infrastructure/Abstractions` scope.
 
   `Infrastructure/Kentico/Xperience` contains it's own `Infrastructure/Kentico/Xperience/Abstractions` (`BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions`) scope, intended for models and contracts relevant to integrating Kentico's Xperience paltform into the solution. Within the `Infrastructure/Kentico/Xperience/Xperience` (`BlogTemplate.Infrastructure.Kentico.Xperience`) scope, implementations of the domain-level infrastructure contracts that are coupled to the Kentico Xperience platform, can be found. For example, `BlogTemplate.Infrastructure.Kentico.Xperience.Services.AuthorService` implements the `IAuthorService` contract via Xperience's Content Tree (`TreeNode/Document` abstraction).
 
