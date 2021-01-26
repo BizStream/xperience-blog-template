@@ -37,11 +37,7 @@
     "[xml]": {
       "editor.tabSize": 4
     },
-    "cSpell.words": [
-      "Kentico",
-      "Xperience",
-      "browserslist"
-    ]
+    "cSpell.words": ["Kentico", "Xperience", "browserslist"]
   },
   "tasks": {
     "version": "2.0.0",
@@ -82,7 +78,7 @@
         "request": "launch",
         "preLaunchTask": "build mvc",
         // If you have changed target frameworks, make sure to update the program path.
-        "program": "${workspaceFolder}/src/Mvc/App/bin/Debug/netcoreapp3.1/BlogTemplate.Mvc.App.dll",
+        "program": "${workspaceFolder}/src/Mvc/App/bin/Debug/net5.0/BlogTemplate.Mvc.App.dll",
         "args": [],
         "cwd": "${workspaceFolder}/src/Mvc/App",
         "stopAtEntry": false,
@@ -96,7 +92,7 @@
         },
         "sourceFileMap": {
           "/Views": "${workspaceFolder}/src/Mvc/App/Views",
-          "/Views": "${workspaceFolder}/src/Mvc/Xperience/Views"
+          "/Views": "${workspaceFolder}/src/Mvc/Kentico/Xperience/Xperience/Views"
         }
       }
     ],
