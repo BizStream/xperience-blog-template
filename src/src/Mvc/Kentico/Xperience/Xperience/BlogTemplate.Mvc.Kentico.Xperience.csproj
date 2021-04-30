@@ -8,6 +8,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="client-ui\src\GenericColumnSection\**" />
+      <Content Remove="client-ui\src\GenericColumnSection\**" />
+      <EmbeddedResource Remove="client-ui\src\GenericColumnSection\**" />
+      <None Remove="client-ui\src\GenericColumnSection\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
     </ItemGroup>
 
@@ -20,6 +27,10 @@
         <ProjectReference Include="$(SourceRoot)\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage.csproj" />
         <ProjectReference Include="$(SourceRoot)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
         <ProjectReference Include="$(SourceRoot)\Mvc\Kentico\Xperience\StaticWebAssetsStorage\BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ViewComponents\Sections\" />
     </ItemGroup>
 
     <Target Name="Compile client-ui" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release' ">

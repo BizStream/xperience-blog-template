@@ -43,7 +43,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kentico", "Kentico", "{3790
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xperience", "Xperience", "{BB2B92BB-AC45-4340-9FAA-213F7F3A2E7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage", "src\Mvc\Kentico\Xperience\StaticWebAssetsStorage\BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage.csproj", "{78C35AA0-71F1-40FD-9C54-59E485FFF491}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage", "src\Mvc\Kentico\Xperience\StaticWebAssetsStorage\BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage.csproj", "{78C35AA0-71F1-40FD-9C54-59E485FFF491}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
