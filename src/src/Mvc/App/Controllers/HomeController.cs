@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Mvc.App.Models;
@@ -29,17 +30,17 @@ namespace BlogTemplate.Mvc.App.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index( )
+        public async Task<IActionResult> Index( )
         {
-            var blog = blogService.GetBlog();
+            var blog = await blogService.GetBlogAsync();
             if( blog == null )
             {
                 return NotFound();
             }
 
             var viewModel = mapper.Map<HomeViewModel>( blog );
-            viewModel.RecentArticles = articleService.GetRecentArticles()
-                .Select( mapper.Map<ArticleListingItem> );
+            viewModel.RecentArticles = await articleService.GetRecentArticlesAsync()
+                .ContinueWith( task => task.Result.Select( mapper.Map<ArticleListingItem> ) );
 
             return View( viewModel );
         }

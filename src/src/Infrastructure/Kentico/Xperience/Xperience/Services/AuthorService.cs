@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
 using BizStream.Extensions.Kentico.Xperience.Caching;
+using BizStream.Extensions.Kentico.Xperience.DataEngine;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
@@ -32,27 +34,31 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             this.mapper = mapper;
         }
 
-        public Author GetAuthor( Guid authorGuid )
-            => GetAuthors().FirstOrDefault(
-                author => author.AuthorGuid == authorGuid
+        public async Task<Author> GetAuthorAsync( Guid authorGuid )
+            => await GetAuthorsAsync().ContinueWith(
+                ( task, state ) => task.Result.FirstOrDefault( author => author.AuthorGuid == ( Guid )state ),
+                authorGuid
             );
 
-        public IEnumerable<Author> GetAuthors( )
-            => cache.GetOrCreate(
+        public async Task<IEnumerable<Author>> GetAuthorsAsync( )
+            => await cache.GetOrCreate(
                 "author|all",
-                entry =>
+                async entry =>
                 {
-                    var nodes = documentRetriever.GetDocuments<AuthorNode>()
-                        .ToList();
-
-                    if( !nodes.Any() )
+                    var query = documentRetriever.GetDocuments<AuthorNode>();
+                    if( !query.Any() )
                     {
                         entry.SetAbsoluteExpiration( TimeSpan.FromMinutes( 20 ) );
                         return Enumerable.Empty<Author>();
                     }
 
                     entry.WithCMSDependency( depends => depends.OnNodesOfType<AuthorNode>( SiteNames.BlogTemplate ) );
-                    return nodes.Select( mapper.Map<Author> ).ToList();
+                    return await query.ToListAsync()
+                        .ContinueWith(
+                            task => task.Result.Select( mapper.Map<Author> )
+                                .ToList()
+                                .AsReadOnly()
+                    );
                 }
             );
 

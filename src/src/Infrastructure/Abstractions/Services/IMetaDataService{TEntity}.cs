@@ -1,4 +1,5 @@
-﻿using BlogTemplate.Core.Abstractions.Models;
+﻿using System.Threading.Tasks;
+using BlogTemplate.Core.Abstractions.Models;
 
 namespace BlogTemplate.Infrastructure.Abstractions.Services
 {
@@ -10,11 +11,11 @@ namespace BlogTemplate.Infrastructure.Abstractions.Services
 
         /// <summary> Retrieve basic meta-data for the given entity. </summary>
         /// <param name="entity"> The entity to retrieve basic meta-data for. </param>
-        MetaData GetMetaData( TEntity entity );
+        Task<MetaData> GetMetaDataAsync( TEntity entity );
 
         /// <summary> Retrieve OpenGraph meta-data for the given entity. </summary>
         /// <param name="entity"> The entity to retrieve OpenGraph meta-data for. </param>
-        OpenGraphData GetOpenGraphData( TEntity entity );
+        Task<OpenGraphData> GetOpenGraphDataAsync( TEntity entity );
 
     }
 

@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
 using BizStream.Extensions.Kentico.Xperience.Caching;
+using BizStream.Extensions.Kentico.Xperience.DataEngine;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Extensions;
+using CMS.DocumentEngine;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
@@ -33,9 +35,9 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             this.mapper = mapper;
         }
 
-        public Article GetArticle( string slug )
+        public async Task<Article> GetArticleAsync( string slug )
         {
-            var node = GetArticleNode( slug );
+            var node = await GetArticleNodeAsync( slug );
             if( node == null )
             {
                 return null;
@@ -44,12 +46,16 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             return mapper.Map<Article>( node );
         }
 
-        private ArticleNode GetArticleNode( string slug )
-            => cache.GetOrCreate(
+        private async Task<ArticleNode> GetArticleNodeAsync( string slug )
+            => await cache.GetOrCreateAsync(
                 $"article|node|{slug}",
-                entry =>
+                async entry =>
                 {
-                    var node = documentRetriever.GetDocument<ArticleNode>( slug );
+                    var node = await documentRetriever.GetDocuments<ArticleNode>()
+                        .WhereEquals( nameof( TreeNode.NodeAlias ), slug )
+                        .TopN( 1 )
+                        .FirstOrDefaultAsync();
+
                     if( node == null )
                     {
                         entry.SetAbsoluteExpiration( TimeSpan.FromMinutes( 20 ) );
@@ -61,9 +67,9 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                 }
             );
 
-        public MetaData GetMetaData( Article article )
+        public async Task<MetaData> GetMetaDataAsync( Article article )
         {
-            var node = GetArticleNode( article?.Slug );
+            var node = await GetArticleNodeAsync( article?.Slug );
             if( node == null )
             {
                 return null;
@@ -72,9 +78,9 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             return mapper.Map<MetaData>( node );
         }
 
-        public OpenGraphData GetOpenGraphData( Article article )
+        public async Task<OpenGraphData> GetOpenGraphDataAsync( Article article )
         {
-            var node = GetArticleNode( article?.Slug );
+            var node = await GetArticleNodeAsync( article?.Slug );
             if( node == null )
             {
                 return null;
@@ -83,26 +89,29 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             return mapper.Map<OpenGraphData>( node );
         }
 
-        public IEnumerable<Article> GetRecentArticles( )
-            => cache.GetOrCreate(
+        public async Task<IEnumerable<Article>> GetRecentArticlesAsync( )
+            => await cache.GetOrCreateAsync(
                 $"article|recent",
-                entry =>
+                async entry =>
                 {
-                    var nodes = documentRetriever.GetDocuments<ArticleNode>()
+                    var query = documentRetriever.GetDocuments<ArticleNode>()
                         .OrderByDescending( SyntheticDocumentFields.PublishedAtDate )
-                        .TopN( 5 )
-                        .ToList();
+                        .TopN( 5 );
 
-                    if( !nodes.Any() )
+                    if( !query.Any() )
                     {
                         entry.SetAbsoluteExpiration( TimeSpan.FromMinutes( 20 ) );
                         return Enumerable.Empty<Article>();
                     }
 
                     entry.WithCMSDependency( depends => depends.OnNodesOfType<ArticleNode>( SiteNames.BlogTemplate ) );
-                    return nodes.Select( mapper.Map<Article> )
-                        .OrderByDescending( article => article.PublishedAt )
-                        .ToList();
+                    return await query.ToListAsync()
+                        .ContinueWith(
+                            task => task.Result.Select( mapper.Map<Article> )
+                                .OrderByDescending( article => article.PublishedAt )
+                                .ToList()
+                                .AsReadOnly()
+                        );
                 }
             );
 

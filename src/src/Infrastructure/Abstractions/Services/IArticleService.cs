@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using BlogTemplate.Core.Abstractions.Models;
 
 namespace BlogTemplate.Infrastructure.Abstractions.Services
@@ -10,10 +11,10 @@ namespace BlogTemplate.Infrastructure.Abstractions.Services
 
         /// <summary> Retrieve an <see cref="Article"/>, via its <see cref="Article.Slug"/>. </summary>
         /// <param name="slug"> <see cref="Article.Slug"/>. </param>
-        Article GetArticle( string slug );
+        Task<Article> GetArticleAsync( string slug );
 
         /// <summary> Retrieves the 5 most recently published <see cref="Article"/>s. </summary>
-        IEnumerable<Article> GetRecentArticles();
+        Task<IEnumerable<Article>> GetRecentArticlesAsync();
 
     }
 
