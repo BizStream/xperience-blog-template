@@ -16,14 +16,13 @@
     </ItemGroup>
 
     <ItemGroup>
-    
+        <PackageReference Include="BizStream.Extensions.Kentico.Xperience.StaticWebAssetsStorage" Version="1.0.0-beta.3ed9d3a" />
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="$(SourceRoot)\Infrastructure\Infrastructure\BlogTemplate.Infrastructure.csproj" />
         <ProjectReference Include="$(SourceRoot)\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage.csproj" />
         <ProjectReference Include="$(SourceRoot)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
-        <ProjectReference Include="$(SourceRoot)\Mvc\Kentico\Xperience\StaticWebAssetsStorage\BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage.csproj" />
     </ItemGroup>
 
     <Target Name="Compile client-ui" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release' ">

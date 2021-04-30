@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Documents;
-using BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage;
+using BizStream.Extensions.Kentico.Xperience.StaticWebAssetsStorage;
 using Kentico.Content.Web.Mvc;
 using Kentico.Content.Web.Mvc.Routing;
 using Kentico.PageBuilder.Web.Mvc;
