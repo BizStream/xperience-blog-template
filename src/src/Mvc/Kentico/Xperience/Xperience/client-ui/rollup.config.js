@@ -54,4 +54,16 @@ const configureInlineEditor = (
     ...options
   })
 
-export default [configureInlineEditor('text-editor')]
+const configureWidget = (
+  identifier,
+  options = { src: `widgets/${identifier}.js` }
+) =>
+  configureBundle(identifier, {
+    dest: `../wwwroot/dist/PageBuilder/Public/Widgets/${identifier}/`,
+    ...options
+  })
+
+export default [
+  configureInlineEditor('text-editor'),
+  configureWidget('image-widget')
+]

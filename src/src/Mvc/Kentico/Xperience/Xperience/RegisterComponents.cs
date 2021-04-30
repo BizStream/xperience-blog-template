@@ -10,5 +10,6 @@ using BlogTemplate.Mvc.Kentico.Xperience.Models;
 using BlogTemplate.Mvc.Kentico.Xperience.ViewComponents;
 using Kentico.PageBuilder.Web.Mvc;
 
+[assembly: RegisterWidget( ComponentIdentifier.ImageWidget, typeof( ImageWidgetViewComponent ), "Image", typeof( ImageWidgetProperties ), IconClass = "icon-picture" )]
 [assembly: RegisterWidget( ComponentIdentifier.TextWidget, typeof( TextWidgetViewComponent ), "Text", typeof( TextWidgetProperties ), IconClass = "icon-l-text" )]
 [assembly: RegisterSection( ComponentIdentifier.TwoColumnSection, "Two Columns", customViewName: "~/Views/Shared/Sections/_TwoColumnSection.cshtml", IconClass = "icon-l-cols-2" )]
