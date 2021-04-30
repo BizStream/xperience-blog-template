@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using BizStream.Extensions.Kentico.Xperience.Caching;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
+using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Extensions;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
@@ -50,9 +51,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                         return Enumerable.Empty<Author>();
                     }
 
-                    var node = nodes.FirstOrDefault();
-                    entry.SetCMSDependency( $"nodes|{node.NodeSiteName}|{node.ClassName}|all" );
-
+                    entry.WithCMSDependency( depends => depends.OnNodesOfType<AuthorNode>( SiteNames.BlogTemplate ) );
                     return nodes.Select( mapper.Map<Author> ).ToList();
                 }
             );

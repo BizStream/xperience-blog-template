@@ -1,13 +1,12 @@
 using System;
 using System.Linq;
 using AutoMapper;
+using BizStream.Extensions.Kentico.Xperience.Caching;
 using BizStream.Extensions.Kentico.Xperience.DocumentEngine;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Extensions;
-using CMS.DocumentEngine;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
@@ -58,7 +57,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                         return null;
                     }
 
-                    entry.SetCMSDependency( $"nodeid|{node.NodeID}" );
+                    entry.WithCMSDependency( depends => depends.OnNode( node ) );
                     return node;
                 }
             );

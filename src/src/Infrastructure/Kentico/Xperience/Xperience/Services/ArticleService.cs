@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using BizStream.Extensions.Kentico.Xperience.Caching;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
@@ -55,7 +56,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                         return null;
                     }
 
-                    entry.SetCMSDependency( $"nodeid|{node.NodeID}" );
+                    entry.WithCMSDependency( depends => depends.OnNode( node ) );
                     return node;
                 }
             );
@@ -98,9 +99,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                         return Enumerable.Empty<Article>();
                     }
 
-                    var node = nodes.FirstOrDefault();
-                    entry.SetCMSDependency( $"nodes|{node.NodeSiteName}|{node.ClassName}|all" );
-
+                    entry.WithCMSDependency( depends => depends.OnNodesOfType<ArticleNode>( SiteNames.BlogTemplate ) );
                     return nodes.Select( mapper.Map<Article> )
                         .OrderByDescending( article => article.PublishedAt )
                         .ToList();
