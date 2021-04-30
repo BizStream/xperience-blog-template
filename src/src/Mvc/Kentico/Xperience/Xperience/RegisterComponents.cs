@@ -11,4 +11,5 @@ using BlogTemplate.Mvc.Kentico.Xperience.ViewComponents;
 using Kentico.PageBuilder.Web.Mvc;
 
 [assembly: RegisterWidget( ComponentIdentifier.TextWidget, typeof( TextWidgetViewComponent ), "Text", typeof( TextWidgetProperties ), IconClass = "icon-l-text" )]
+[assembly: RegisterWidget( ComponentIdentifier.VideoWidget, typeof( VideoWidgetViewComponent ), "Video", typeof( VideoWidgetProperties ), IconClass = "icon-clapperboard" )]
 [assembly: RegisterSection( ComponentIdentifier.TwoColumnSection, "Two Columns", customViewName: "~/Views/Shared/Sections/_TwoColumnSection.cshtml", IconClass = "icon-l-cols-2" )]
