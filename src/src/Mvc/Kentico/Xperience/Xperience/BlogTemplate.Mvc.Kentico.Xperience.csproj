@@ -22,6 +22,10 @@
         <ProjectReference Include="$(SourceRoot)\Mvc\Kentico\Xperience\StaticWebAssetsStorage\BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="client-ui\src\widgets\carousel\" />
+    </ItemGroup>
+
     <Target Name="Compile client-ui" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
         <Exec Command="npm ci" WorkingDirectory="$(SourceRoot)\Mvc\Kentico\Xperience\Xperience\client-ui" />
         <Exec Command="npm run build" WorkingDirectory="$(SourceRoot)\Mvc\Kentico\Xperience\Xperience\client-ui" />

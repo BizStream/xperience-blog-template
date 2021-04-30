@@ -1,0 +1,12 @@
+﻿@model ComponentViewModel<CarouselWidgetProperties>
+
+<div id="carousel-@Model.Properties.Id" class="swiper-container">
+    <div class="swiper-wrapper">
+        @foreach (var imageUrl in Model.Properties.ImageUrls)
+        {
+            <div class="swiper-slide">
+                <img src="@imageUrl" class="carousel-img" alt="Carousel slide image">
+            </div>
+        }
+    </div>
+</div>

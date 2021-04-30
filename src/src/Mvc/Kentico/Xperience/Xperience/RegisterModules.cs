@@ -9,5 +9,5 @@ using BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage;
 using BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage;
 using CMS;
 
-// [assembly: RegisterModule( typeof( AzureStorageInitializationModule ) )]
+[assembly: RegisterModule( typeof( AzureStorageInitializationModule ) )]
 [assembly: RegisterModule( typeof( StaticWebAssetsStorageModule ) )]
