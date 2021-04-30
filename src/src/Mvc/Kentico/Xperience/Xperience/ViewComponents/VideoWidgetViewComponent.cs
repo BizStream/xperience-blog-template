@@ -15,7 +15,7 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.ViewComponents
         private IMediaFileInfoProvider mediaFileInfoProvider;
         #endregion
 
-        VideoWidgetViewComponent(IMediaFileInfoProvider mediaFileInfoProvider)
+        public VideoWidgetViewComponent(IMediaFileInfoProvider mediaFileInfoProvider)
             => this.mediaFileInfoProvider = mediaFileInfoProvider;
 
         public IViewComponentResult Invoke( ComponentViewModel<VideoWidgetProperties> componentViewModel )
@@ -37,6 +37,7 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.ViewComponents
                 viewModel.Autoplay = componentViewModel.Properties.Autoplay;
                 viewModel.Controls = componentViewModel.Properties.Controls;
                 viewModel.Loop = componentViewModel.Properties.Loop;
+                viewModel.Muted = componentViewModel.Properties.Muted;
             }
 
             return View( viewModel );

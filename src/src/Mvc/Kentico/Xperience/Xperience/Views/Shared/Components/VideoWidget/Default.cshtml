@@ -1,3 +1,10 @@
 @model VideoWidgetViewModel
 
-<video class="video-widget" src="@Model.VideoUrl"></video>
+<video
+    class="video-widget"
+    src="@Model.VideoUrl"
+    @(Model.Autoplay ? "autoplay" : string.Empty)
+    @(Model.Controls ? "controls" : string.Empty)
+    @(Model.Loop ? "loop" : string.Empty)
+    @(Model.Muted ? "muted" : string.Empty)>
+</video>

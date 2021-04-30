@@ -14,6 +14,8 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Models
 
         public bool Loop { get; set; }
 
+        public bool Muted { get; set; }
+
     }
 
 }

@@ -25,6 +25,9 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Models
         [EditingComponent( CheckBoxComponent.IDENTIFIER, Order = 3, Label = "Loop" )]
         public bool Loop { get; set; } = false;
 
+        [EditingComponent( CheckBoxComponent.IDENTIFIER, Order = 4, Label = "Muted" )]
+        public bool Muted { get; set; } = false;
+
     }
 
 }
