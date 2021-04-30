@@ -1,10 +1,11 @@
 using System;
 using System.Linq;
 using AutoMapper;
+using BizStream.Extensions.Kentico.Xperience.DocumentEngine;
+using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.Retrievers;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Extensions;
 using CMS.DocumentEngine;
 using Microsoft.Extensions.Caching.Memory;
@@ -48,8 +49,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                 entry =>
                 {
                     var node = documentRetriever.GetDocuments<HomeNode>()
-                        .OrderByAscending( nameof( TreeNode.NodeLevel ) )
-                        .TopN( 1 )
+                        .AtRootLevel()
                         .FirstOrDefault();
 
                     if( node == null )

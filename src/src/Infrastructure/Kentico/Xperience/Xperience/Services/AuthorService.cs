@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.Retrievers;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Extensions;
 using Microsoft.Extensions.Caching.Memory;
 

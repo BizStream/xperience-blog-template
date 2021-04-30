@@ -7,6 +7,7 @@
 
     <ItemGroup>
         <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="BizStream.Extensions.Kentico.Xperience.Retrievers" Version="1.0.0-beta.3ed9d3a" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.Retrievers;
+using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
 using CMS.DocumentEngine;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Extensions

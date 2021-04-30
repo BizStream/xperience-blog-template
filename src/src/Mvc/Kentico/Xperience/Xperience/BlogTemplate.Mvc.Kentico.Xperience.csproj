@@ -16,6 +16,10 @@
     </ItemGroup>
 
     <ItemGroup>
+    
+    </ItemGroup>
+
+    <ItemGroup>
         <ProjectReference Include="$(SourceRoot)\Infrastructure\Infrastructure\BlogTemplate.Infrastructure.csproj" />
         <ProjectReference Include="$(SourceRoot)\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage.csproj" />
         <ProjectReference Include="$(SourceRoot)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
