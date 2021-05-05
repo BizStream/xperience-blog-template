@@ -9,8 +9,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="$(SourceRoot)\Infrastructure\Abstractions\BlogTemplate.Infrastructure.Abstractions.csproj" />
-        <ProjectReference Include="$(SourceRoot)\Infrastructure\Kentico\Xperience\Xperience\BlogTemplate.Infrastructure.Kentico.Xperience.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Infrastructure\Abstractions\BlogTemplate.Infrastructure.Abstractions.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Infrastructure\Kentico\Xperience\Xperience\BlogTemplate.Infrastructure.Kentico.Xperience.csproj" />
     </ItemGroup>
     
 </Project>

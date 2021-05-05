@@ -2,8 +2,8 @@
 
     <ItemGroup Condition=" '$(IsCmsApp)' != 'true' AND '$(RunAnalyzers)' == 'true' ">
         <!-- Include editorconfig (Visual Studio expects editorconfigs in the root of projects). More info here: https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options?view=vs-2019#file-hierarchy-and-precedence -->
-        <AdditionalFiles Include="$(SourceRoot)\..\.editorconfig" Visible="false" />
-        <Compile Include="$(SourceRoot)\CodeStyleSuppressions.cs" Visible="false" />
+        <AdditionalFiles Include="$(SourceDirectory)\..\.editorconfig" Visible="false" />
+        <Compile Include="$(SourceDirectory)\CodeStyleSuppressions.cs" Visible="false" />
 
         <!-- Include reference to .NET/C# code analyzers -->
         <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
