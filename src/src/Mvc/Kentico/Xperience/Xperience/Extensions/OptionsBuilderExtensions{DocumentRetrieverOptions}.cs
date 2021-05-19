@@ -1,5 +1,5 @@
 using System;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers;
+using BizStream.Extensions.Kentico.Xperience.Retrievers.Documents;
 using CMS.Base;
 using Kentico.Content.Web.Mvc;
 using Kentico.Web.Mvc;

@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using BlogTemplate.Core.Abstractions.Models;
 
 namespace BlogTemplate.Infrastructure.Abstractions.Services
@@ -7,7 +8,7 @@ namespace BlogTemplate.Infrastructure.Abstractions.Services
     public interface IBlogService
     {
 
-        Blog GetBlog( );
+        Task<Blog> GetBlogAsync( );
 
     }
 
