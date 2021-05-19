@@ -39,8 +39,9 @@ namespace BlogTemplate.Mvc.App.Controllers
             }
 
             var viewModel = mapper.Map<HomeViewModel>( blog );
-            viewModel.RecentArticles = await articleService.GetRecentArticlesAsync()
-                .ContinueWith( task => task.Result.Select( mapper.Map<ArticleListingItem> ) );
+
+            var articles = await articleService.GetRecentArticlesAsync();
+            viewModel.RecentArticles = articles.Select( mapper.Map<ArticleListingItem> );
 
             return View( viewModel );
         }
