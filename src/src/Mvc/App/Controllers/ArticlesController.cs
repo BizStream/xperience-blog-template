@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Threading.Tasks;
+using AutoMapper;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Mvc.App.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -27,9 +28,9 @@ namespace BlogTemplate.Mvc.App.Controllers
             => NotFound();
 
         [HttpGet( "articles/{slug}" )]
-        public IActionResult Article( string slug )
+        public async Task<IActionResult> Article( string slug )
         {
-            var article = articleService.GetArticle( slug );
+            var article = await articleService.GetArticleAsync( slug );
             if( article == null )
             {
                 return NotFound();

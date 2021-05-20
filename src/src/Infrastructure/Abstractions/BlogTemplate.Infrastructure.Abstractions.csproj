@@ -5,7 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="$(SourceRoot)\Core\Abstractions\BlogTemplate.Core.Abstractions.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Core\Abstractions\BlogTemplate.Core.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

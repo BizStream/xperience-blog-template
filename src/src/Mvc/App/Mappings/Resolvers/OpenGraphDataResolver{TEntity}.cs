@@ -16,7 +16,9 @@ namespace BlogTemplate.Mvc.App.Mappings.Resolvers
             => this.metaDataService = metaDataService;
 
         public OpenGraphData Resolve( TEntity entity, BaseViewModel viewModel, OpenGraphData openGraphData, ResolutionContext context )
-            => metaDataService.GetOpenGraphData( entity );
+            => metaDataService.GetOpenGraphDataAsync( entity )
+                .GetAwaiter()
+                .GetResult();
 
     }
 

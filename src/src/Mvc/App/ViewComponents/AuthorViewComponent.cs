@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using AutoMapper;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Mvc.App.Models.Components;
@@ -20,9 +21,9 @@ namespace BlogTemplate.Mvc.App.ViewComponents
             this.mapper = mapper;
         }
 
-        public IViewComponentResult Invoke( Guid authorGuid )
+        public async Task<IViewComponentResult> InvokeAsync( Guid authorGuid )
         {
-            var author = authorService.GetAuthor( authorGuid );
+            var author = await authorService.GetAuthorAsync( authorGuid );
             if( author == null )
             {
                 return Content( string.Empty );

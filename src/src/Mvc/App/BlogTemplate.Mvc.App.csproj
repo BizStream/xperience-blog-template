@@ -6,19 +6,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AutoMapper" Version="9.0.0" />
-        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.8" Condition=" '$(Configuration)' == 'Debug' " />
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.5" Condition=" '$(Configuration)' == 'Debug' " />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="$(SourceRoot)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
-        <ProjectReference Include="$(SourceRoot)\Mvc\Kentico\Xperience\Xperience\BlogTemplate.Mvc.Kentico.Xperience.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Kentico\Xperience\Xperience\BlogTemplate.Mvc.Kentico.Xperience.csproj" />
     </ItemGroup>
 
     <Target Name="Compile client-ui" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
-        <Exec Command="npm ci" WorkingDirectory="$(SourceRoot)\Mvc\App\client-ui" />
-        <Exec Command="npm run build" WorkingDirectory="$(SourceRoot)\Mvc\App\client-ui" />
+        <Exec Command="npm ci" WorkingDirectory="$(SourceDirectory)\Mvc\App\client-ui" />
+        <Exec Command="npm run build" WorkingDirectory="$(SourceDirectory)\Mvc\App\client-ui" />
     </Target>
 
 </Project>

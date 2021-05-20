@@ -3,7 +3,6 @@
     <PropertyGroup>
         <IncludeKenticoWebReferences>true</IncludeKenticoWebReferences>
         <TargetFramework>net5.0</TargetFramework>
-        <Version>1.0.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
@@ -11,7 +10,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <AssemblyAttribute Include="CMS.AssemblyDiscoverable" />
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

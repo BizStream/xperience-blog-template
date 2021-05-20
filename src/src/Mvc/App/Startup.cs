@@ -1,7 +1,6 @@
-using System.Reflection;
+using BizStream.Kentico.Xperience.AspNetCore.StatusCodePages;
 using BlogTemplate.Infrastructure.Extensions;
 using BlogTemplate.Mvc.App.Extensions;
-using BlogTemplate.Mvc.Kentico.Xperience.Controllers;
 using BlogTemplate.Mvc.Kentico.Xperience.Extensions;
 using Kentico.Web.Mvc;
 using Microsoft.AspNetCore.Builder;
@@ -45,6 +44,8 @@ namespace BlogTemplate.Mvc.App
             services.AddBlogKentico( Environment );
             services.AddBlogMappings();
             services.AddBlogServices();
+
+            services.AddXperienceStatusCodePages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +57,7 @@ namespace BlogTemplate.Mvc.App
             }
             else
             {
-                app.UseExceptionHandler( "/Home/Error" );
+                app.UseXperienceStatusCodePages();
 
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
