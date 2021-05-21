@@ -54,6 +54,18 @@ const configureInlineEditor = (
     ...options,
   });
 
+  const configureSection = (
+    identifier,
+    options = { src: `sections/${identifier}.js` }
+  ) =>
+    configureBundle(identifier, {
+      dest: `../wwwroot/dist/PageBuilder/Public/Sections/${identifier}/`,
+      ...options
+    })
+  export default [
+    configureInlineEditor('text-editor'),
+    configureSection('generic-column')
+  ]
 const configureWidget = (
   identifier,
   options = { src: `widgets/${identifier}.js` }

@@ -1,0 +1,24 @@
+.generic-column-section {
+  display: flex;
+  justify-content: space-between;
+
+  .generic-col-12 {
+    flex-basis: 100%;
+  }
+
+  .generic-col-6 {
+    flex-basis: 50%;
+  }
+
+  .generic-col-4 {
+    flex-basis: 33%;
+  }
+
+  .generic-col-3 {
+    flex-basis: 25%;
+  }
+
+  .generic-col-2 {
+    flex-basis: 16.666667%;
+  }
+}

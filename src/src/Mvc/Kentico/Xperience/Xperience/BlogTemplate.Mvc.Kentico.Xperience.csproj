@@ -8,6 +8,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="client-ui\src\GenericColumnSection\**" />
+      <Content Remove="client-ui\src\GenericColumnSection\**" />
+      <EmbeddedResource Remove="client-ui\src\GenericColumnSection\**" />
+      <None Remove="client-ui\src\GenericColumnSection\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
     </ItemGroup>
 
@@ -25,6 +32,10 @@
         <ProjectReference Include="$(SourceDirectory)\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage.csproj" />
         <ProjectReference Include="$(SourceDirectory)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
         <ProjectReference Include="$(SourceDirectory)\Mvc\Kentico\Xperience\Abstractions\BlogTemplate.Mvc.Kentico.Xperience.Abstractions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ViewComponents\Sections\" />
     </ItemGroup>
 
     <ItemGroup>
