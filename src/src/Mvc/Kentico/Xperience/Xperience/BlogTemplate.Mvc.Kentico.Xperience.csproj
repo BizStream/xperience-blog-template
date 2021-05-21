@@ -38,6 +38,10 @@
       <Folder Include="ViewComponents\Sections\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="client-ui\src\widgets\carousel\" />
+    </ItemGroup>
+
     <Target Name="Compile client-ui" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
         <Exec Command="npm ci" WorkingDirectory="$(SourceDirectory)\Mvc\Kentico\Xperience\Xperience\client-ui" />
         <Exec Command="npm run build" WorkingDirectory="$(SourceDirectory)\Mvc\Kentico\Xperience\Xperience\client-ui" />

@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.12.5",
-        "medium-editor": "^5.23.3"
+        "medium-editor": "^5.23.3",
+        "swiper": "^6.5.9"
     }
 }
