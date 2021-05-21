@@ -7,7 +7,7 @@
 
         <!-- Include reference to .NET/C# code analyzers -->
         <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
-        <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.1" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.3" PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup Condition=" '$(IsCmsApp)' != 'true' AND '$(TargetKenticoVersion)' != '' ">
