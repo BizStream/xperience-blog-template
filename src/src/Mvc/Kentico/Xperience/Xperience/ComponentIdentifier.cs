@@ -11,6 +11,8 @@ namespace BlogTemplate.Mvc.Kentico.Xperience
 
         public const string TwoColumnSection = Prefix + nameof( TwoColumnSection );
 
+        public const string GenericColumnSection = Prefix + nameof( GenericColumnSection );
+
     }
 
 }
