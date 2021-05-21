@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using BlogTemplate.Mvc.Kentico.Xperience.Models.Widgets;
 using CMS.MediaLibrary;
 using CMS.SiteProvider;
@@ -34,12 +35,20 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.ViewComponents
             //     return View( "Edit", viewModel );
             // }
 
+            var imageUrls = new List<string>();
             var imageGuids = viewModel.Properties?.Images?.Select( item => item.FileGuid );
-            viewModel.Properties.ImageUrls = imageGuids?.Any() != true
-                ? Enumerable.Empty<string>()
-                : await Task.WhenAll(
-                    imageGuids.Select( imageGuid => mediaFileInfoProvider.GetAsync( imageGuid, SiteContext.CurrentSiteID ) )
-                ).ContinueWith( task => task.Result.Select( MediaLibraryHelper.GetDirectUrl ) );
+
+            if( imageGuids?.Any() == true )
+            {
+                foreach( var imageGuid in imageGuids )
+                {
+                    imageUrls.Add(
+                      await mediaFileInfoProvider.GetAsync( imageGuid, SiteContext.CurrentSiteID )
+                        .ContinueWith( task => MediaLibraryHelper.GetDirectUrl( task.Result ) )
+                    );
+                }
+            }
+            viewModel.Properties.ImageUrls = imageUrls;
 
             return View( viewModel );
         }

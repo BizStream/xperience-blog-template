@@ -16,8 +16,6 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Models.Widgets
 
         public IEnumerable<string> ImageUrls { get; set; }
 
-        public Guid Id { get; set; } = Guid.NewGuid();
-
     }
 
 }

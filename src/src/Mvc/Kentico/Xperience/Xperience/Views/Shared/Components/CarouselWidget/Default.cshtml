@@ -1,6 +1,6 @@
 ﻿@model ComponentViewModel<CarouselWidgetProperties>
 
-<div id="carousel-@Model.Properties.Id" class="swiper-container">
+<div class="swiper-container">
     <div class="swiper-wrapper">
         @foreach (var imageUrl in Model.Properties.ImageUrls)
         {
@@ -9,4 +9,7 @@
             </div>
         }
     </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </div>

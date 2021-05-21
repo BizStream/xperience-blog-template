@@ -5,20 +5,21 @@ import Swiper, { Navigation } from "swiper";
 Swiper.use([Navigation]);
 
 const init = () => {
-  // const swiperButtonNext = document.querySelector(".swiper-button-next");
-  // const swiperButtonPrev = document.querySelector(".swiper-button-prev");
+  const sliders = document.querySelectorAll(".swiper-container");
 
-  // const swiper = new Swiper(this, {
-  //   direction: "horizontal",
-  //   slidesPerView: 1,
+  for (let i = 0; i < sliders.length; i++) {
+    const slider = sliders[i];
 
-  //   navigation: {
-  //     nextEl: swiperButtonNext,
-  //     prevEl: swiperButtonPrev,
-  //   },
-  // });
+    const swiperButtonNext = slider.querySelector(".swiper-button-next");
+    const swiperButtonPrev = slider.querySelector(".swiper-button-prev");
 
-  console.log("carousel-widget");
+    const swiper = new Swiper(slider, {
+      navigation: {
+        nextEl: swiperButtonNext,
+        prevEl: swiperButtonPrev,
+      },
+    });
+  }
 };
 
 init();
