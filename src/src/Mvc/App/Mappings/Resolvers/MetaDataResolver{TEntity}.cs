@@ -16,7 +16,9 @@ namespace BlogTemplate.Mvc.App.Mappings.Resolvers
             => this.metaDataService = metaDataService;
 
         public MetaData Resolve( TEntity entity, BaseViewModel viewModel, MetaData meta, ResolutionContext context )
-            => metaDataService.GetMetaData( entity );
+            => metaDataService.GetMetaDataAsync( entity )
+                .GetAwaiter()
+                .GetResult();
 
     }
 

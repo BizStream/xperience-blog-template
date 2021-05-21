@@ -1,12 +1,13 @@
 using System;
-using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
+using BizStream.Extensions.Kentico.Xperience.Caching;
+using BizStream.Extensions.Kentico.Xperience.DataEngine;
+using BizStream.Extensions.Kentico.Xperience.DocumentEngine;
+using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.Retrievers;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Extensions;
-using CMS.DocumentEngine;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
@@ -31,9 +32,9 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             this.mapper = mapper;
         }
 
-        public Blog GetBlog( )
+        public async Task<Blog> GetBlogAsync( )
         {
-            var node = GetHomeNode();
+            var node = await GetHomeNodeAsync();
             if( node == null )
             {
                 return null;
@@ -42,15 +43,14 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             return mapper.Map<Blog>( node );
         }
 
-        private HomeNode GetHomeNode( )
-            => cache.GetOrCreate(
+        private async Task<HomeNode> GetHomeNodeAsync( )
+            => await cache.GetOrCreateAsync(
                 "home|node",
-                entry =>
+                async entry =>
                 {
-                    var node = documentRetriever.GetDocuments<HomeNode>()
-                        .OrderByAscending( nameof( TreeNode.NodeLevel ) )
-                        .TopN( 1 )
-                        .FirstOrDefault();
+                    var node = await documentRetriever.GetDocuments<HomeNode>()
+                        .AtRootLevel()
+                        .FirstOrDefaultAsync();
 
                     if( node == null )
                     {
@@ -58,14 +58,14 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                         return null;
                     }
 
-                    entry.SetCMSDependency( $"nodeid|{node.NodeID}" );
+                    entry.WithCMSDependency( depends => depends.OnNode( node ) );
                     return node;
                 }
             );
 
-        public MetaData GetMetaData( Blog entity )
+        public async Task<MetaData> GetMetaDataAsync( Blog entity )
         {
-            var node = GetHomeNode();
+            var node = await GetHomeNodeAsync();
             if( node == null )
             {
                 return null;
@@ -74,9 +74,9 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
             return mapper.Map<MetaData>( node );
         }
 
-        public OpenGraphData GetOpenGraphData( Blog entity )
+        public async Task<OpenGraphData> GetOpenGraphDataAsync( Blog entity )
         {
-            var node = GetHomeNode();
+            var node = await GetHomeNodeAsync();
             if( node == null )
             {
                 return null;

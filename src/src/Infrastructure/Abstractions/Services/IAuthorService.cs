@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using BlogTemplate.Core.Abstractions.Models;
 
 namespace BlogTemplate.Infrastructure.Abstractions.Services
@@ -11,10 +12,10 @@ namespace BlogTemplate.Infrastructure.Abstractions.Services
 
         /// <summary> Retrieve the <see cref="Author"/> with the given <see cref="Author.AuthorGuid"/>. </summary>
         /// <param name="authorGuid"> The <see cref="Author.AuthorGuid"/> of the <see cref="Author"/> to retrieve. </param>
-        Author GetAuthor( Guid authorGuid );
+        Task<Author> GetAuthorAsync( Guid authorGuid );
 
         /// <summary> Retrieve all <see cref="Author"/>s. </summary>
-        IEnumerable<Author> GetAuthors( );
+        Task<IEnumerable<Author>> GetAuthorsAsync( );
 
     }
 

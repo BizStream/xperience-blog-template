@@ -37,7 +37,12 @@
     "[xml]": {
       "editor.tabSize": 4
     },
-    "cSpell.words": ["Kentico", "Xperience", "browserslist"]
+    "cSpell.words": [
+      "Hsts",
+      "Kentico",
+      "Xperience",
+      "browserslist"
+    ]
   },
   "tasks": {
     "version": "2.0.0",

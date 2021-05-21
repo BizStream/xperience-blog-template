@@ -1,6 +1,7 @@
-﻿using BlogTemplate.Core.Abstractions.Models;
+﻿using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
+using BizStream.Extensions.Kentico.Xperience.Retrievers.Documents;
+using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Abstractions.Services;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.Retrievers;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -48,7 +49,7 @@ namespace BlogTemplate.Infrastructure.Extensions
 
         public static IServiceCollection AddRetrieverServices( this IServiceCollection services )
         {
-            services.AddTransient<IDocumentRetriever, DocumentRetriever>();
+            services.AddTransient<IDocumentRetriever, BlogTemplateDocumentRetriever>();
             services.Configure<DocumentRetrieverOptions>( options => { } );
 
             return services;
