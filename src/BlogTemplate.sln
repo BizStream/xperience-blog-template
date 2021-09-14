@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31710.8
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B860E184-6889-41E0-89DA-B664B29509A6}"
 	ProjectSection(SolutionItems) = preProject
@@ -43,8 +43,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kentico", "Kentico", "{3790
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xperience", "Xperience", "{BB2B92BB-AC45-4340-9FAA-213F7F3A2E7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage", "src\Mvc\Kentico\Xperience\StaticWebAssetsStorage\BlogTemplate.Mvc.Kentico.Xperience.StaticWebAssetsStorage.csproj", "{78C35AA0-71F1-40FD-9C54-59E485FFF491}"
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogTemplate.Mvc.Kentico.Xperience.Abstractions", "src\Mvc\Kentico\Xperience\Abstractions\BlogTemplate.Mvc.Kentico.Xperience.Abstractions.csproj", "{30EFD46E-0038-494B-AAD7-D6FA64B78AA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTemplate.Mvc.Kentico.Xperience.Abstractions", "src\Mvc\Kentico\Xperience\Abstractions\BlogTemplate.Mvc.Kentico.Xperience.Abstractions.csproj", "{30EFD46E-0038-494B-AAD7-D6FA64B78AA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,7 +190,7 @@ Global
 		{94594988-8059-4DCA-ACBE-36D574B6897D} = {B860E184-6889-41E0-89DA-B664B29509A6}
 		{7D405550-B613-44B2-BE5D-7A7E3D85B610} = {CD92E9A8-9F53-4DF7-A2C9-E056DFBDA1BF}
 		{C5374C09-6594-4797-9C49-64C92534C829} = {7D405550-B613-44B2-BE5D-7A7E3D85B610}
-		{EEBC2FEB-5398-438B-9452-9D24F40C0C3B} = {94594988-8059-4DCA-ACBE-36D574B6897D}
+		{EEBC2FEB-5398-438B-9452-9D24F40C0C3B} = {BB2B92BB-AC45-4340-9FAA-213F7F3A2E7F}
 		{826A7FA1-1080-4A5B-A206-3D40F38379E3} = {94594988-8059-4DCA-ACBE-36D574B6897D}
 		{EC322775-9149-4485-B2C7-DC48F8B4415C} = {B7E6A2C9-4682-4211-A3CC-79428E223BE3}
 		{B7E6A2C9-4682-4211-A3CC-79428E223BE3} = {7D405550-B613-44B2-BE5D-7A7E3D85B610}

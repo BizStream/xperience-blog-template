@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
         <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
@@ -6,13 +6,6 @@
         <TargetFramework>net5.0</TargetFramework>
         <Version>1.0.0</Version>
     </PropertyGroup>
-
-    <ItemGroup>
-      <Compile Remove="client-ui\src\GenericColumnSection\**" />
-      <Content Remove="client-ui\src\GenericColumnSection\**" />
-      <EmbeddedResource Remove="client-ui\src\GenericColumnSection\**" />
-      <None Remove="client-ui\src\GenericColumnSection\**" />
-    </ItemGroup>
 
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
@@ -23,8 +16,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="BizStream.Extensions.Kentico.Xperience.StaticWebAssetsStorage" Version="1.0.0" />
-        <PackageReference Include="BizStream.Kentico.Xperience.AspNetCore.StatusCodePages" Version="1.0.0-beta.7916fd9" />
+        <PackageReference Include="BizStream.Kentico.Xperience.AspNetCore.StaticWebAssetsStorage" Version="1.0.4" />
+        <PackageReference Include="BizStream.Kentico.Xperience.AspNetCore.StatusCodePages" Version="1.0.1" />
     </ItemGroup>
 
     <ItemGroup>
@@ -32,10 +25,6 @@
         <ProjectReference Include="$(SourceDirectory)\Infrastructure\Kentico\Xperience\Modules\AzureStorage\BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage.csproj" />
         <ProjectReference Include="$(SourceDirectory)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
         <ProjectReference Include="$(SourceDirectory)\Mvc\Kentico\Xperience\Abstractions\BlogTemplate.Mvc.Kentico.Xperience.Abstractions.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="ViewComponents\Sections\" />
     </ItemGroup>
 
     <Target Name="Compile client-ui" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release' ">

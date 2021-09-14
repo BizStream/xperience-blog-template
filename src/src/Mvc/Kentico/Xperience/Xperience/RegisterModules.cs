@@ -5,7 +5,7 @@
  *  [assembly: CMS.RegisterModule( typeof( MyMvcModule ) )]
  */
 
-using BizStream.Extensions.Kentico.Xperience.StaticWebAssetsStorage;
+using BizStream.Kentico.Xperience.AspNetCore.StaticWebAssetsStorage;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage;
 using CMS;
 
