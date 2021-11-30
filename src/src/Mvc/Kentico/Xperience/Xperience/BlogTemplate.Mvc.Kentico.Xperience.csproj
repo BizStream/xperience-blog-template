@@ -17,7 +17,7 @@
 
     <ItemGroup>
         <PackageReference Include="BizStream.Kentico.Xperience.AspNetCore.StaticWebAssetsStorage" Version="1.0.4" />
-        <PackageReference Include="BizStream.Kentico.Xperience.AspNetCore.StatusCodePages" Version="1.0.1" />
+        <PackageReference Include="BizStream.Kentico.Xperience.AspNetCore.StatusCodePages" Version="1.0.2" />
     </ItemGroup>
 
     <ItemGroup>
