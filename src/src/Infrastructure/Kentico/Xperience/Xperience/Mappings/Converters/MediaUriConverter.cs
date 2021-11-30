@@ -1,13 +1,10 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using CMS.SiteProvider;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Converters
 {
-
     public class MediaUriConverter : IValueConverter<string, Uri>
     {
-
         public Uri Convert( string source, ResolutionContext context )
         {
             if( string.IsNullOrWhiteSpace( source ) )
@@ -22,7 +19,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Converters
 
             return new Uri( source, UriKind.Absolute );
         }
-
     }
-
 }

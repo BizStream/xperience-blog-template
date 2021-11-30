@@ -5,7 +5,6 @@ using BlogTemplate.Mvc.Abstractions.Models;
 
 namespace BlogTemplate.Mvc.App.Mappings.Resolvers
 {
-
     public class MetaDataResolver<TEntity> : IValueResolver<TEntity, BaseViewModel, MetaData>
     {
         #region Fields
@@ -19,7 +18,5 @@ namespace BlogTemplate.Mvc.App.Mappings.Resolvers
             => metaDataService.GetMetaDataAsync( entity )
                 .GetAwaiter()
                 .GetResult();
-
     }
-
 }

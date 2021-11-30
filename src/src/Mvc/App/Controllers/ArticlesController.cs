@@ -1,12 +1,10 @@
-﻿using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Mvc.App.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogTemplate.Mvc.App.Controllers
 {
-
     public class ArticlesController : Controller
     {
         #region Fields
@@ -39,7 +37,5 @@ namespace BlogTemplate.Mvc.App.Controllers
             var viewModel = mapper.Map<ArticleViewModel>( article );
             return View( viewModel );
         }
-
     }
-
 }

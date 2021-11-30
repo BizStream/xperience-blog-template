@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using BizStream.Extensions.Kentico.Xperience.Caching;
 using BizStream.Extensions.Kentico.Xperience.DataEngine;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Abstractions.Documents;
@@ -15,7 +11,6 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
 {
-
     public class ArticleService : IArticleService, IMetaDataService<Article>
     {
         #region Fields
@@ -114,7 +109,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
                         );
                 }
             );
-
     }
-
 }

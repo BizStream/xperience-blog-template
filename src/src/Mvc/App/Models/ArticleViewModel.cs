@@ -1,12 +1,9 @@
-﻿using System;
-using BlogTemplate.Mvc.Abstractions.Models;
+﻿using BlogTemplate.Mvc.Abstractions.Models;
 
 namespace BlogTemplate.Mvc.App.Models
 {
-
     public class ArticleViewModel : BaseViewModel
     {
-
         public Guid AuthorGuid { get; set; }
 
         public string Content { get; set; }
@@ -18,7 +15,5 @@ namespace BlogTemplate.Mvc.App.Models
         public DateTime ModifiedAt { get; set; }
 
         public DateTime PublishedAt { get; set; }
-
     }
-
 }

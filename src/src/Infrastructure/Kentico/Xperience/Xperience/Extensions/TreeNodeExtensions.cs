@@ -1,14 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using CMS.DocumentEngine;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Extensions
 {
-
     public static partial class TreeNodeExtensions
     {
-
         public static IEnumerable<string> GetDocumentTags( this TreeNode node )
         {
             ThrowIfNodeIsNull( node );
@@ -25,7 +20,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Extensions
                 throw new ArgumentNullException( nameof( node ) );
             }
         }
-
     }
-
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Linq.Expressions;
 using AutoMapper;
 using BlogTemplate.Mvc.Abstractions.Mappings.Converters;
@@ -6,10 +5,8 @@ using Microsoft.AspNetCore.Html;
 
 namespace BlogTemplate.Mvc.Abstractions.Mappings.Extensions
 {
-
     public static class IMemberConfigurationExpressionExtensions
     {
-
         public static void ConvertToHtmlContent<TSource, TDestination>(
             this IMemberConfigurationExpression<TSource, TDestination, IHtmlContent> expression,
             Expression<Func<TSource, string>> sourceMember
@@ -26,7 +23,5 @@ namespace BlogTemplate.Mvc.Abstractions.Mappings.Extensions
                 throw new ArgumentNullException( nameof( expression ) );
             }
         }
-
     }
-
 }

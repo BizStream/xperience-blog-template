@@ -1,12 +1,8 @@
-﻿using System;
-
-namespace BlogTemplate.Core.Abstractions.Models
+﻿namespace BlogTemplate.Core.Abstractions.Models
 {
-
     /// <summary> Represents an instance of marketing content. </summary>
     public class Article : IAuthored
     {
-
         /// <inheritdoc />
         public Guid AuthorGuid { get; set; }
 
@@ -28,7 +24,5 @@ namespace BlogTemplate.Core.Abstractions.Models
 
         /// <inheritdoc />
         public DateTime LastAuthoredAt { get; set; }
-
     }
-
 }

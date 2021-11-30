@@ -8,10 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BlogTemplate.Infrastructure.Extensions
 {
-
     public static class IServiceCollectionExtensions
     {
-
         public static IServiceCollection AddBlogServices( this IServiceCollection services )
         {
             services.AddOptions();
@@ -54,7 +52,5 @@ namespace BlogTemplate.Infrastructure.Extensions
 
             return services;
         }
-
     }
-
 }

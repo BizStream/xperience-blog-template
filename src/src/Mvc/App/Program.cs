@@ -1,12 +1,7 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-
 namespace BlogTemplate.Mvc.App
 {
-
     public static class Program
     {
-
         public static void Main( string[] args )
             => CreateHostBuilder( args )
                 .Build()
@@ -18,7 +13,5 @@ namespace BlogTemplate.Mvc.App
                     webBuilder => webBuilder.UseStartup<Startup>()
                         .UseStaticWebAssets()
                 );
-
     }
-
 }

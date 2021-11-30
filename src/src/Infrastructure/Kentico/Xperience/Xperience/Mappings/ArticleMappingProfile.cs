@@ -1,17 +1,14 @@
 ﻿using AutoMapper;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
-using BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Converters;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Extensions;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Resolvers;
 using CMS.DocumentEngine;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
 {
-
     public class ArticleMappingProfile : Profile
     {
-
         public ArticleMappingProfile( )
         {
             CreateMap<ArticleNode, Article>()
@@ -31,7 +28,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
                 .IncludeBase<TreeNode, OpenGraphData>()
                 .ForMember( openGraphData => openGraphData.Description, opt => opt.MapFrom( node => node.Summary ) );
         }
-
     }
-
 }

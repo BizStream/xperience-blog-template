@@ -5,7 +5,6 @@ using BlogTemplate.Mvc.Abstractions.Models;
 
 namespace BlogTemplate.Mvc.App.Mappings.Resolvers
 {
-
     public class OpenGraphDataResolver<TEntity> : IValueResolver<TEntity, BaseViewModel, OpenGraphData>
     {
         #region Fields
@@ -19,7 +18,5 @@ namespace BlogTemplate.Mvc.App.Mappings.Resolvers
             => metaDataService.GetOpenGraphDataAsync( entity )
                 .GetAwaiter()
                 .GetResult();
-
     }
-
 }

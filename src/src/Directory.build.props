@@ -12,10 +12,12 @@
 
     <PropertyGroup Condition=" $(IsCmsApp) != 'true' ">
         <!-- Disable legacy analyzers, and enable roslyn analyzers with the default ruleset -->
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <CodeAnalysisRuleSet>$(SourceDirectory)\default.ruleset</CodeAnalysisRuleSet>
         <RunCodeAnalysis>false</RunCodeAnalysis>
         <RunAnalyzers>true</RunAnalyzers>
-        <CodeAnalysisRuleSet>$(SourceDirectory)\default.ruleset</CodeAnalysisRuleSet>
 
+        <ImplicitUsings>true</ImplicitUsings>
         <LangVersion>latest</LangVersion>
         <TargetFramework>netstandard2.0</TargetFramework>
 

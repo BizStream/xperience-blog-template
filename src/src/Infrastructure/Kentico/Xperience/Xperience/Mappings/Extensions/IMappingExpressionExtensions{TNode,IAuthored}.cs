@@ -1,15 +1,12 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Resolvers;
 using CMS.DocumentEngine;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Extensions
 {
-
     public static partial class IMappingExpressionExtensions
     {
-
         public static IMappingExpression<TNode, TAuthored> IncludeAuthored<TNode, TAuthored>( this IMappingExpression<TNode, TAuthored> expression )
             where TNode : TreeNode, new()
             where TAuthored : class, IAuthored
@@ -26,7 +23,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Extensions
                 throw new ArgumentNullException( nameof( expression ) );
             }
         }
-
     }
-
 }

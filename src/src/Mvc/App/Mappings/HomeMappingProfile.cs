@@ -5,10 +5,8 @@ using BlogTemplate.Mvc.App.Models;
 
 namespace BlogTemplate.Mvc.App.Mappings
 {
-
     public class HomeMappingProfile : Profile
     {
-
         public HomeMappingProfile( )
         {
             CreateMap<Blog, HomeViewModel>()
@@ -16,7 +14,5 @@ namespace BlogTemplate.Mvc.App.Mappings
                 .IncludeOpenGraphData()
                 .ForMember( viewModel => viewModel.Heading, opt => opt.MapFrom( blog => blog.Name ) );
         }
-
     }
-
 }

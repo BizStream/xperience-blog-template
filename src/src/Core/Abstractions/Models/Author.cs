@@ -1,12 +1,8 @@
-﻿using System;
-
-namespace BlogTemplate.Core.Abstractions.Models
+﻿namespace BlogTemplate.Core.Abstractions.Models
 {
-
     /// <summary> Represents information about an individual that maintains an instance of an entity, or the data an entity may represent. </summary>
     public class Author
     {
-
         /// <summary> The unique identifier of the individual. </summary>
         public Guid AuthorGuid { get; set; }
 
@@ -24,7 +20,5 @@ namespace BlogTemplate.Core.Abstractions.Models
         public string Name { get; set; }
 
         public Uri TwitterUrl { get; set; }
-
     }
-
 }

@@ -6,10 +6,8 @@ using BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Extensions;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
 {
-
     public class AuthorMappingProfile : Profile
     {
-
         public AuthorMappingProfile( )
         {
             CreateMap<AuthorNode, Author>()
@@ -21,6 +19,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
                 .ForMember( author => author.Name, opt => opt.MapFrom( node => node.DocumentName ) )
                 .ForMember( author => author.TwitterUrl, opt => opt.ConvertUsing<StringToUriConverter, string>() );
         }
-
     }
 }

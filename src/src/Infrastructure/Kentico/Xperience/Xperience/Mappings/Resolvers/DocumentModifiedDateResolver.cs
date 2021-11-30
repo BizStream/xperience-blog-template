@@ -1,11 +1,9 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions;
 using CMS.DocumentEngine;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Resolvers
 {
-
     /// <summary> Resolves the last modified date for a document. </summary>
     /// <remarks> This implementation resolves the value using <see cref="DocumentPublishDateResolver"/>, if <see cref="TreeNode.DocumentModifiedWhen"/> does not have a value. </remarks>
     public class DocumentModifiedDateResolver : IValueResolver<TreeNode, object, DateTime>
@@ -29,7 +27,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings.Resolvers
                 ? modified
                 : publishDateResolver.Resolve( source, destination, destMember, context );
         }
-
     }
-
 }

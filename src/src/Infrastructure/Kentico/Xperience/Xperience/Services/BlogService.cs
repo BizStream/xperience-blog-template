@@ -1,5 +1,3 @@
-using System;
-using System.Threading.Tasks;
 using AutoMapper;
 using BizStream.Extensions.Kentico.Xperience.Caching;
 using BizStream.Extensions.Kentico.Xperience.DataEngine;
@@ -12,7 +10,6 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Services
 {
-
     public class BlogService : IBlogService, IMetaDataService<Blog>
     {
         #region Fields

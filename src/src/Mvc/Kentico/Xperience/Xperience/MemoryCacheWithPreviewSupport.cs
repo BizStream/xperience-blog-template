@@ -1,4 +1,3 @@
-using System;
 using Kentico.Content.Web.Mvc;
 using Kentico.Web.Mvc;
 using Microsoft.AspNetCore.Http;
@@ -6,7 +5,6 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace BlogTemplate.Mvc.Kentico.Xperience
 {
-
     /// <summary> Decorator implementation of <see cref="IMemoryCache"/> that disables caching when Preview Mode is active. </summary>
     public sealed class MemoryCacheWithPreviewSupport : IMemoryCache
     {
@@ -60,7 +58,5 @@ namespace BlogTemplate.Mvc.Kentico.Xperience
 
             return cache.TryGetValue( key, out value );
         }
-
     }
-
 }

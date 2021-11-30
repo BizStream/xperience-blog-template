@@ -1,4 +1,3 @@
-using System;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Documents;
 using CMS.Base;
 using Kentico.Content.Web.Mvc;
@@ -8,10 +7,8 @@ using Microsoft.Extensions.Options;
 
 namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
 {
-
     public static partial class OptionsBuilderExtensions
     {
-
         public static OptionsBuilder<DocumentRetrieverOptions> ConfigureCurrentSite( this OptionsBuilder<DocumentRetrieverOptions> builder )
         {
             if( builder == null )
@@ -35,7 +32,7 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
                 ( options, httpAccessor ) =>
                 {
                     var httpContext = httpAccessor.HttpContext;
-                    var isPreview = httpContext?.Kentico()
+                    bool? isPreview = httpContext?.Kentico()
                         ?.Preview()
                         ?.Enabled;
 
@@ -45,7 +42,5 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
                 }
             );
         }
-
     }
-
 }

@@ -3,10 +3,8 @@ using Microsoft.AspNetCore.Html;
 
 namespace BlogTemplate.Mvc.Abstractions.Mappings.Converters
 {
-
     public class HtmlContentConverter : ITypeConverter<string, IHtmlContent>, IValueConverter<string, IHtmlContent>
     {
-
         public IHtmlContent Convert( string source, ResolutionContext context )
             => ToHtml( source );
 
@@ -16,7 +14,5 @@ namespace BlogTemplate.Mvc.Abstractions.Mappings.Converters
         private static IHtmlContent ToHtml( string source )
             => new HtmlContentBuilder()
                 .SetHtmlContent( source );
-
     }
-
 }

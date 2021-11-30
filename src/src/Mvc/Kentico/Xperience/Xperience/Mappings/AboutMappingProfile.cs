@@ -6,10 +6,8 @@ using CMS.DocumentEngine;
 
 namespace BlogTemplate.Mvc.Kentico.Xperience.Mappings
 {
-
     public class AboutMappingProfile : Profile
     {
-
         public AboutMappingProfile( )
         {
             CreateMap<AboutNode, AboutViewModel>()
@@ -22,7 +20,5 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Mappings
             CreateMap<AboutNode, OpenGraphData>()
                 .IncludeBase<TreeNode, OpenGraphData>();
         }
-
     }
-
 }

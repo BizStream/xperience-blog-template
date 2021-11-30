@@ -1,10 +1,7 @@
 ﻿using System.Reflection;
-using AutoMapper;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace BlogTemplate.Mvc.App.Extensions
 {
-
     public static class IServiceCollectionExtensions
     {
         #region Fields
@@ -21,7 +18,5 @@ namespace BlogTemplate.Mvc.App.Extensions
                 KenticoMvcMappingsAssembly,
                 MvcAppMappingsAssembly
             );
-
     }
-
 }

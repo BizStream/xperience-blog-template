@@ -7,10 +7,8 @@ using CMS.DocumentEngine;
 
 namespace BlogTemplate.Mvc.Kentico.Xperience.Mappings
 {
-
     public class StatusCodeMappingProfile : Profile
     {
-
         public StatusCodeMappingProfile( )
         {
             CreateMap<StatusCodeNode, StatusCodeViewModel>()
@@ -25,7 +23,5 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Mappings
             CreateMap<StatusCodeNode, OpenGraphData>()
                 .IncludeBase<TreeNode, OpenGraphData>();
         }
-
     }
-
 }

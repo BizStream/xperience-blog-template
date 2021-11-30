@@ -1,14 +1,11 @@
-﻿using System.Linq;
-using CMS.DataEngine;
+﻿using CMS.DataEngine;
 using CMS.IO;
 using CMS.SiteProvider;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage
 {
-
     public class AzureStorageInitializationModule : Module
     {
-
         public AzureStorageInitializationModule( )
             : base( nameof( AzureStorageInitializationModule ) )
         {
@@ -35,7 +32,7 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage
                 .Select( site => site.SiteName )
                 .ToList();
 
-            foreach( var siteName in siteNames )
+            foreach( string siteName in siteNames )
             {
                 StorageHelper.MapStoragePath( $"~/{siteName}/media", provider );
             }
@@ -49,7 +46,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage
             var provider = CreateAzureProvider();
             MapMediaLibraries( provider );
         }
-
     }
-
 }

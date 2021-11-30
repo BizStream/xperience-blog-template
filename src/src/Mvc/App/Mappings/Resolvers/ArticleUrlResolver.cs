@@ -1,11 +1,8 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogTemplate.Core.Abstractions.Models;
-using Microsoft.AspNetCore.Routing;
 
 namespace BlogTemplate.Mvc.App.Mappings.Resolvers
 {
-
     public class ArticleUrlResolver : IValueResolver<Article, object, Uri>
     {
         #region Fields
@@ -22,10 +19,8 @@ namespace BlogTemplate.Mvc.App.Mappings.Resolvers
                 throw new ArgumentNullException( nameof( article ) );
             }
 
-            var url = linkGenerator.GetPathByAction( "Article", "Articles", new { article.Slug } );
+            string url = linkGenerator.GetPathByAction( "Article", "Articles", new { article.Slug } );
             return new Uri( url, UriKind.Relative );
         }
-
     }
-
 }

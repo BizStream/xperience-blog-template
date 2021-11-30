@@ -3,15 +3,9 @@ using BlogTemplate.Infrastructure.Extensions;
 using BlogTemplate.Mvc.App.Extensions;
 using BlogTemplate.Mvc.Kentico.Xperience.Extensions;
 using Kentico.Web.Mvc;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace BlogTemplate.Mvc.App
 {
-
     public class Startup
     {
         #region Properties
@@ -84,7 +78,5 @@ namespace BlogTemplate.Mvc.App
                 }
             );
         }
-
     }
-
 }

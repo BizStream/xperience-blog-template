@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogTemplate.Core.Abstractions.Models;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions.PageTypes;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Extensions;
@@ -9,10 +7,8 @@ using CMS.DocumentEngine;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
 {
-
     public class MetaDataMappingProfile : Profile
     {
-
         public MetaDataMappingProfile( )
         {
             CreateMap<TreeNode, MetaData>()
@@ -41,7 +37,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Mappings
                 )
                 .ForMember( openGraphData => openGraphData.VideoUrl, opt => opt.ConvertMediaPathToUri( node => node.GetStringValue( nameof( BaseNode.OpenGraphVideo ), string.Empty ) ) );
         }
-
     }
-
 }

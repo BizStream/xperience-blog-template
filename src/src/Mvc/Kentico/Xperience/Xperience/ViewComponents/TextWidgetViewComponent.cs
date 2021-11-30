@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlogTemplate.Mvc.Kentico.Xperience.ViewComponents
 {
-
     public class TextWidgetViewComponent : ViewComponent
     {
         #region Fields
@@ -21,7 +20,5 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.ViewComponents
 
             return View( viewModel );
         }
-
     }
-
 }

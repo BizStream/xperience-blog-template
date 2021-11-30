@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Documents;
 using BizStream.Kentico.Xperience.AspNetCore.StaticWebAssetsStorage;
 using Kentico.Content.Web.Mvc;
@@ -15,10 +13,8 @@ using Microsoft.Extensions.Hosting;
 
 namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
 {
-
     public static class IServiceCollectionExtensions
     {
-
         public static IServiceCollection AddBlogKentico( this IServiceCollection services, IHostEnvironment environment )
         {
             if( services == null )
@@ -85,7 +81,5 @@ namespace BlogTemplate.Mvc.Kentico.Xperience.Extensions
                 )
             );
         }
-
     }
-
 }

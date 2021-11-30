@@ -6,10 +6,8 @@ using BlogTemplate.Mvc.App.Models;
 
 namespace BlogTemplate.Mvc.App.Mappings
 {
-
     public class ArticleMappingProfile : Profile
     {
-
         public ArticleMappingProfile( )
         {
             CreateMap<Article, ArticleViewModel>()
@@ -21,7 +19,5 @@ namespace BlogTemplate.Mvc.App.Mappings
             CreateMap<Article, ArticleListingItem>()
                 .ForMember( item => item.Url, opt => opt.MapFrom<ArticleUrlResolver>() );
         }
-
     }
-
 }

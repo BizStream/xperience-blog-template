@@ -1,17 +1,12 @@
-using System;
 using System.Reflection;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Options;
 
 namespace BlogTemplate.Mvc.App.Extensions
 {
-
     public static partial class OptionsBuilderExtensions
     {
-
         public static OptionsBuilder<StaticFileOptions> ConfigureEmbeddedProvider( this OptionsBuilder<StaticFileOptions> options, Assembly assembly, string root )
         {
             if( options == null )
@@ -30,7 +25,5 @@ namespace BlogTemplate.Mvc.App.Extensions
             }
         );
         }
-
     }
-
 }

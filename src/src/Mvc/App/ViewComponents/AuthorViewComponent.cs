@@ -1,5 +1,3 @@
-using System;
-using System.Threading.Tasks;
 using AutoMapper;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Mvc.App.Models.Components;
@@ -7,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlogTemplate.Mvc.App.ViewComponents
 {
-
     public class AuthorViewComponent : ViewComponent
     {
         #region Fields
@@ -32,7 +29,5 @@ namespace BlogTemplate.Mvc.App.ViewComponents
             var viewModel = mapper.Map<AuthorComponentViewModel>( author );
             return View( viewModel );
         }
-
     }
-
 }

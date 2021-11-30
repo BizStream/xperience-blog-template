@@ -1,14 +1,11 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogTemplate.Mvc.Abstractions.Models;
 using BlogTemplate.Mvc.App.Mappings.Resolvers;
 
 namespace BlogTemplate.Mvc.App.Mappings.Extensions
 {
-
     public static partial class IMappingExpressionExtensions
     {
-
         public static IMappingExpression<TEntity, TViewModel> IncludeMetaData<TEntity, TViewModel>( this IMappingExpression<TEntity, TViewModel> expression )
             where TEntity : class
             where TViewModel : BaseViewModel
@@ -32,7 +29,5 @@ namespace BlogTemplate.Mvc.App.Mappings.Extensions
                 throw new ArgumentNullException( nameof( expression ) );
             }
         }
-
     }
-
 }

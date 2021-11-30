@@ -1,14 +1,10 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using BlogTemplate.Infrastructure.Abstractions.Services;
 using BlogTemplate.Mvc.App.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
 
 namespace BlogTemplate.Mvc.App.Controllers
 {
-
     [Route( "" )]
     public class HomeController : Controller
     {
@@ -45,7 +41,5 @@ namespace BlogTemplate.Mvc.App.Controllers
 
             return View( viewModel );
         }
-
     }
-
 }

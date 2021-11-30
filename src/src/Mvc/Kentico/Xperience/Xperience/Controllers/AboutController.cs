@@ -5,13 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlogTemplate.Mvc.Kentico.Xperience.Controllers
 {
-
     public class AboutController : XperienceController
     {
-
         public IActionResult Index( )
             => PageView<AboutNode, AboutViewModel>();
-
     }
-
 }

@@ -1,4 +1,3 @@
-using System;
 using BizStream.Extensions.Kentico.Xperience.Retrievers.Documents;
 using BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions;
 using CMS.DataEngine;
@@ -7,11 +6,9 @@ using Microsoft.Extensions.Options;
 
 namespace BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers
 {
-
     /// <summary> A class that can query Kentico Documents. </summary>
     public class BlogTemplateDocumentRetriever : DocumentRetriever
     {
-
         public BlogTemplateDocumentRetriever( IOptionsSnapshot<DocumentRetrieverOptions> options )
             : base( options )
         {
@@ -40,7 +37,5 @@ namespace BlogTemplate.Infrastructure.Kentico.Xperience.Retrievers
 
             return typedQuery;
         }
-
     }
-
 }
