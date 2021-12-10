@@ -10,10 +10,22 @@
         <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="*" PrivateAssets="all" />
     </ItemGroup>
 
-    <ItemGroup Condition=" '$(IsCmsApp)' != 'true' AND '$(TargetKenticoVersion)' != '' ">
-        <PackageReference Include="Kentico.Xperience.Libraries" Version="$(TargetKenticoVersion)" Condition=" '$(IncludeKenticoReferences)' == 'true' " />
-        <PackageReference Include="Kentico.Xperience.Libraries.Tests" Version="$(TargetKenticoVersion)" Condition=" '$(IncludeKenticoTestReferences)' == 'true' " />
-        <PackageReference Include="Kentico.Xperience.AspNetCore.WebApp" Version="$(TargetKenticoVersion)" Condition=" '$(IncludeKenticoWebReferences)' == 'true' " />
+    <ItemGroup Condition=" '$(IsCmsApp)' != 'true' AND '$(TargetXperienceVersion)' != '' ">
+        <PackageReference Include="Kentico.Xperience.Libraries" Version="$(TargetXperienceVersion)" Condition=" '$(IncludeXperienceReferences)' == 'true' " />
+        <PackageReference Include="Kentico.Xperience.Libraries.Tests" Version="$(TargetXperienceVersion)" Condition=" '$(IncludeXperienceTestReferences)' == 'true' " />
+        <PackageReference Include="Kentico.Xperience.AspNetCore.WebApp" Version="$(TargetXperienceVersion)" Condition=" '$(IncludeXperienceWebReferences)' == 'true' " />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(IsMvcFeature)' == 'true' ">
+        <PackageReference Include="Microsoft.AspNetCore.ClientAssets" Version="0.1.0-alpha.21528.2" Condition=" '$(ClientAssetsEnabled)' == 'true' " />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.*" Condition=" '$(Configuration)' == 'Debug' " />
+
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Infrastructure\AutoMapper\BlogTemplate.Mvc.Infrastructure.AutoMapper.csproj" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(ImplicitUsings)' == 'true' AND '$(IncludeXperienceWebReferences)' == 'true' ">
+        <Using Include="Kentico.Content.Web.Mvc" />
+        <Using Include="Kentico.Content.Web.Mvc.Routing" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,10 @@
+﻿@using BlogTemplate.Mvc.Articles.Abstractions
+
+@model IEnumerable<ArticleItem>
+
+<section class="recent-articles">
+    @if( Model?.Any() is true )
+    {
+        @Html.DisplayFor( articles => articles )
+    }
+</section>

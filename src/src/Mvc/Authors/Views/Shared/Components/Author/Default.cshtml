@@ -1,0 +1,23 @@
+@using BlogTemplate.Mvc.Authors.Abstractions
+
+@model AuthorItem
+
+@if( Model is null )
+{
+    return;
+}
+
+<section class="author">
+    @if( Model.ImageUrl is not null )
+    {
+        <div class="author-image">
+            <img src="@Model.ImageUrl" />
+        </div>
+    }
+
+    <div class="author-details">
+        <div class="author-name">@Model.Name</div>
+        <div class="author-description">@Model.Description</div>
+    </div>
+</section>
+

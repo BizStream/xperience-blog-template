@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <IncludeXperienceWebReferences>true</IncludeXperienceWebReferences>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(SourceDirectory)\Infrastructure\Xperience\AutoMapper\BlogTemplate.Infrastructure.Xperience.AutoMapper.csproj" />
+    </ItemGroup>
+
+</Project>

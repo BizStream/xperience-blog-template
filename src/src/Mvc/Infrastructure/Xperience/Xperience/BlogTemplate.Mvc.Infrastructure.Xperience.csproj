@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <IncludeXperienceWebReferences>true</IncludeXperienceWebReferences>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="CMS.AssemblyDiscoverable" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(SourceDirectory)\Infrastructure\Xperience\AzureMediaStorage\BlogTemplate.Infrastructure.Xperience.AzureMediaStorage.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Infrastructure\Xperience\Abstractions\BlogTemplate.Mvc.Infrastructure.Xperience.Abstractions.csproj" />
+    </ItemGroup>
+
+</Project>

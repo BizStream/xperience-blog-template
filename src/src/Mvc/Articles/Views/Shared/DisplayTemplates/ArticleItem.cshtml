@@ -1,0 +1,20 @@
+﻿@using BlogTemplate.Mvc.Articles.Abstractions
+
+@model ArticleItem
+
+@if( Model is null )
+{
+    return;
+}
+
+<div class="article-item">
+    <a class="article-title" href="@Model.Url">
+        <h3>@Model.Title</h3>
+        <span class="article-published-at">@Model.PublishedAt.ToShortDateString()</span>
+    </a>
+
+    @if( !string.IsNullOrWhiteSpace( Model.Summary ) )
+    {
+        <p>@Model.Summary</p>
+    }
+</div>

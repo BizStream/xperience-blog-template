@@ -1,0 +1,21 @@
+@using BlogTemplate.Mvc.PageBuilder.Abstractions
+
+@model ComponentViewModel<GenericColumnSectionProperties>
+
+@if( Model is null )
+{
+    return;
+}
+
+@{
+    int.TryParse( Model.Properties.ColumnCount, out int columns );
+}
+
+<div class="generic-column-section">
+    @for( int i = 0; i < columns; i++ )
+    {
+        <div class="generic-col-@(12 / columns)">
+            <widget-zone />
+        </div>
+    }
+</div>

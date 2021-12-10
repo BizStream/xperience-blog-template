@@ -1,0 +1,12 @@
+@using BlogTemplate.Mvc.Errors.Abstractions
+
+@model ErrorViewModel
+
+@if( Model is null )
+{
+    <h1>An Unknown Error Occurred.</h1>
+    return;
+}
+
+<h1>@Model.Heading</h1>
+@Model.Content

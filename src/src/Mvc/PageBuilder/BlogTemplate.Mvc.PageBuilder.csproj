@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <ClientAssetsEnabled>true</ClientAssetsEnabled>
+        <IncludeXperienceWebReferences>true</IncludeXperienceWebReferences>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="CMS.AssemblyDiscoverable" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BizStream.Kentico.Xperience.AspNetCore.StaticWebAssetsStorage" Version="1.1.0-beta.933c63b" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Using Include="Kentico.Forms.Web.Mvc" />
+        <Using Include="Kentico.PageBuilder.Web.Mvc" />
+        <Using Include="Kentico.PageBuilder.Web.Mvc.PageTemplates" />
+    </ItemGroup>
+
+</Project>

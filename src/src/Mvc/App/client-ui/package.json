@@ -4,27 +4,31 @@
     "description": "Client side UI implementation for the Xperience BlogTemplate Mvc site.",
     "main": "index.js",
     "scripts": {
-        "build": "npx rollup -c",
-        "start": "npx rollup -c -w"
+        "build": "npm run build:Debug",
+        "build:Debug": "npx rollup -c --environment MODE:debug",
+        "build:Release": "npx rollup -c --environment MODE:release",
+        "start": "npm run build:Debug -- -w"
     },
     "author": "BizStream",
-    "browserslist": "> 0.25%, not dead",
+    "browserslist": "> 0.25%, not dead, not ie 11, not op_mini all",
     "license": "ISC",
     "devDependencies": {
-        "@babel/core": "^7.12.10",
-        "@babel/plugin-transform-runtime": "^7.12.10",
-        "@babel/preset-env": "^7.12.10",
+        "@babel/core": "^7.14.3",
+        "@babel/plugin-transform-runtime": "^7.14.3",
+        "@babel/preset-env": "^7.14.4",
         "@rollup/plugin-babel": "^5.2.2",
         "@rollup/plugin-commonjs": "^17.0.0",
         "@rollup/plugin-node-resolve": "^11.0.0",
         "autoprefixer": "^10.1.0",
         "core-js": "^3.8.1",
-        "postcss": "^8.2.10",
-        "node-sass": "^5.0.0",
+        "postcss": "^8.3.0",
+        "postcss-normalize": "^10.0.1",
+        "postcss-url": "^10.1.3",
         "rollup": "^2.34.2",
         "rollup-plugin-cleaner": "^1.0.0",
         "rollup-plugin-postcss": "^4.0.0",
-        "rollup-plugin-terser": "^7.0.2"
+        "rollup-plugin-terser": "^7.0.2",
+        "sass": "^1.34.0"
     },
     "dependencies": {
         "@babel/runtime": "^7.12.5",
