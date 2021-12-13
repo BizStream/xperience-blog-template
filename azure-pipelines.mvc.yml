@@ -17,6 +17,23 @@ trigger:
       - develop
 
 steps:
+  - task: UseDotNet@2
+    displayName: use netcoreapp3.1 sdk
+    inputs:
+      version: "3.1.x"
+      performMultiLevelLookup: true
+
+  - task: UseDotNet@2
+    displayName: use net5.0 sdk
+    inputs:
+      version: "5.0.x"
+      performMultiLevelLookup: true
+
+  - task: UseDotNet@2
+    displayName: use net6.0 sdk
+    inputs:
+      version: "6.0.x"
+
   - task: DotNetCoreCLI@2
     displayName: "restore dependencies"
     inputs:
@@ -38,8 +55,6 @@ steps:
       publishWebProjects: false
       projects: "src/src/Mvc/App/BlogTemplate.Mvc.App.csproj"
       arguments: '-c Release -o "$(build.artifactstagingdirectory)" --no-build'
-
-  # TODO: add appsettings.bzs-dev.json to mvc artifact from DevOps Secrets
 
   - task: PublishBuildArtifacts@1
     displayName: "publish artifact"
