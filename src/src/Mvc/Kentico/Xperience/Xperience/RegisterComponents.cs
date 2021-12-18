@@ -14,3 +14,4 @@ using Kentico.PageBuilder.Web.Mvc;
 [assembly: RegisterWidget( ComponentIdentifier.TextWidget, typeof( TextWidgetViewComponent ), "Text", typeof( TextWidgetProperties ), IconClass = "icon-l-text" )]
 [assembly: RegisterSection( ComponentIdentifier.TwoColumnSection, "Two Columns", customViewName: "~/Views/Shared/Sections/_TwoColumnSection.cshtml", IconClass = "icon-l-cols-2" )]
 [assembly: RegisterSection( ComponentIdentifier.GenericColumnSection, "Generic Column Section", typeof( GenericColumnSectionProperties ), customViewName: "~/Views/Shared/Sections/_GenericColumnSection.cshtml", IconClass = "icon-l-cols-3" )]
+[assembly: RegisterSection( ComponentIdentifier.ResponsiveColumnSection, "Responsive Column Section", typeof( ResponsiveColumnSectionProperties ), customViewName: "~/Views/Shared/Sections/_ResponsiveColumnSection.cshtml", IconClass = "icon-l-cols-70-30" )]

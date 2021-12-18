@@ -64,5 +64,6 @@ const configureInlineEditor = (
     })
   export default [
     configureInlineEditor('text-editor'),
-    configureSection('generic-column')
+    configureSection('generic-column'),
+    configureSection('responsive-column')
   ]

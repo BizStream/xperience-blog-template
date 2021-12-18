@@ -1,0 +1,16 @@
+@model ComponentViewModel<ResponsiveColumnSectionProperties>
+
+@{ 
+    var leftPercent = $"{Model.Properties.LeftColumnWidth}%";
+    var rightPercent = $"{Model.Properties.RightColumnWidth}%";
+}
+
+<div class="responsive-column-section">
+    <div class="responsive-col" style="flex-basis:@leftPercent;">
+        <widget-zone />
+    </div>
+
+    <div class="responsive-col" style="flex-basis: @rightPercent;">
+        <widget-zone />
+    </div>
+</div>
