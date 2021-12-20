@@ -6,9 +6,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="BizStream.AspNetCore.Components.Metadata" Version="0.0.1-beta.a87015f" />
-        <PackageReference Include="BizStream.AspNetCore.Components.OpenGraph" Version="0.0.1-beta.a87015f" />
-        <PackageReference Include="BizStream.AspNetCore.Components.Schema" Version="0.0.1-beta.a87015f" />
+        <PackageReference Include="BizStream.AspNetCore.Components.Metadata" Version="0.0.1-beta.12d2e22" />
+        <PackageReference Include="BizStream.AspNetCore.Components.OpenGraph" Version="0.0.1-beta.12d2e22" />
+        <PackageReference Include="BizStream.AspNetCore.Components.Schema" Version="0.0.1-beta.12d2e22" />
         <PackageReference Include="SimpleMvcSitemap" Version="4.*" />
     </ItemGroup>
 
