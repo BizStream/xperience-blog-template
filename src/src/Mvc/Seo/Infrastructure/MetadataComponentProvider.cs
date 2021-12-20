@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BlogTemplate.Mvc.Seo.Infrastructure;
 
-public class XperienceMetadataComponentProvider : IMetadataComponentProvider
+public class MetadataComponentProvider : IMetadataComponentProvider
 {
     private static Meta? Invoke( ViewComponentContext context )
     {
@@ -28,7 +28,8 @@ public class XperienceMetadataComponentProvider : IMetadataComponentProvider
                 ),
                 Description = pageMeta.Description,
                 Keywords = pageMeta.Keywords.Split( ',', StringSplitOptions.RemoveEmptyEntries )
-                    .Select( keyword => keyword.Trim() ),
+                    .Select( keyword => keyword.Trim() )
+                    .ToList(),
                 Title = pageMeta.Title
             };
         }

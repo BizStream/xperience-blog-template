@@ -14,5 +14,4 @@ public static class PageBuilderServiceCollectionExtensions
 
         return services;
     }
-
 }

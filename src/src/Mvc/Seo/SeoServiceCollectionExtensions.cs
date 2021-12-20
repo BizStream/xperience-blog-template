@@ -1,5 +1,8 @@
 ﻿using BizStream.AspNetCore.Components.Metadata;
 using BizStream.AspNetCore.Components.OpenGraph;
+using BlogTemplate.Mvc.Infrastructure.Xperience.AutoMapper.Resolvers;
+using BlogTemplate.Mvc.Seo.Infrastructure;
+using BlogTemplate.Mvc.Seo.Mappings;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,9 +17,14 @@ public static class SeoServiceCollectionExtensions
     {
         ArgumentNullException.ThrowIfNull( services );
 
+        services.AddAutoMapper(
+            typeof( OpenGraphMappingProfile ),
+            typeof( MediaUrlResolver<,> )
+        );
+
         services.AddMvc()
-            .AddMetadataComponent()
-            .AddOpenGraphComponent();
+            .AddMetadataComponent( options => options.AddProvider( new MetadataComponentProvider() ) )
+            .AddOpenGraphComponent( options => options.AddProvider( new OpenGraphComponentProvider() ) );
 
         services.TryAddScoped(
             serviceProvider =>
@@ -30,9 +38,6 @@ public static class SeoServiceCollectionExtensions
         );
 
         services.AddTransient<ISitemapProvider, SitemapProvider>();
-
-        services.ConfigureOptions<ConfigureMetadataComponent>();
-        services.ConfigureOptions<ConfigureOpenGraphComponent>();
 
         return services;
     }

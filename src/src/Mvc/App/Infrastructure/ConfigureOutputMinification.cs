@@ -12,8 +12,7 @@ public class ConfigureOutputMinification : IConfigureOptions<WebMarkupMinOptions
         options.DisablePoweredByHttpHeaders = true;
 
         // NOTE: change this setting if you need inspect HTML output while deving
-        // options.AllowMinificationInDevelopmentEnvironment = true;
-        options.AllowMinificationInDevelopmentEnvironment = false;
+        options.AllowMinificationInDevelopmentEnvironment = true;
     }
 
     public void Configure( HtmlMinificationOptions options )

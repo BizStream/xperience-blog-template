@@ -51,8 +51,7 @@ public class Startup
     {
         if( Environment.IsDevelopment() )
         {
-            //app.UseDeveloperExceptionPage();
-            app.UseBlogTemplateErrors();
+            app.UseDeveloperExceptionPage();
         }
         else
         {
