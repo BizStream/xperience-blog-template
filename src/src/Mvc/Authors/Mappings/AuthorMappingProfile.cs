@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using BlogTemplate.Infrastructure.Xperience.Abstractions.PageTypes;
-using BlogTemplate.Mvc.Infrastructure.Xperience.AutoMapper.Extensions;
 using BlogTemplate.Mvc.Authors.Abstractions;
+using BlogTemplate.Mvc.Infrastructure.Xperience.AutoMapper.Extensions;
 
 namespace BlogTemplate.Mvc.Authors.Mappings;
 

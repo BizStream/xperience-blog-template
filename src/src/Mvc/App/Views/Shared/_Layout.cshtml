@@ -1,5 +1,6 @@
 ﻿@using BizStream.AspNetCore.Components.Metadata
 @using BizStream.AspNetCore.Components.OpenGraph
+@using BizStream.AspNetCore.Components.Schema
 
 <!DOCTYPE html>
 
@@ -7,10 +8,11 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     @( await Component.InvokeAsync<MetadataComponent>( ) )
     @( await Component.InvokeAsync<OpenGraphComponent>( ) )
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @( await Component.InvokeAsync<SchemaComponent>( ) )
 
     <link href="/master.min.css" rel="stylesheet" asp-append-version="true" />
     @await RenderSectionAsync( "head", required: false )

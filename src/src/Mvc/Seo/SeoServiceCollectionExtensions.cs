@@ -1,7 +1,9 @@
 ﻿using BizStream.AspNetCore.Components.Metadata;
 using BizStream.AspNetCore.Components.OpenGraph;
+using BizStream.AspNetCore.Components.Schema;
 using BlogTemplate.Mvc.Infrastructure.Xperience.AutoMapper.Resolvers;
 using BlogTemplate.Mvc.Seo.Infrastructure;
+using BlogTemplate.Mvc.Seo.Infrastructure.Schema;
 using BlogTemplate.Mvc.Seo.Mappings;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
@@ -24,7 +26,14 @@ public static class SeoServiceCollectionExtensions
 
         services.AddMvc()
             .AddMetadataComponent( options => options.AddProvider( new MetadataComponentProvider() ) )
-            .AddOpenGraphComponent( options => options.AddProvider( new OpenGraphComponentProvider() ) );
+            .AddOpenGraphComponent( options => options.AddProvider( new OpenGraphComponentProvider() ) )
+            .AddSchemaComponent(
+                options =>
+                {
+                    options.AddProvider( new HomeSchemaComponentProvider() );
+                    options.AddProvider( new ArticleSchemaComponentProvider() );
+                }
+            );
 
         services.TryAddScoped(
             serviceProvider =>

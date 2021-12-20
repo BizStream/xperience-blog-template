@@ -445,4 +445,4 @@ $RECYCLE.BIN/
 src/src/Mvc/App/appsettings.Development.json
 
 # Ignore compiled static assets
-**/wwwroot/dist/*
+**/wwwroot/**/*.min.*

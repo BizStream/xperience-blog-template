@@ -325,4 +325,4 @@ ConnectionStrings.config
 # e.g. CMS/{SiteCodeName}
 
 # Ignore compiled static assets
-**/wwwroot/dist/*
+**/wwwroot/**/*.min.*
