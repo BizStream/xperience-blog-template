@@ -1,15 +1,18 @@
+@using Kentico.PageBuilder.Web.Mvc
+@using Kentico.Web.Mvc
+
 @{
     ViewBag.ContainerClassName = "about";
 }
 
 @section head
 {
-<page-builder-styles />
+@Html.Kentico().PageBuilderStyles()
 }
 
-<editable-area area-identifier="content" />
+@( await Html.Kentico().EditableAreaAsync( "content" ) )
 
 @section scripts
 {
-<page-builder-scripts />
+@Html.Kentico().PageBuilderScripts()
 }

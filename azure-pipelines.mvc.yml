@@ -2,7 +2,7 @@
 
 name: $(Date:yyyyMMdd)$(Rev:-r)
 pool:
-  vmImage: "windows-latest"
+  vmImage: windows-2022
 
 pr:
   branches:
@@ -18,19 +18,7 @@ trigger:
 
 steps:
   - task: UseDotNet@2
-    displayName: use netcoreapp3.1 sdk
-    inputs:
-      version: "3.1.x"
-      performMultiLevelLookup: true
-
-  - task: UseDotNet@2
-    displayName: use net5.0 sdk
-    inputs:
-      version: "5.0.x"
-      performMultiLevelLookup: true
-
-  - task: UseDotNet@2
-    displayName: use net6.0 sdk
+    displayName: "use net6.0 sdk"
     inputs:
       version: "6.0.x"
 

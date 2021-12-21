@@ -2,7 +2,7 @@
 
 name: $(Date:yyyyMMdd)$(Rev:-r)
 pool:
-  vmImage: windows-latest
+  vmImage: windows-2022
 
 pr:
   branches:

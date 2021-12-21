@@ -17,6 +17,8 @@
     </ItemGroup>
 
     <ItemGroup Condition=" '$(IsMvcFeature)' == 'true' ">
+        <Content Remove="client-ui\**" />
+        
         <PackageReference Include="Microsoft.AspNetCore.ClientAssets" Version="0.1.0-alpha.21528.2" Condition=" '$(ClientAssetsEnabled)' == 'true' " />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.*" Condition=" '$(Configuration)' == 'Debug' " />
 

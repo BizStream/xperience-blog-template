@@ -1,9 +1,11 @@
+@using Kentico.Web.Mvc
+
 <div class="column-wrapper">
     <div class="column">
-        <widget-zone />
+        @(await Html.Kentico().WidgetZoneAsync())
     </div>
 
     <div class="column">
-        <widget-zone />
+        @(await Html.Kentico().WidgetZoneAsync())
     </div>
 </div>
