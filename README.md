@@ -7,7 +7,7 @@ The following repository contains a .NET Core CLI Template solution, intended to
 
 ## Getting Started
 
-Before installing the template, it is recommened to have the [latest](https://dotnet.microsoft.com/download/dotnet/5.0) net5.0 SDK installed.
+Before installing the template, it is recommended to have the latest [net5.0](https://dotnet.microsoft.com/download/dotnet/5.0) or [net6.0](https://dotnet.microsoft.com/download/dotnet/6.0) SDK installed.
 
 ### Create a Solution
 
@@ -38,8 +38,8 @@ Before installing the template, it is recommened to have the [latest](https://do
      - `<Solution Name>` will be used as the starting prefix of all generated class libraries, we recommend using the `SiteName` specified in the Kentico Installer (e.g. `dotnet new bzs-xp-blog -n MyBlog` will result in the creation of `MyBlog.sln`, `MyBlog.Core.Abstractions`, `MyBlog.Infrastracture.Abstractions`, etc).
      - `<Kentico Solution Folder>` should be the path to the parent folder containing the `CMSApp`, and other Kentico components created by the Kentico Installer.
    - Open `CMSApp.sln` to ensure the solution was configured
-     - Ensure that `<Solution Name>.Infrastructure.Kentico.Xperience.Modules.AzureStorage` has been added to the Solution, along with `default.ruleset` and other root solution files.
-     - Ensure that `CMSApp.csproj` references the `<Solution Name>.Infrastructure.Kentico.Xperience.Modules.AzureStorage` project.
+     - Ensure that `<Solution Name>.Infrastructure.Xperience.AzureMediaStorage` has been added to the Solution, along with `default.ruleset` and other root solution files.
+     - Ensure that `CMSApp.csproj` references the `<Solution Name>.Infrastructure.Xperience.AzureMediaStorage` project.
      - Ensure that `CMSApp.csproj` includes and compiles `CMS\RegisterModules.cs`.
 
 5. Import Kentico Objects
@@ -52,34 +52,29 @@ Before installing the template, it is recommened to have the [latest](https://do
 
 ### Media Storage
 
-The templated solution includes an Xperience Module that configures all sites to use an Azure Storage Provider (`BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage`). By default, this module **is not registered**.
+The templated solution includes an Xperience Module that configures all sites to use an Azure Storage Provider (`BlogTemplate.Infrastructure.Xperience.AzureMediaStorage`). By default, this module **is not registered**.
 
-To enable it, uncomment the `RegisterModuleAttribute` line within the `RegisterModules.cs` files located at `src\Mvc\Kentico\Xperience\Xperience\RegisterModules.cs`, and `CMS\RegisterModules.cs`, and provide the relevant `CMSAzureAccountName` and `CMSAzureSharedKey` setting keys within `CMS\web.config` and `src\Mvc\App\appsettings.json`, and relevant transforms.
+To enable it, uncomment the `RegisterModuleAttribute` line within the `RegisterModules.cs` files located at `src\Mvc\Infrastructure\Xperience\Xperience\RegisterModules.cs`, and `CMS\RegisterModules.cs`, and provide the relevant `CMSAzureAccountName` and `CMSAzureSharedKey` setting keys within `CMS\web.config` and `src\Mvc\App\appsettings.json`, and relevant transforms.
 
-## Architecture
+## Architecture & Philosophy
 
-The provided solution's architecture is strongly influenced by SOLID principles, with the intention to organize, separate, and distinguish the logical couplings and dependencies within the solution.
+The provided solution attempts a mixed Layer and Featured based architecture, with the intention to organize, separate, and distinguish dependencies across logical groupings of functionality that compose an Mvc application.
 
-Projects within the solution are organized in a nested-folder structure, wherein each nesting level is intended to encapsulate logical couplings/dependencies within that nesting level's "scope". Within the root of the `./src` folder, there are 3 nested folders; these folders are intended to define the "scope" (the layers) of the application:
-
-- `Core`
-
-  The "Core" layer of the solution is intended to define the domain-level abstractions (Domain Model), as well as other "low-level" abstractions/implementations. For example, the project within `Core/Abstractions` (`BlogTemplate.Core.Abstractions`) defines the Domain Models for a blog.
-
-  A folder, `Core/Extensions` (`BlogTemplate.Core.Extensions`), could exists that may contain extension methods to Domain Models or System Types (such as `int`, `string`, `DateTime`). Projects within this layer should be light weight, decoupled, and avoid dependencies on specific technologies or platforms outside the solution's Domain or runtime.
+Projects within the solution are organized in a nested-folder structure, wherein each nesting level is intended to encapsulate logical couplings/dependencies within that nesting level's "scope". Within the root of the `./src` folder, there are 2 nested folders; these folders are intended to define the "scope" (the layers) of the application:
 
 - `Infrastructure`
 
-  The "Infrastructure" layer is where we "do stuff". The "scope" of this layer is quite wide, as it is intended to contain nested "scopes" for coupled technologies/platforms (dependencies). The most important nested "scope" within this layer is `Infrastructure/Abstractions` (`BlogTemplate.Infrastructure.Abstractions`), which is intended to define contracts relevant to the solution's domain. An example of this is `IAuthorService`, a contract that defines how the `Author` domain model may be retrieved. Additional nested "scopes" within `Infrastructure` are intended to encapsulate dependencies to coupled technologies/platforms, ideally to facilitate the implementation of a contract defined within the `Infrastructure/Abstractions` scope.
+  The "Infrastructure" layer is intended for encapsulation of high-level dependencies/functionality. The "scope" of this layer is quite wide, as it is intended to contain nested "scopes" for technologies/platforms (dependencies) that are relevant to the implementation of the solution application, but are not explicitly coupled to primitives/concepts of the Mvc application (e.g. a data retrieval service utilized by the Mvc application, as well a micro-service, such as an Azure Function or Cron Job).
 
-  `Infrastructure/Kentico/Xperience` contains it's own `Infrastructure/Kentico/Xperience/Abstractions` (`BlogTemplate.Infrastructure.Kentico.Xperience.Abstractions`) scope, intended for models and contracts relevant to integrating Kentico's Xperience paltform into the solution. Within the `Infrastructure/Kentico/Xperience/Xperience` (`BlogTemplate.Infrastructure.Kentico.Xperience`) scope, implementations of the domain-level infrastructure contracts that are coupled to the Kentico Xperience platform, can be found. For example, `BlogTemplate.Infrastructure.Kentico.Xperience.Services.AuthorService` implements the `IAuthorService` contract via Xperience's Content Tree (`TreeNode/Document` abstraction).
+  For example, the Kentico Xperience scope `Infrastructure/Xperience` contains it's own `Infrastructure/Xperience/Xperience/Abstractions` (`BlogTemplate.Infrastructure.Xperience.Abstractions`) scope, intended for models and contracts relevant to integrating Kentico's Xperience APIs into the solution. Within the `Infrastructure/Xperience/Xperience` (`BlogTemplate.Infrastructure.Xperience`) scope, implementations that are coupled to the Kentico Xperience platform can be found.
+
+  For example, in an E-commerce site that integrates with a third party ERP system, an `Infrastructure/<ErpNamespaceRoot>` scope may also exist to encapsulate integration into the third party ERP system. This `Infrastructure/<ErpNamespaceRoot>` scope would ideally contain a `Infrastructure/<ErpNamespaceRoot>/Abstractions` scope that exposes various contracts for integration with the ERP, and an `Infrastructure/<ErpNamespaceRoot>/<ErpNamespaceRoot>` scope for implementations of contracts.
 
 - `Mvc`
 
-  The "Mvc" layer contains the various components that build a runnable Mvc web server. As with the "Infrastructure" layer, this layer is intended to contain nested "scopes" for coupled dependencies, but those _that are relevant to the Mvc/Web app's functionality_, it **should not** contain business rules or logic relevant to the high-level domain, as this is the intention of the "Infrastructure" layer.
+  The `Mvc/App` (`BlogTemplate.Mvc.App`) scope represents the runnable Mvc Site, and is intended to orchestrate the configuration and startup of the features that compose the Mvc application.
 
-  The `Mvc/Abstractions` (`BlogTemplate.Mvc.Abstractions`) scope is intended to define the Mvc-specific abstractions (View Models) and implementations. This layer is akin to `Core/Abstractions`, but for abstractions/implementations relevant to the Mvc app, rather than the high-level domain.
+  The "Mvc" layer contains the various components, also referred to as "Mvc Feature Libraries", that compose the Mvc application. "Mvc Feature Libraries" are [_Razor Class Libraries_](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class) that function as [_Application Parts_](https://docs.microsoft.com/en-us/aspnet/core/mvc/advanced/app-parts), allowing an Mvc application to be composed of logical groupings of functionality implemented in distinct Class Libraries.
 
-  The `Mvc/App` (`BlogTemplate.Mvc.App`) scope represents the runnable Mvc Site, and is intended to encapsulate the configuration and startup of the features that compose the Mvc App. Additionally, this scope is intended to contain implementations of Mvc-specific functionality that conforms to the Domain Model. For Mvc-specific functionality that is tightly-coupled to a dependency (tech/platform), it is recommended to create nested scopes to encapsulate the dependency's functionality (e.g. `BlogTemplate.Mvc.Kentico.Xperience`).
-
-  The `Mvc/Kentico/Xperience` scope contains Mvc-specific implementations that are tightly coupled to the Kentico Xperience platform. This primarily entails features that utilize Page Builder/Form Builder functionality.
+  Within the `Mvc` scope exists an `Mvc/Infrastructure` scope, this scope is intended
+  to serve a similar purpose as the root `Infrastructure` scope, but for dependencies/technologies that are explicitly coupled to Mvc (more specifically, dependent upon `Microsoft.AspNetCore.*` APIs). For example, the `Mvc/Infrastructure/Xperience` scope is used to expose services that are coupled to Kentico Xperience's Mvc (`WebApp`) [package](https://www.nuget.org/packages/Kentico.Xperience.AspNetCore.WebApp). The `Mvc/Infrastructure` scope is additionally used for encapsulating code reused across various "Mvc Feature Libraries".
