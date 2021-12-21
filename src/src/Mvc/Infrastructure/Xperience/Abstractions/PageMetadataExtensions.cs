@@ -6,6 +6,7 @@ public static class PageMetadataExtensions
     {
         ArgumentNullException.ThrowIfNull( metadata );
         return metadata.Keywords?.Split( ',', StringSplitOptions.RemoveEmptyEntries )
-            .Select( keyword => keyword.Trim() );
+            .Select( keyword => keyword.Trim() )
+                ?? Enumerable.Empty<string>();
     }
 }

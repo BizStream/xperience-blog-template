@@ -5,7 +5,7 @@
         <IsMvcProject Condition=" $(MSBuildProjectName.StartsWith('BlogTemplate.Mvc.')) ">true</IsMvcProject>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(IsMvcProject)' == 'true' AND !$(MSBuildProjectName.Startswith('BlogTemplate.Mvc.Infrastructure.')) ">
+    <PropertyGroup Condition=" '$(IsMvcProject)' == 'true' AND !$(MSBuildProjectName.StartsWith('BlogTemplate.Mvc.Infrastructure.')) ">
         <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
         <ClientAssetsEnabled>false</ClientAssetsEnabled>
         <ClientAssetsBuildOutputParameter>--dir</ClientAssetsBuildOutputParameter>
@@ -47,7 +47,7 @@
         <IncludeXperienceWebReferences>false</IncludeXperienceWebReferences>
     </PropertyGroup>
 
-    <ItemGroup Condition=" '$(IsMvcProject)' == 'true' ">
+    <ItemGroup Condition=" '$(IsMvcProject)' == 'true' AND !$(MSBuildProjectName.EndsWith('.App')) ">
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
     </ItemGroup>
 
