@@ -21,6 +21,7 @@
 
     <PropertyGroup Condition=" $(IsCmsApp) != 'true' ">
         <!-- Disable legacy analyzers, and enable roslyn analyzers with the default ruleset -->
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <CodeAnalysisRuleSet>$(SourceDirectory)\default.ruleset</CodeAnalysisRuleSet>
         <RunCodeAnalysis>false</RunCodeAnalysis>
