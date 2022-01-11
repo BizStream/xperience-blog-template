@@ -1,0 +1,22 @@
+@using BlogTemplate.Mvc.PageBuilder.Abstractions
+@using Kentico.Web.Mvc
+
+@model ComponentViewModel<GenericColumnSectionProperties>
+
+@if( Model is null )
+{
+    return;
+}
+
+@{
+    int.TryParse( Model.Properties.ColumnCount, out int columns );
+}
+
+<div class="generic-column-section">
+    @for( int i = 0; i < columns; i++ )
+    {
+        <div class="generic-col-@(12 / columns)">
+            @(await Html.Kentico().WidgetZoneAsync())
+        </div>
+    }
+</div>

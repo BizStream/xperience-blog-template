@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="CMS.AssemblyDiscoverable" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Authors\BlogTemplate.Mvc.Authors.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Infrastructure\Xperience\Abstractions\BlogTemplate.Mvc.Infrastructure.Xperience.Abstractions.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Infrastructure\Xperience\AutoMapper\BlogTemplate.Mvc.Infrastructure.Xperience.AutoMapper.csproj" />
+    </ItemGroup>
+
+</Project>

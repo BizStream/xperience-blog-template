@@ -1,14 +1,20 @@
-﻿@model BaseViewModel
+﻿@using BizStream.AspNetCore.Components.Metadata
+@using BizStream.AspNetCore.Components.OpenGraph
+@using BizStream.AspNetCore.Components.Schema
 
 <!DOCTYPE html>
 
 <html lang="en">
 
 <head>
-    @await Html.PartialAsync( "Head/_Meta", Model.Meta )
-    @await Html.PartialAsync( "Head/_OpenGraph", Model.OpenGraph )
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="/dist/master.min.css" rel="stylesheet" asp-append-version="true" />
+    @( await Component.InvokeAsync<MetadataComponent>( ) )
+    @( await Component.InvokeAsync<OpenGraphComponent>( ) )
+    @( await Component.InvokeAsync<SchemaComponent>( ) )
+
+    <link href="/master.min.css" rel="stylesheet" asp-append-version="true" />
     @await RenderSectionAsync( "head", required: false )
 </head>
 
@@ -17,7 +23,7 @@
         @RenderBody()
     </main>
 
-    <script src="/dist/master.min.js" asp-append-version="true"></script>
+    <script src="/master.min.js" asp-append-version="true"></script>
     @await RenderSectionAsync( "scripts", required: false )
 </body>
 

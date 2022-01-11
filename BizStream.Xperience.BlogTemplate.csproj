@@ -15,7 +15,7 @@
   <PropertyGroup>
     <Title>Xperience Blog Template</Title>
     <Description>ASP.NET Core MVC dotnet new template for a basic starter blog built with Kentico Xperience 13 as the CMS.</Description>
-    <VersionPrefix>1.1.0</VersionPrefix>
+    <VersionPrefix>2.0.0</VersionPrefix>
 
     <Authors>BizStream</Authors>
     <ProjectUrl>https://github.com/BizStream/xperience-blog-template</ProjectUrl>

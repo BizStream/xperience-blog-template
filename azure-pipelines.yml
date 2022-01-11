@@ -2,7 +2,7 @@
 
 name: $(Date:yyyyMMdd)$(Rev:-r)
 pool:
-  vmImage: "windows-latest"
+  vmImage: windows-2022
 
 pr:
   branches:
@@ -17,12 +17,17 @@ trigger:
       - develop
 
 steps:
+  - task: UseDotNet@2
+    displayName: use net6.0 sdk
+    inputs:
+      version: "6.0.x"
+
   - task: DotNetCoreCLI@2
     displayName: "create deployable"
     inputs:
-      command: 'pack'
-      packagesToPack: 'BizStream.Xperience.BlogTemplate.csproj'
-      versioningScheme: 'off'
+      command: "pack"
+      packagesToPack: "BizStream.Xperience.BlogTemplate.csproj"
+      versioningScheme: "off"
 
   - task: PublishBuildArtifacts@1
     displayName: "publish artifact"

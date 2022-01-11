@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <IncludeXperienceWebReferences>true</IncludeXperienceWebReferences>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="CMS.AssemblyDiscoverable" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Articles\BlogTemplate.Mvc.Articles.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Authors\BlogTemplate.Mvc.Authors.csproj" />
+    </ItemGroup>
+
+</Project>

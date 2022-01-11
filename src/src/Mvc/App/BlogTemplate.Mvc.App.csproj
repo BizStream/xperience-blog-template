@@ -1,24 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <ClientAssetsEnabled Condition=" '$(Configuration)' == 'Release' ">true</ClientAssetsEnabled>
         <Version>1.0.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AutoMapper" Version="10.1.1" />
-        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.5" Condition=" '$(Configuration)' == 'Debug' " />
+        <PackageReference Include="WebMarkupMin.AspNetCore6" Version="2.*" />
+        <PackageReference Include="WebMarkupMin.NUglify" Version="2.*" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="$(SourceDirectory)\Mvc\Abstractions\BlogTemplate.Mvc.Abstractions.csproj" />
-        <ProjectReference Include="$(SourceDirectory)\Mvc\Kentico\Xperience\Xperience\BlogTemplate.Mvc.Kentico.Xperience.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Infrastructure\Xperience\Xperience\BlogTemplate.Mvc.Infrastructure.Xperience.csproj" />
     </ItemGroup>
 
-    <Target Name="Compile client-ui" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
-        <Exec Command="npm ci" WorkingDirectory="$(SourceDirectory)\Mvc\App\client-ui" />
-        <Exec Command="npm run build" WorkingDirectory="$(SourceDirectory)\Mvc\App\client-ui" />
-    </Target>
+    <ItemGroup>
+        <ProjectReference Include="$(SourceDirectory)\Mvc\About\BlogTemplate.Mvc.About.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Errors\BlogTemplate.Mvc.Errors.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Home\BlogTemplate.Mvc.Home.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\PageBuilder\BlogTemplate.Mvc.PageBuilder.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Seo\BlogTemplate.Mvc.Seo.csproj" />
+    </ItemGroup>
 
 </Project>

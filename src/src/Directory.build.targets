@@ -2,18 +2,32 @@
 
     <ItemGroup Condition=" '$(IsCmsApp)' != 'true' AND '$(RunAnalyzers)' == 'true' ">
         <!-- Include editorconfig (Visual Studio expects editorconfigs in the root of projects). More info here: https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options?view=vs-2019#file-hierarchy-and-precedence -->
-        <AdditionalFiles Include="$(SourceDirectory)\..\.editorconfig" Visible="false" />
+        <None Include="$(SourceDirectory)\..\.editorconfig" Visible="false" />
         <Compile Include="$(SourceDirectory)\CodeStyleSuppressions.cs" Visible="false" />
 
         <!-- Include reference to .NET/C# code analyzers -->
-        <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
-        <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.3" PrivateAssets="all" />
+        <PackageReference Include="StyleCop.Analyzers" Version="*" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="*" PrivateAssets="all" />
     </ItemGroup>
 
-    <ItemGroup Condition=" '$(IsCmsApp)' != 'true' AND '$(TargetKenticoVersion)' != '' ">
-        <PackageReference Include="Kentico.Xperience.Libraries" Version="$(TargetKenticoVersion)" Condition=" '$(IncludeKenticoReferences)' == 'true' " />
-        <PackageReference Include="Kentico.Xperience.Libraries.Tests" Version="$(TargetKenticoVersion)" Condition=" '$(IncludeKenticoTestReferences)' == 'true' " />
-        <PackageReference Include="Kentico.Xperience.AspNetCore.WebApp" Version="$(TargetKenticoVersion)" Condition=" '$(IncludeKenticoWebReferences)' == 'true' " />
+    <ItemGroup Condition=" '$(IsCmsApp)' != 'true' AND '$(TargetXperienceVersion)' != '' ">
+        <PackageReference Include="Kentico.Xperience.Libraries" Version="$(TargetXperienceVersion)" Condition=" '$(IncludeXperienceReferences)' == 'true' " />
+        <PackageReference Include="Kentico.Xperience.Libraries.Tests" Version="$(TargetXperienceVersion)" Condition=" '$(IncludeXperienceTestReferences)' == 'true' " />
+        <PackageReference Include="Kentico.Xperience.AspNetCore.WebApp" Version="$(TargetXperienceVersion)" Condition=" '$(IncludeXperienceWebReferences)' == 'true' " />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(IsMvcFeature)' == 'true' ">
+        <Content Remove="client-ui\**" />
+        
+        <PackageReference Include="Microsoft.AspNetCore.ClientAssets" Version="0.1.0-alpha.21528.2" Condition=" '$(ClientAssetsEnabled)' == 'true' " />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.*" Condition=" '$(Configuration)' == 'Debug' " />
+
+        <ProjectReference Include="$(SourceDirectory)\Mvc\Infrastructure\AutoMapper\BlogTemplate.Mvc.Infrastructure.AutoMapper.csproj" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(ImplicitUsings)' == 'true' AND '$(IncludeXperienceWebReferences)' == 'true' ">
+        <Using Include="Kentico.Content.Web.Mvc" />
+        <Using Include="Kentico.Content.Web.Mvc.Routing" />
     </ItemGroup>
 
 </Project>

@@ -1,8 +1,17 @@
 <Project>
 
-    <!-- Some setting we won't want to apply to the CMSApp, so define a property for conditions to reference. -->
-    <PropertyGroup Condition=" '$(MSBuildProjectName)' == 'CMSApp' ">
-        <IsCmsApp>true</IsCmsApp>
+    <PropertyGroup>
+        <IsCmsApp Condition=" '$(MSBuildProjectName)' == 'CMSApp' ">true</IsCmsApp>
+        <IsMvcProject Condition=" $(MSBuildProjectName.StartsWith('BlogTemplate.Mvc.')) ">true</IsMvcProject>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(IsMvcProject)' == 'true' AND !$(MSBuildProjectName.StartsWith('BlogTemplate.Mvc.Infrastructure.')) ">
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+        <ClientAssetsEnabled>false</ClientAssetsEnabled>
+        <ClientAssetsBuildOutputParameter>--dir</ClientAssetsBuildOutputParameter>
+        <ClientAssetsDirectory>client-ui</ClientAssetsDirectory>
+        <ClientAssetsRestoreCommand Condition=" '$(Configuration)' == 'Release' ">npm ci</ClientAssetsRestoreCommand>
+        <IsMvcFeature>true</IsMvcFeature>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -12,26 +21,35 @@
 
     <PropertyGroup Condition=" $(IsCmsApp) != 'true' ">
         <!-- Disable legacy analyzers, and enable roslyn analyzers with the default ruleset -->
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <CodeAnalysisRuleSet>$(SourceDirectory)\default.ruleset</CodeAnalysisRuleSet>
         <RunCodeAnalysis>false</RunCodeAnalysis>
         <RunAnalyzers>true</RunAnalyzers>
-        <CodeAnalysisRuleSet>$(SourceDirectory)\default.ruleset</CodeAnalysisRuleSet>
 
+        <ImplicitUsings>true</ImplicitUsings>
+        <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework Condition=" '$(IsMvcProject)' == true ">net6.0</TargetFramework>
 
         <!--
-            Define a property for the version of Kentico.
+            Define a property for the version of Xperience.
       
             This makes upgrading Kentico a bit easier, if you're using the property when referencing the `Kentico.Libraries` NuGet package:
-            <PackageReference Include="Kentico.Libraries" Version="$(TargetKenticoVersion)" />
+            <PackageReference Include="Kentico.Xperience.Libraries" Version="$(TargetXperienceVersion)" />
 
             If ^this is how you're referencing the nuget package, during an upgrade, simply update the value below to update the package reference across all projects in the solution.
         -->
-        <TargetKenticoVersion>13.0.5</TargetKenticoVersion>
+        <TargetXperienceVersion>13.0.53</TargetXperienceVersion>
 
-        <IncludeKenticoReferences>false</IncludeKenticoReferences>
-        <IncludeKenticoTestReferences>false</IncludeKenticoTestReferences>
-        <IncludeKenticoWebReferences>false</IncludeKenticoWebReferences>
+        <IncludeXperienceReferences>false</IncludeXperienceReferences>
+        <IncludeXperienceTestReferences>false</IncludeXperienceTestReferences>
+        <IncludeXperienceWebReferences>false</IncludeXperienceWebReferences>
     </PropertyGroup>
+
+    <ItemGroup Condition=" '$(IsMvcProject)' == 'true' AND !$(MSBuildProjectName.EndsWith('.App')) ">
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
 
 </Project>

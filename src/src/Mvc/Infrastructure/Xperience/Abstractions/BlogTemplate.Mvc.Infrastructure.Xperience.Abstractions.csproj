@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <IncludeXperienceWebReferences>true</IncludeXperienceWebReferences>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="CMS.AssemblyDiscoverable" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(SourceDirectory)\Infrastructure\Xperience\Abstractions\BlogTemplate.Infrastructure.Xperience.Abstractions.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\Infrastructure\Xperience\AutoMapper\BlogTemplate.Infrastructure.Xperience.AutoMapper.csproj" />
+    </ItemGroup>
+
+</Project>

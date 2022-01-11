@@ -1,0 +1,38 @@
+﻿@using BlogTemplate.Mvc.Articles.Abstractions
+@using BlogTemplate.Mvc.Authors.Components
+
+@model ArticleViewModel
+
+@{
+    ViewBag.ContainerClassName = "article";
+}
+
+@if( Model is null )
+{
+    return;
+}
+
+@section head {
+<link href="/article.min.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<h1>@Model.Heading</h1>
+
+<span class="article-published-at" title="Published:">
+    @Model.PublishedAt.ToShortDateString()
+    @if( Model.ModifiedAt != DateTime.MinValue && Model.ModifiedAt != Model.PublishedAt )
+    {
+        <span class="article-updated-at" title="Last edited:">@Model.ModifiedAt.ToShortDateString()</span>
+    }
+</span>
+
+@if( Model.HeroImageUrl is not null )
+{
+    <img class="article-hero" src="@Model.HeroImageUrl" />
+}
+
+<section class="article-content">
+    @Model.Content
+</section>
+
+@( await Component.InvokeAsync<AuthorComponent>( new { authorGuid = Model.AuthorGuid } ) )

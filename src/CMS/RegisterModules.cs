@@ -5,7 +5,7 @@
  *  [assembly: RegisterModule( typeof( MyCMSModule ) )]
  */
 
-using BlogTemplate.Infrastructure.Kentico.Xperience.Modules.AzureStorage;
+using BlogTemplate.Infrastructure.Xperience.AzureMediaStorage;
 using CMS;
 
-// [assembly: RegisterModule( typeof( AzureStorageInitializationModule ) )]
+// [assembly: RegisterModule( typeof( AzureMediaStorageModule ) )]
