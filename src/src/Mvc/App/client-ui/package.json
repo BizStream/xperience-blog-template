@@ -20,7 +20,7 @@
         "autoprefixer": "^10.1.0",
         "core-js": "^3.8.1",
         "postcss": "^8.2.10",
-        "node-sass": "^5.0.0",
+        "node-sass": "^7.0.0",
         "rollup": "^2.34.2",
         "rollup-plugin-cleaner": "^1.0.0",
         "rollup-plugin-postcss": "^4.0.0",
