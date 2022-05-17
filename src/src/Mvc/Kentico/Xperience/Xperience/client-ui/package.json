@@ -19,7 +19,7 @@
         "@rollup/plugin-node-resolve": "^11.0.0",
         "autoprefixer": "^10.1.0",
         "core-js": "^3.8.1",
-        "postcss": "^8.2.10",
+        "postcss": "^8.2.13",
         "node-sass": "^5.0.0",
         "rollup": "^2.34.2",
         "rollup-plugin-cleaner": "^1.0.0",
