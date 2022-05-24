@@ -13,6 +13,8 @@ namespace BlogTemplate.Mvc.Kentico.Xperience
 
         public const string GenericColumnSection = Prefix + nameof( GenericColumnSection );
 
+        public const string VariableSection = Prefix + nameof( VariableSection );
+
     }
 
 }
